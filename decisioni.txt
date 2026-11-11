@@ -56,6 +56,8 @@ RETI
    squilibrato).
 10. Il Regno Unito resta nelle reti.
     Perche': il suo calo (dall'11,5% dei flussi nel 2018 al 2,9% nel 2023) e' parte di H3.
+    Per H3 il Regno Unito si guarda anno per anno (reti annuali), perche' la media 2022-23
+    nasconde il crollo del 2023 (uscite da 5.349 nel 2022 a 705 nel 2023).
 
 ATTRIBUTI E IPOTESI
 11. PIL per abitante in euro (Eurostat), media dei due anni di ogni periodo.
@@ -66,11 +68,15 @@ ATTRIBUTI E IPOTESI
 12. Il PIL di Regno Unito, Islanda e Liechtenstein non c'e' (43 regioni): restano nelle reti
     e nelle distanze, ma escono dalle analisi sul PIL, con una nota nel report.
     Perche': non sono nel file Eurostat usato. Mescolare fonti diverse o stimare i valori
-    sarebbe peggio.
+    complicherebbe l'analisi e renderebbe i dati meno confrontabili.
 13. Approssimazioni del PIL, da scrivere nella sezione Data:
     - PT16 Centro e PT18 Alentejo sono approssimate, perche' nel 2024 Eurostat le ha
       ridisegnate e non esiste una corrispondenza esatta;
-    - per la Norvegia, nel post_covid si usa il PIL del 2021, l'ultimo disponibile nel file.
+    - per la Norvegia, nel post_covid si usa il PIL del 2021, l'ultimo disponibile nel file;
+    - NL31 Utrecht e NL33 Zuid-Holland hanno nel file del PIL i codici nuovi (NL35 e NL36):
+      si usa il loro valore, ricodificato, senza altre modifiche;
+    - per l'Albania (AL01, AL02, AL03) nel post_covid c'e' il PIL di un solo anno su due: si usa
+      quell'anno.
 14. H2: lo stesso campione (le 276 regioni con PIL) in tutti i modelli.
     Perche': altrimenti i modelli non sono confrontabili.
 15. H2: le coppie dello stesso paese (colonna stesso_paese nel file coppie_regioni.csv) si
