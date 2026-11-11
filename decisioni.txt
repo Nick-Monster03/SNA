@@ -1,0 +1,62 @@
+DECISIONI DELLA FASE 2 (DATI E RETI) E PERCHE'
+Progetto Erasmus+ - Network Analysis - aggiornato all'11/11/2026
+
+DATI E FILTRI
+1. Solo mobilita' "for studies" (78% dei partecipanti 2016-2023).
+   Perche': la domanda riguarda gli studenti tra universita'. Nei tirocini la meta e'
+   un'azienda, VET(tirocini da scuole professionali) e Youth(volontariato).
+2. Anni 2016-2023.
+   Perche' abbiamo preso questo periodo di 8 anni?
+   2014-2015 usano i codici NUTS 2013. Il 2023 e' il primo anno dopo Covid e Brexit per questo è importante.
+3. Esclusa la Svizzera (963 studenti, 0,06%).
+   Perche': non partecipa al programma. Nei dati non manda mai studenti e ne riceve solo dal
+   2021. La regola e' generale: restano solo i paesi che mandano studenti in tutti gli anni.
+4. Tolti i flussi dentro lo stesso paese (1.273 studenti).
+   Perche': l'Erasmus e' mobilita' verso l'estero.
+5. Codici NUTS cambiati nel 2021: le regioni sono unite seguendo le citta' che cambiano
+   codice (Croazia continentale = HR04; Norvegia sud-orientale = NO01+NO03+NO04+NO05;
+   Irlanda del Nord = UKN0). Tolti ES64 e NO0B (18 studenti), senza corrispondenza.
+   Perche': ogni regione deve essere lo stesso territorio in tutti gli anni.
+
+RETI
+6. Nodi = 319 regioni NUTS 2 di 36 paesi; archi orientati origine -> destinazione;
+   peso = studenti.
+   Perche': NUTS 2 e' il livello del PIL Eurostat; i paesi sono pochi, le NUTS 3 troppo piccole.
+7. Tre reti di periodo: pre_covid 2018-19, covid 2020-21, post_covid 2022-23.
+   Il peso e' la media annua. Le reti annuali 2016-2023 servono per le serie temporali.
+   Perche': stesso disegno su tre reti; due anni sono piu' stabili di uno.
+8. Rete binaria: arco se ha almeno 5 studenti l'anno; controllo con la soglia 3.
+   Perche': con la soglia 5 restano l'80% degli studenti e oltre il 92% delle regioni connesse.
+   La soglia 10 sarebbe un controllo piu' severo (da fare se avanza tempo), ma con la soglia
+   10 la rete Covid si spezza (solo l'82% delle regioni resta connesso).
+9. Small-world sulla versione binaria NON orientata: c'e' un arco se c'e' almeno una
+   direzione.
+   Perche': clustering e cammino medio dello small-world si definiscono su reti non orientate.
+   Basta una direzione perche' un flusso stabile in un verso e' gia' un legame tra le due
+   regioni; chiedere la reciprocita' cancellerebbe molti legami (l'Erasmus e' spesso
+   squilibrato).
+10. Il Regno Unito resta nelle reti.
+    Perche': il suo calo (dall'11,5% dei flussi nel 2018 al 2,9% nel 2023) e' parte di H3.
+
+ATTRIBUTI E IPOTESI
+11. PIL per abitante in euro (Eurostat), media dei due anni di ogni periodo.
+    Le regioni unite sono ricombinate con la media pesata sugli abitanti.
+    Perche': misura la ricchezza senza dipendere dalla grandezza della regione.
+12. Il PIL di Regno Unito, Islanda e Liechtenstein non c'e' (43 regioni): restano nelle reti
+    e nelle distanze, ma escono dalle analisi sul PIL, con una nota nel report.
+    Perche': Eurostat non li pubblica; mescolare fonti diverse o stimare i valori sarebbe peggio.
+13. Approssimazioni del PIL, da scrivere nella sezione Data:
+    - PT16 Centro e PT18 Alentejo sono approssimate, perche' nel 2024 Eurostat le ha
+      ridisegnate e non esiste una corrispondenza esatta;
+    - per la Norvegia, nel post_covid si usa il PIL del 2021, l'ultimo disponibile.
+14. H2: lo stesso campione (le 276 regioni con PIL) in tutti i modelli.
+    Perche': altrimenti i modelli non sono confrontabili.
+15. H2: le coppie dello stesso paese (colonna stesso_paese nel file coppie_regioni.csv) si
+    tolgono.
+    Perche': il loro flusso e' zero per costruzione (punto 4), non per la distanza.
+16. Distanza: in linea d'aria tra i centri delle regioni.
+    Lingua: "stessa lingua" = una lingua ufficiale nazionale in comune; "stessa famiglia" =
+    stesso ramo linguistico (romanzo, germanico, slavo...).
+    Scelta: croato, serbo e montenegrino sono lingue diverse (non "stessa lingua"), ma sono
+    nella stessa famiglia.
+    Perche': sono le lingue ufficiali distinte dei tre stati.
