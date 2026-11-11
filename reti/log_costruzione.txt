@@ -1,0 +1,30 @@
+Dataset: Erasmus_2014-2022_individual.parquet.gzip - 2,191,857 righe, 2,275,868 studenti, anni 2014-2022
+ATTENZIONE: il file arriva al 2022: il periodo post-Covid sara' piu' corto degli altri.
+
+PASSI (numero di studenti):
+  partenza                                restano 2,275,868
+  1. solo studio         tolti   481,087  restano 1,794,781   (attivita' che contengono 'for studies')
+  2. anni                tolti   356,805  restano 1,437,976   (dal 2016 al 2022)
+  3. paesi esclusi       tolti       493  restano 1,437,483   (CH)
+
+  Codici presenti solo fino al 2020: ['HR04', 'NO01', 'NO03', 'NO04', 'NO05', 'UKN1']
+  Codici presenti solo dal 2021:     ['HR02', 'HR05', 'HR06', 'NO08', 'NO09', 'NO0A', 'NO0B']
+  Dopo l'unione dei codici, ancora spaiati: []
+
+  4. flussi interni      tolti     1,007  restano 1,436,476   (stesso paese di origine e destinazione)
+
+RETI ANNUALI:
+  rete_2016.csv    319 regioni   28,483 archi   219,174 studenti
+  rete_2017.csv    319 regioni   28,659 archi   225,090 studenti
+  rete_2018.csv    318 regioni   28,901 archi   230,532 studenti
+  rete_2019.csv    319 regioni   28,646 archi   230,552 studenti
+  rete_2020.csv    318 regioni   21,959 archi   122,344 studenti
+  rete_2021.csv    318 regioni   25,164 archi   197,163 studenti
+  rete_2022.csv    317 regioni   25,673 archi   211,621 studenti
+
+RETI DI PERIODO (media annua):
+  rete_pre_covid.csv (2018-2019)    319 regioni   33,988 archi     230,542 studenti l'anno
+  rete_covid.csv (2020-2021)    319 regioni   29,674 archi     159,754 studenti l'anno
+  rete_post_covid.csv (2022-2022)    317 regioni   25,673 archi     211,621 studenti l'anno
+
+In totale: 319 regioni di 36 paesi
