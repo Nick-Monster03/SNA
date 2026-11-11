@@ -1,14 +1,13 @@
-Dataset: Erasmus_2014-2022_individual.parquet.gzip - 2,191,857 righe, 2,275,868 studenti, anni 2014-2022
-ATTENZIONE: il file arriva al 2022: il periodo post-Covid sara' piu' corto degli altri.
+Dataset: Erasmus_2014-2023_individual.parquet - 2,460,819 righe, 2,554,116 studenti, anni 2014-2023
 
 PASSI (numero di studenti):
-  partenza                                restano 2,275,868
-  1. solo studio         tolti   481,087  restano 1,794,781   (attivita' che contengono 'for studies')
-  2. anni                tolti   356,805  restano 1,437,976   (dal 2016 al 2022)
+  partenza                                restano 2,554,116
+  1. solo studio         tolti   537,533  restano 2,016,583   (attivita' che contengono 'for studies')
+  2. anni                tolti   356,807  restano 1,659,776   (dal 2016 al 2023)
 
   PAESI CHE VERRANNO ESCLUSI - i loro dati prima dell'esclusione:
 
-  CH: 493 studenti coinvolti (0.034% del totale), 0 in uscita, 493 in entrata
+  CH: 963 studenti coinvolti (0.058% del totale), 0 in uscita, 963 in entrata
     anno     uscita  entrata
     2016          0        0
     2017          0        0
@@ -17,24 +16,25 @@ PASSI (numero di studenti):
     2020          0        0
     2021          0      166
     2022          0      327
-    studenti in entrata provenienti da: SE 127, BE 124, IT 88, FR 48, ES 35, PT 18, DE 15, AT 9
-    regioni di destinazione: CH01 195, CH04 101, CH02 92, CH05 30, CH06 27, CH03 25, CH07 23
-    tipi di mobilita': HE-SMS - Student mobility for studies (493)
+    2023          0      470
+    studenti in entrata provenienti da: IT 260, SE 173, BE 168, FR 85, ES 73, PT 53, DE 37, AT 24
+    regioni di destinazione: CH01 342, CH04 189, CH02 175, CH07 73, CH06 66, CH05 65, CH03 53
+    tipi di mobilita': HE-SMS - Student mobility for studies (963)
 
   Dettaglio per anno salvato in reti/paesi_esclusi.csv
 
-  3. paesi esclusi       tolti       493  restano 1,437,483   (non mandano studenti in tutti gli anni: CH)
+  3. paesi esclusi       tolti       963  restano 1,658,813   (non mandano studenti in tutti gli anni: CH)
 
   Codici presenti solo fino al 2020: ['HR04', 'NO01', 'NO03', 'NO04', 'NO05', 'UKN1']
-  Codici presenti solo dal 2021:     ['HR02', 'HR05', 'HR06', 'NO08', 'NO09', 'NO0A', 'NO0B']
+  Codici presenti solo dal 2021:     ['ES64', 'HR02', 'HR05', 'HR06', 'NO08', 'NO09', 'NO0A', 'NO0B']
   Corrispondenze trovate nei dati (citta' che passano da un codice all'altro):
-    HR04 -> HR02   (8 citta')
+    HR04 -> HR02   (9 citta')
     HR04 -> HR05   (8 citta')
-    HR04 -> HR06   (6 citta')
-    NO01 -> NO08   (7 citta')
+    HR04 -> HR06   (7 citta')
+    NO01 -> NO08   (8 citta')
     NO03 -> NO08   (6 citta')
     NO03 -> NO09   (7 citta')
-    NO04 -> NO09   (3 citta')
+    NO04 -> NO09   (4 citta')
     NO04 -> NO0A   (4 citta')
     NO05 -> NO0A   (9 citta')
     UKN1 -> UKN0   (3 citta')
@@ -43,21 +43,22 @@ PASSI (numero di studenti):
     NO01+NO03+NO04+NO05    <- NO01, NO03, NO04, NO05, NO08, NO09, NO0A
     UKN0                   <- UKN0, UKN1
 
-  4. codici senza pari   tolti        14  restano 1,437,469   (regioni presenti solo in parte degli anni: NO0B)
-  5. flussi interni      tolti     1,007  restano 1,436,462   (stesso paese di origine e destinazione)
+  4. codici senza pari   tolti        18  restano 1,658,795   (regioni presenti solo in parte degli anni: ES64, NO0B)
+  5. flussi interni      tolti     1,273  restano 1,657,522   (stesso paese di origine e destinazione)
 
 RETI ANNUALI:
-  rete_2016.csv    319 regioni   28,483 archi   219,174 studenti
+  rete_2016.csv    319 regioni   28,483 archi   219,175 studenti
   rete_2017.csv    319 regioni   28,659 archi   225,090 studenti
   rete_2018.csv    318 regioni   28,901 archi   230,532 studenti
   rete_2019.csv    319 regioni   28,646 archi   230,552 studenti
   rete_2020.csv    318 regioni   21,959 archi   122,344 studenti
-  rete_2021.csv    318 regioni   25,164 archi   197,160 studenti
-  rete_2022.csv    317 regioni   25,672 archi   211,610 studenti
+  rete_2021.csv    318 regioni   25,165 archi   197,161 studenti
+  rete_2022.csv    317 regioni   25,679 archi   211,624 studenti
+  rete_2023.csv    318 regioni   25,077 archi   221,044 studenti
 
 RETI DI PERIODO (media annua):
   rete_pre_covid.csv (2018-2019)    319 regioni   33,988 archi     230,542 studenti l'anno
-  rete_covid.csv (2020-2021)    319 regioni   29,674 archi     159,752 studenti l'anno
-  rete_post_covid.csv (2022-2022)    317 regioni   25,672 archi     211,610 studenti l'anno
+  rete_covid.csv (2020-2021)    319 regioni   29,675 archi     159,752 studenti l'anno
+  rete_post_covid.csv (2022-2023)    318 regioni   31,108 archi     216,334 studenti l'anno
 
 In totale: 319 regioni di 36 paesi
