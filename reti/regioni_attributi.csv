@@ -1,0 +1,320 @@
+regione,nome,paese,pil_pre_covid,pil_covid,pil_post_covid,nota_pil
+AL01,Veri,AL,3750.0,3950.0,5300.0,diretto; post_covid: solo 1 anno su 2
+AL02,Qender,AL,5700.0,6150.0,7700.0,diretto; post_covid: solo 1 anno su 2
+AL03,Jug,AL,4350.0,4600.0,6000.0,diretto; post_covid: solo 1 anno su 2
+AT11,Burgenland,AT,30450.0,30750.0,36000.0,diretto
+AT12,Niederösterreich,AT,36850.0,36250.0,42000.0,diretto
+AT13,Wien,AT,51250.0,51900.0,58350.0,diretto
+AT21,Kärnten,AT,38100.0,38900.0,47400.0,diretto
+AT22,Steiermark,AT,40350.0,40500.0,47000.0,diretto
+AT31,Oberösterreich,AT,45650.0,46000.0,52100.0,diretto
+AT32,Salzburg,AT,51350.0,51300.0,62050.0,diretto
+AT33,Tirol,AT,46050.0,44250.0,53400.0,diretto
+AT34,Vorarlberg,AT,48000.0,48500.0,56950.0,diretto
+BE10,Région de Bruxelles-Capitale/ Brussels Hoofdstedelijk Gewest,BE,70300.0,70450.0,80100.0,diretto
+BE21,Prov. Antwerpen,BE,48100.0,49450.0,59050.0,diretto
+BE22,Prov. Limburg (BE),BE,33000.0,33850.0,40300.0,diretto
+BE23,Prov. Oost-Vlaanderen,BE,37600.0,39150.0,46950.0,diretto
+BE24,Prov. Vlaams-Brabant,BE,44300.0,45450.0,53150.0,diretto
+BE25,Prov. West-Vlaanderen,BE,39650.0,41150.0,49400.0,diretto
+BE31,Prov. Brabant Wallon,BE,53350.0,53750.0,65150.0,diretto
+BE32,Prov. Hainaut,BE,25600.0,25950.0,30500.0,diretto
+BE33,Prov. Liège,BE,30050.0,30550.0,36450.0,diretto
+BE34,Prov. Luxembourg (BE),BE,25200.0,26050.0,31050.0,diretto
+BE35,Prov. Namur,BE,27350.0,28200.0,33650.0,diretto
+BG31,Severozapaden,BG,5450.0,6600.0,9300.0,diretto
+BG32,Severen tsentralen,BG,6050.0,7100.0,9500.0,diretto
+BG33,Severoiztochen,BG,7200.0,8050.0,10900.0,diretto
+BG34,Yugoiztochen,BG,6950.0,7650.0,12450.0,diretto
+BG41,Yugozapaden,BG,14150.0,16650.0,22150.0,diretto
+BG42,Yuzhen tsentralen,BG,6200.0,7100.0,9300.0,diretto
+CY00,Kypros,CY,25400.0,26200.0,32750.0,diretto
+CZ01,Praha,CZ,46450.0,49450.0,61450.0,diretto
+CZ02,Střední Čechy,CZ,19500.0,20050.0,25100.0,diretto
+CZ03,Jihozápad,CZ,17800.0,18750.0,23400.0,diretto
+CZ04,Severozápad,CZ,14350.0,14950.0,19250.0,diretto
+CZ05,Severovýchod,CZ,17250.0,18200.0,22500.0,diretto
+CZ06,Jihovýchod,CZ,19000.0,20850.0,26150.0,diretto
+CZ07,Střední Morava,CZ,16800.0,17900.0,22500.0,diretto
+CZ08,Moravskoslezsko,CZ,16650.0,17050.0,21750.0,diretto
+DE11,Stuttgart,DE,55100.0,55850.0,65300.0,diretto
+DE12,Karlsruhe,DE,46800.0,46800.0,53000.0,diretto
+DE13,Freiburg,DE,40600.0,40450.0,44750.0,diretto
+DE14,Tübingen,DE,45400.0,46300.0,52150.0,diretto
+DE21,Oberbayern,DE,61200.0,62600.0,72550.0,diretto
+DE22,Niederbayern,DE,41150.0,42550.0,48650.0,diretto
+DE23,Oberpfalz,DE,44650.0,46150.0,52600.0,diretto
+DE24,Oberfranken,DE,40350.0,41550.0,46550.0,diretto
+DE25,Mittelfranken,DE,47600.0,48250.0,53950.0,diretto
+DE26,Unterfranken,DE,42700.0,43050.0,49100.0,diretto
+DE27,Schwaben,DE,41600.0,42200.0,46850.0,diretto
+DE30,Berlin,DE,43850.0,46450.0,53200.0,diretto
+DE40,Brandenburg,DE,30300.0,31500.0,36600.0,diretto
+DE50,Bremen,DE,48600.0,49350.0,57350.0,diretto
+DE60,Hamburg,DE,70850.0,73100.0,85600.0,diretto
+DE71,Darmstadt,DE,54450.0,55300.0,62450.0,diretto
+DE72,Gießen,DE,36800.0,37750.0,41950.0,diretto
+DE73,Kassel,DE,38850.0,39750.0,45650.0,diretto
+DE80,Mecklenburg-Vorpommern,DE,29700.0,31250.0,36600.0,diretto
+DE91,Braunschweig,DE,50450.0,48550.0,53100.0,diretto
+DE92,Hannover,DE,40650.0,41900.0,46750.0,diretto
+DE93,Lüneburg,DE,30150.0,31550.0,35900.0,diretto
+DE94,Weser-Ems,DE,37150.0,38600.0,44900.0,diretto
+DEA1,Düsseldorf,DE,43150.0,43750.0,49650.0,diretto
+DEA2,Köln,DE,44550.0,45000.0,50550.0,diretto
+DEA3,Münster,DE,35050.0,36300.0,40750.0,diretto
+DEA4,Detmold,DE,39800.0,41250.0,45450.0,diretto
+DEA5,Arnsberg,DE,36900.0,37450.0,42050.0,diretto
+DEB1,Koblenz,DE,34750.0,35900.0,40750.0,diretto
+DEB2,Trier,DE,32700.0,33450.0,37600.0,diretto
+DEB3,Rheinhessen-Pfalz,DE,38900.0,42550.0,47900.0,diretto
+DEC0,Saarland,DE,36750.0,36200.0,41350.0,diretto
+DED2,Dresden,DE,32800.0,33750.0,38900.0,diretto
+DED4,Chemnitz,DE,29500.0,30200.0,34350.0,diretto
+DED5,Leipzig,DE,34650.0,35800.0,41250.0,diretto
+DEE0,Sachsen-Anhalt,DE,29200.0,30700.0,35650.0,diretto
+DEF0,Schleswig-Holstein,DE,33950.0,35550.0,41000.0,diretto
+DEG0,Thüringen,DE,30000.0,31000.0,35250.0,diretto
+DK01,Hovedstaden,DK,67850.0,73850.0,88750.0,diretto
+DK02,Sjælland,DK,36600.0,38600.0,43150.0,diretto
+DK03,Syddanmark,DK,46600.0,49300.0,53700.0,diretto
+DK04,Midtjylland,DK,47900.0,51650.0,54100.0,diretto
+DK05,Nordjylland,DK,43900.0,45850.0,49100.0,diretto
+EE00,Eesti,EE,20750.0,22300.0,27700.0,diretto
+EL30,Attiki,EL,23400.0,22950.0,28300.0,diretto
+EL41,Voreio Aigaio,EL,11350.0,10300.0,12500.0,diretto
+EL42,Notio Aigaio,EL,18150.0,15350.0,20300.0,diretto
+EL43,Kriti,EL,14500.0,13300.0,17400.0,diretto
+EL51,"Anatoliki Makedonia, Thraki",EL,11350.0,11100.0,13450.0,diretto
+EL52,Kentriki Makedonia,EL,13450.0,13100.0,16400.0,diretto
+EL53,Dytiki Makedonia,EL,15550.0,14000.0,15600.0,diretto
+EL54,Ipeiros,EL,11400.0,10900.0,13250.0,diretto
+EL61,Thessalia,EL,12950.0,13050.0,15700.0,diretto
+EL62,Ionia Nisia,EL,15750.0,13600.0,18200.0,diretto
+EL63,Dytiki Ellada,EL,12250.0,11900.0,14700.0,diretto
+EL64,Sterea Ellada,EL,15100.0,15300.0,18350.0,diretto
+EL65,Peloponnisos,EL,14600.0,14100.0,17350.0,diretto
+ES11,Galicia,ES,23550.0,22900.0,27650.0,diretto
+ES12,Principado de Asturias,ES,22950.0,22250.0,27300.0,diretto
+ES13,Cantabria,ES,24150.0,23300.0,27450.0,diretto
+ES21,País Vasco,ES,33200.0,31500.0,37650.0,diretto
+ES22,Comunidad Foral de Navarra,ES,31650.0,30250.0,35850.0,diretto
+ES23,La Rioja,ES,27750.0,26550.0,31400.0,diretto
+ES24,Aragón,ES,28650.0,28050.0,33700.0,diretto
+ES30,Comunidad de Madrid,ES,36100.0,34300.0,40900.0,diretto
+ES41,Castilla y León,ES,24500.0,23950.0,28400.0,diretto
+ES42,Castilla-La Mancha,ES,21050.0,20600.0,24650.0,diretto
+ES43,Extremadura,ES,19650.0,19400.0,23050.0,diretto
+ES51,Cataluña,ES,30900.0,29100.0,34300.0,diretto
+ES52,Comunidad Valenciana,ES,22950.0,21950.0,25600.0,diretto
+ES53,Illes Balears,ES,29200.0,24200.0,32500.0,diretto
+ES61,Andalucía,ES,19500.0,18700.0,22400.0,diretto
+ES62,Región de Murcia,ES,21700.0,21100.0,24900.0,diretto
+ES70,Canarias,ES,21050.0,18100.0,23250.0,diretto
+FI19,Länsi-Suomi,FI,37500.0,38950.0,43550.0,diretto
+FI1B,Helsinki-Uusimaa,FI,55900.0,56500.0,61300.0,diretto
+FI1C,Etelä-Suomi,FI,37800.0,38800.0,42250.0,diretto
+FI1D,Pohjois- ja Itä-Suomi,FI,35150.0,36600.0,41500.0,diretto
+FI20,Åland,FI,44300.0,41850.0,51350.0,diretto
+FR10,Ile-de-France,FR,58700.0,57250.0,65000.0,diretto
+FRB0,Centre - Val de Loire,FR,29350.0,29600.0,33150.0,diretto
+FRC1,Bourgogne,FR,29800.0,30200.0,33750.0,diretto
+FRC2,Franche-Comté,FR,27500.0,27700.0,30250.0,diretto
+FRD1,Basse-Normandie,FR,28500.0,28700.0,32450.0,diretto
+FRD2,Haute-Normandie,FR,29800.0,29950.0,33900.0,diretto
+FRE1,Nord-Pas de Calais,FR,28000.0,28250.0,31550.0,diretto
+FRE2,Picardie,FR,25900.0,26050.0,29700.0,diretto
+FRF1,Alsace,FR,33100.0,32700.0,36550.0,diretto
+FRF2,Champagne-Ardenne,FR,30000.0,29850.0,35550.0,diretto
+FRF3,Lorraine,FR,26100.0,26150.0,29300.0,diretto
+FRG0,Pays de la Loire,FR,31700.0,32400.0,35550.0,diretto
+FRH0,Bretagne,FR,30150.0,30700.0,34250.0,diretto
+FRI1,Aquitaine,FR,31600.0,31850.0,35600.0,diretto
+FRI2,Limousin,FR,27050.0,27950.0,30250.0,diretto
+FRI3,Poitou-Charentes,FR,29000.0,29500.0,33100.0,diretto
+FRJ1,Languedoc-Roussillon,FR,27400.0,28250.0,31350.0,diretto
+FRJ2,Midi-Pyrénées,FR,33050.0,32150.0,36050.0,diretto
+FRK1,Auvergne,FR,28800.0,29150.0,32300.0,diretto
+FRK2,Rhône-Alpes,FR,36200.0,36150.0,40650.0,diretto
+FRL0,Provence-Alpes-Côte d’Azur,FR,33950.0,35650.0,41300.0,diretto
+FRM0,Corse,FR,30100.0,30150.0,34350.0,diretto
+FRY1,Guadeloupe,FR,23950.0,24300.0,26950.0,diretto
+FRY2,Martinique,FR,24750.0,24550.0,27850.0,diretto
+FRY3,Guyane,FR,17150.0,17450.0,17900.0,diretto
+FRY4,La Réunion,FR,22400.0,23250.0,26100.0,diretto
+HR03,Jadranska Hrvatska,HR,13200.0,12800.0,18000.0,diretto
+HR04,Kontinentalna Hrvatska,HR,13971.0,14627.1,19563.4,ricombinato da HR02+HR05+HR06
+HU11,Budapest,HU,30550.0,32200.0,40950.0,diretto
+HU12,Pest,HU,11500.0,12350.0,16350.0,diretto
+HU21,Közép-Dunántúl,HU,13400.0,13550.0,16750.0,diretto
+HU22,Nyugat-Dunántúl,HU,14650.0,14200.0,17100.0,diretto
+HU23,Dél-Dunántúl,HU,9900.0,10300.0,12800.0,diretto
+HU31,Észak-Magyarország,HU,9750.0,10300.0,12150.0,diretto
+HU32,Észak-Alföld,HU,9450.0,9950.0,12400.0,diretto
+HU33,Dél-Alföld,HU,10600.0,11150.0,13650.0,diretto
+IE04,Northern and Western,IE,30700.0,37450.0,46000.0,diretto
+IE05,Southern,IE,77000.0,90750.0,109150.0,diretto
+IE06,Eastern and Midland,IE,81200.0,91900.0,112400.0,diretto
+IS00,Ísland,IS,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+ITC1,Piemonte,IT,31300.0,30600.0,35950.0,diretto
+ITC2,Valle d'Aosta/Vallée d'Aoste,IT,38450.0,37200.0,45550.0,diretto
+ITC3,Liguria,IT,32150.0,31150.0,37100.0,diretto
+ITC4,Lombardia,IT,40200.0,40200.0,47500.0,diretto
+ITF1,Abruzzo,IT,25350.0,25000.0,29850.0,diretto
+ITF2,Molise,IT,22050.0,22200.0,26100.0,diretto
+ITF3,Campania,IT,19150.0,19000.0,22750.0,diretto
+ITF4,Puglia,IT,19100.0,19250.0,22850.0,diretto
+ITF5,Basilicata,IT,22550.0,22250.0,26800.0,diretto
+ITF6,Calabria,IT,17550.0,17550.0,20500.0,diretto
+ITG1,Sicilia,IT,18050.0,18150.0,21750.0,diretto
+ITG2,Sardegna,IT,21350.0,21350.0,25600.0,diretto
+ITH1,Provincia Autonoma di Bolzano/Bozen,IT,48550.0,47700.0,58700.0,diretto
+ITH2,Provincia Autonoma di Trento,IT,38050.0,37850.0,45300.0,diretto
+ITH3,Veneto,IT,34000.0,33250.0,39300.0,diretto
+ITH4,Friuli-Venezia Giulia,IT,31900.0,32050.0,36750.0,diretto
+ITH5,Emilia-Romagna,IT,36400.0,36150.0,42200.0,diretto
+ITI1,Toscana,IT,32350.0,30900.0,36850.0,diretto
+ITI2,Umbria,IT,26050.0,25450.0,30100.0,diretto
+ITI3,Marche,IT,27800.0,27500.0,32250.0,diretto
+ITI4,Lazio,IT,35500.0,34500.0,41000.0,diretto
+LI00,Liechtenstein,LI,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+LT01,Sostinės regionas,LT,25050.0,28300.0,37350.0,diretto
+LT02,Vidurio ir vakarų Lietuvos regionas,LT,13700.0,15250.0,19500.0,diretto
+LU00,Luxembourg,LU,99650.0,108050.0,120050.0,diretto
+LV00,Latvija,LV,15000.0,16250.0,20050.0,diretto
+ME00,Crna Gora,ME,7550.0,7250.0,10400.0,diretto
+MK00,Severna Makedonija,MK,5850.0,6100.0,7600.0,diretto
+MT00,Malta,MT,28550.0,29950.0,35750.0,diretto
+NL11,Groningen,NL,44350.0,44000.0,56200.0,diretto
+NL12,Friesland (NL),NL,33300.0,35800.0,42700.0,diretto
+NL13,Drenthe,NL,32800.0,34400.0,40350.0,diretto
+NL21,Overijssel,NL,39650.0,42000.0,49050.0,diretto
+NL22,Gelderland,NL,39400.0,41700.0,48250.0,diretto
+NL23,Flevoland,NL,34950.0,36650.0,44400.0,diretto
+NL31,Utrecht,NL,56300.0,60350.0,68500.0,ricodificato da NL35
+NL32,Noord-Holland,NL,61750.0,62450.0,75150.0,diretto
+NL33,Zuid-Holland,NL,45400.0,47500.0,55150.0,ricodificato da NL36
+NL34,Zeeland,NL,37450.0,38950.0,48000.0,diretto
+NL41,Noord-Brabant,NL,47850.0,50850.0,58650.0,diretto
+NL42,Limburg (NL),NL,40700.0,42350.0,47750.0,diretto
+NO01+NO03+NO04+NO05,Oslo og Akershus + Sør-Østlandet + Agder og Rogaland + Vestlandet,NO,59833.4,58444.1,61485.8,ricombinato da NO08+NO09+NO0A; post_covid: usato il 2021
+NO02,Hedmark og Oppland,NO,44400.0,45150.0,48100.0,diretto; post_covid: usato il 2021
+NO06,Trøndelag,NO,54450.0,52600.0,55300.0,diretto; post_covid: usato il 2021
+NO07,Nord-Norge,NO,53450.0,50850.0,54200.0,diretto; post_covid: usato il 2021
+PL21,Małopolskie,PL,12550.0,13650.0,16700.0,diretto
+PL22,Śląskie,PL,14050.0,15250.0,19450.0,diretto
+PL41,Wielkopolskie,PL,14800.0,16000.0,19600.0,diretto
+PL42,Zachodniopomorskie,PL,11500.0,12700.0,15400.0,diretto
+PL43,Lubuskie,PL,11200.0,12400.0,15100.0,diretto
+PL51,Dolnośląskie,PL,15000.0,16550.0,20150.0,diretto
+PL52,Opolskie,PL,11150.0,12400.0,15150.0,diretto
+PL61,Kujawsko-pomorskie,PL,11050.0,12400.0,15250.0,diretto
+PL62,Warmińsko-mazurskie,PL,9500.0,10900.0,13300.0,diretto
+PL63,Pomorskie,PL,13300.0,14250.0,18200.0,diretto
+PL71,Łódzkie,PL,12900.0,14400.0,17750.0,diretto
+PL72,Świętokrzyskie,PL,10050.0,11300.0,13850.0,diretto
+PL81,Lubelskie,PL,9450.0,10600.0,13050.0,diretto
+PL82,Podkarpackie,PL,9750.0,10800.0,13350.0,diretto
+PL84,Podlaskie,PL,10200.0,11550.0,14500.0,diretto
+PL91,Warszawski stołeczny,PL,29550.0,29900.0,37050.0,diretto
+PL92,Mazowiecki regionalny,PL,12000.0,13300.0,17300.0,diretto
+PT11,Norte,PT,17350.0,17550.0,20950.0,diretto
+PT15,Algarve,PT,21500.0,19000.0,26400.0,diretto
+PT16,Centro (PT),PT,17604.7,17869.1,20788.7,"approssimato da PT19 + PT1D (53%) (tra parentesi: quota dell'area, abitanti stimati in proporzione)"
+PT17,Área Metropolitana de Lisboa,PT,26507.4,25994.0,32100.0,ricombinato da PT1A+PT1B
+PT18,Alentejo,PT,17958.2,17647.4,21339.2,"approssimato da PT1C + PT1D (47%) (tra parentesi: quota dell'area, abitanti stimati in proporzione)"
+PT20,Região Autónoma dos Açores,PT,17900.0,17600.0,21300.0,diretto
+PT30,Região Autónoma da Madeira,PT,20000.0,18850.0,26000.0,diretto
+RO11,Nord-Vest,RO,10150.0,11200.0,14550.0,diretto
+RO12,Centru,RO,10450.0,11300.0,14500.0,diretto
+RO21,Nord-Est,RO,6950.0,7650.0,9650.0,diretto
+RO22,Sud-Est,RO,8950.0,9550.0,12300.0,diretto
+RO31,Sud - Muntenia,RO,8450.0,9050.0,11750.0,diretto
+RO32,Bucureşti - Ilfov,RO,25150.0,27850.0,38350.0,diretto
+RO41,Sud-Vest Oltenia,RO,8600.0,9200.0,12500.0,diretto
+RO42,Vest,RO,11300.0,12050.0,16050.0,diretto
+RS11,Beogradski region,RS,11900.0,13250.0,17250.0,diretto
+RS12,Region Vojvodine,RS,6200.0,7100.0,10150.0,diretto
+RS21,Region Šumadije i Zapadne Srbije,RS,4250.0,4900.0,6700.0,diretto
+RS22,Region Južne i Istočne Srbije,RS,4350.0,5250.0,7550.0,diretto
+SE11,Stockholm,SE,63100.0,67200.0,69650.0,diretto
+SE12,Östra Mellansverige,SE,39500.0,41650.0,44150.0,diretto
+SE21,Småland med öarna,SE,39150.0,41650.0,43800.0,diretto
+SE22,Sydsverige,SE,39250.0,42050.0,43300.0,diretto
+SE23,Västsverige,SE,44700.0,46350.0,50400.0,diretto
+SE31,Norra Mellansverige,SE,37100.0,38850.0,40100.0,diretto
+SE32,Mellersta Norrland,SE,39100.0,41450.0,44700.0,diretto
+SE33,Övre Norrland,SE,44600.0,49500.0,52000.0,diretto
+SI03,Vzhodna Slovenija,SI,18400.0,19100.0,23000.0,diretto
+SI04,Zahodna Slovenija,SI,27100.0,28250.0,34750.0,diretto
+SK01,Bratislavský kraj,SK,40050.0,39950.0,44250.0,diretto
+SK02,Západné Slovensko,SK,15400.0,16400.0,19550.0,diretto
+SK03,Stredné Slovensko,SK,13700.0,14750.0,17900.0,diretto
+SK04,Východné Slovensko,SK,12050.0,13000.0,15700.0,diretto
+TR10,Istanbul,TR,12950.0,12300.0,17500.0,diretto
+TR21,"Tekirdag, Edirne, Kirklareli",TR,9700.0,10000.0,13250.0,diretto
+TR22,"Balikesir, Çanakkale",TR,7500.0,7450.0,10400.0,diretto
+TR31,Izmir,TR,9350.0,8950.0,13000.0,diretto
+TR32,"Aydin, Denizli, Mugla",TR,7250.0,6700.0,9600.0,diretto
+TR33,"Manisa, Afyonkarahisar, Kütahya, Usak",TR,7100.0,6850.0,9250.0,diretto
+TR41,"Bursa, Eskisehir, Bilecik",TR,9000.0,8450.0,11500.0,diretto
+TR42,"Kocaeli, Sakarya, Düzce, Bolu, Yalova",TR,10300.0,10250.0,14550.0,diretto
+TR51,Ankara,TR,11700.0,11800.0,16300.0,diretto
+TR52,"Konya, Karaman",TR,6400.0,6150.0,8800.0,diretto
+TR61,"Antalya, Isparta, Burdur",TR,8750.0,6900.0,11300.0,diretto
+TR62,"Adana, Mersin",TR,5600.0,5700.0,8450.0,diretto
+TR63,"Hatay, Kahramanmaras, Osmaniye",TR,4400.0,4550.0,6450.0,diretto
+TR71,"Kirikkale, Aksaray, Nigde, Nevsehir, Kirsehir",TR,5800.0,5600.0,8450.0,diretto
+TR72,"Kayseri, Sivas, Yozgat",TR,6000.0,5950.0,8050.0,diretto
+TR81,"Zonguldak, Karabük, Bartin",TR,6050.0,6350.0,8550.0,diretto
+TR82,"Kastamonu, Çankiri, Sinop",TR,5750.0,6050.0,8200.0,diretto
+TR83,"Samsun, Tokat, Çorum, Amasya",TR,5150.0,4950.0,6950.0,diretto
+TR90,Trabzon,TR,5500.0,5300.0,6650.0,diretto
+TRA1,"Erzurum, Erzincan, Bayburt",TR,5400.0,5350.0,6950.0,diretto
+TRA2,"Agri, Kars, Igdir, Ardahan",TR,3700.0,3650.0,5050.0,diretto
+TRB1,"Malatya, Elazig, Bingöl, Tunceli",TR,4850.0,4950.0,6500.0,diretto
+TRB2,"Van, Mus, Bitlis, Hakkari",TR,3400.0,3200.0,4350.0,diretto
+TRC1,"Gaziantep, Adiyaman, Kilis",TR,4450.0,4750.0,6600.0,diretto
+TRC2,"Sanliurfa, Diyarbakir",TR,2900.0,2800.0,4150.0,diretto
+TRC3,"Mardin, Batman, Sirnak, Siirt",TR,4000.0,4050.0,5600.0,diretto
+UKC1,Tees Valley and Durham,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKC2,Northumberland and Tyne and Wear,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKD1,Cumbria,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKD3,Greater Manchester,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKD4,Lancashire,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKD6,Cheshire,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKD7,Merseyside,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKE1,East Yorkshire and Northern Lincolnshire,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKE2,North Yorkshire,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKE3,South Yorkshire,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKE4,West Yorkshire,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKF1,Derbyshire and Nottinghamshire,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKF2,"Leicestershire, Rutland and Northamptonshire",UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKF3,Lincolnshire,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKG1,"Herefordshire, Worcestershire and Warwickshire",UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKG2,Shropshire and Staffordshire,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKG3,West Midlands,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKH1,East Anglia,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKH2,Bedfordshire and Hertfordshire,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKH3,Essex,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKI3,Inner London - West,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKI4,Inner London - East,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKI5,Outer London - East and North East,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKI6,Outer London - South,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKI7,Outer London - West and North West,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKJ1,"Berkshire, Buckinghamshire and Oxfordshire",UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKJ2,"Surrey, East and West Sussex",UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKJ3,Hampshire and Isle of Wight,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKJ4,Kent,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKK1,"Gloucestershire, Wiltshire and Bristol/Bath area",UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKK2,Dorset and Somerset,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKK3,Cornwall and Isles of Scilly,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKK4,Devon,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKL1,West Wales and The Valleys,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKL2,East Wales,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKM5,North Eastern Scotland,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKM6,Highlands and Islands,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKM7,Eastern Scotland,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKM8,West Central Scotland,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKM9,Southern Scotland,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)
+UKN0,Northern Ireland,UK,,,,escluso dalle analisi sul PIL: paese assente dal file Eurostat (la regione resta nelle reti)

@@ -1,0 +1,12 @@
+Reti binarie: un arco resta se ha in media almeno N studenti l'anno (percentuali su 319 regioni)
+
+rete         soglia  regioni   archi  densita  studenti tenuti  regioni connesse
+pre_covid         5      307  11,371   0.1210           82.4%            96.2%
+covid             5      295   8,049   0.0928           77.6%            92.5%
+post_covid        5      301   9,963   0.1103           83.3%            94.4%
+
+pre_covid         3      313  16,560   0.1696           90.7%            98.1%
+covid             3      309  12,289   0.1291           87.3%            96.9%
+post_covid        3      313  14,401   0.1475           90.8%            98.1%
+
+File salvati in reti/: rete_<periodo>_soglia5.csv (principale) e rete_<periodo>_soglia3.csv (controllo)
