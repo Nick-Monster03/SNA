@@ -1,0 +1,57 @@
+==============================================================================
+VERIFICA: come cambiano i flussi del Regno Unito (caso Brexit)
+==============================================================================
+ anno  UK_in_uscita  UK_in_entrata  quota_UK_sul_totale_%  regioni_UK_presenti
+ 2016          9358          17694                   12.3                   41
+ 2017          9605          17460                   12.0                   41
+ 2018          9246          17289                   11.5                   41
+ 2019          8849          15487                   10.6                   41
+ 2020          4019           7270                    9.2                   41
+ 2021          6305           8861                    7.7                   41
+ 2022          5349           9648                    7.1                   40
+ 2023           705           5598                    2.9                   41
+
+==============================================================================
+VERIFICA: quale soglia usare per la versione binaria della rete
+Reti di periodo: un arco resta solo se ha in media almeno N studenti l'anno.
+PRENDERE LA SOGLIA DA 5
+==============================================================================
+      rete  soglia  regioni_con_archi  archi  densita  studenti_tenuti_%  regioni_nella_comp_principale_%  regioni_mutuamente_raggiungibili_%
+ pre_covid       1                319  28205   0.2780               98.7                            100.0                                95.6
+ pre_covid       2                316  21008   0.2111               95.0                             99.1                                93.1
+ pre_covid       3                313  16560   0.1696               90.7                             98.1                                90.9
+ pre_covid       5                307  11371   0.1210               82.4                             96.2                                83.4
+ pre_covid      10                285   5869   0.0725               66.1                             89.3                                67.7
+ pre_covid      20                237   2524   0.0451               46.3                             74.3                                48.0
+     covid       1                317  23285   0.2325               98.0                             99.4                                96.2
+     covid       2                315  16184   0.1636               92.7                             98.7                                90.9
+     covid       3                309  12289   0.1291               87.3                             96.9                                83.1
+     covid       5                295   8049   0.0928               77.6                             92.5                                74.9
+     covid      10                263   3862   0.0560               59.8                             82.4                                58.9
+     covid      20                185   1548   0.0455               40.0                             56.7                                37.3
+post_covid       1                317  25190   0.2515               98.6                             99.4                                96.2
+post_covid       2                315  18299   0.1850               94.8                             98.7                                90.0
+post_covid       3                313  14401   0.1475               90.8                             98.1                                85.0
+post_covid       5                301   9963   0.1103               83.3                             94.4                                77.7
+post_covid      10                275   5359   0.0711               68.9                             86.2                                62.4
+post_covid      20                205   2389   0.0571               50.1                             63.6                                44.5
+
+(percentuali calcolate su tutte le 319 regioni; tabella salvata in reti/verifica_soglia.csv)
+
+==============================================================================
+VERIFICA: le regioni delle reti si trovano nel file dei confini (NUTS_RG_20M_2016_4326.geojson)?
+==============================================================================
+Regioni delle reti: 319 - trovate: 319 - mancanti: nessuna
+(le regioni unificate dallo script sono cercate pezzo per pezzo)
+
+==============================================================================
+VERIFICA: ogni regione delle reti ha il suo PIL (Eurostat_PIL_NUTS2.csv)?
+==============================================================================
+Unita' presenti nel file: ['EUR_HAB']
+pre_covid (2018-2019): regioni senza PIL 50 su 319
+      per paese: UK 41, PT 3, NL 2, HR 1, IS 1, LI 1, NO 1
+covid (2020-2021): regioni senza PIL 50 su 319
+      per paese: UK 41, PT 3, NL 2, HR 1, IS 1, LI 1, NO 1
+post_covid (2022-2023): regioni senza PIL 56 su 319
+      per paese: UK 41, NO 4, AL 3, PT 3, NL 2, HR 1, IS 1, LI 1
+
