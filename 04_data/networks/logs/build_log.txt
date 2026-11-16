@@ -1,0 +1,64 @@
+Dataset: Erasmus_2014-2023_individual.parquet - 2,460,819 rows, 2,554,116 students, years 2014-2023
+
+FILTERING STEPS (number of students):
+  initial                                   remaining 2,554,116
+  1. study only          removed   537,533  remaining 2,016,583   (activities containing 'for studies')
+  2. years               removed   356,807  remaining 1,659,776   (from 2016 to 2023)
+
+  COUNTRIES TO BE EXCLUDED - data prior to exclusion:
+
+  CH: 963 students involved (0.058% of total), 0 outgoing, 963 incoming
+    year   outgoing incoming
+    2016          0        0
+    2017          0        0
+    2018          0        0
+    2019          0        0
+    2020          0        0
+    2021          0      166
+    2022          0      327
+    2023          0      470
+    incoming students from: IT 260, SE 173, BE 168, FR 85, ES 73, PT 53, DE 37, AT 24
+    destination regions: CH01 342, CH04 189, CH02 175, CH07 73, CH06 66, CH05 65, CH03 53
+    mobility types: HE-SMS - Student mobility for studies (963)
+
+  Yearly breakdown saved to 04_data\networks\logs/excluded_countries.csv
+
+  3. excluded countries  removed       963  remaining 1,658,813   (do not send students in all years: CH)
+
+  Codes present only up to 2020: ['HR04', 'NO01', 'NO03', 'NO04', 'NO05', 'UKN1']
+  Codes present only from 2021:     ['ES64', 'HR02', 'HR05', 'HR06', 'NO08', 'NO09', 'NO0A', 'NO0B']
+  Correspondences found in data (cities switching from one NUTS code to another):
+    HR04 -> HR02   (9 cities)
+    HR04 -> HR05   (8 cities)
+    HR04 -> HR06   (7 cities)
+    NO01 -> NO08   (8 cities)
+    NO03 -> NO08   (6 cities)
+    NO03 -> NO09   (7 cities)
+    NO04 -> NO09   (4 cities)
+    NO04 -> NO0A   (4 cities)
+    NO05 -> NO0A   (9 cities)
+    UKN1 -> UKN0   (3 cities)
+  Merged regions:
+    HR04                   <- HR02, HR04, HR05, HR06
+    NO01+NO03+NO04+NO05    <- NO01, NO03, NO04, NO05, NO08, NO09, NO0A
+    UKN0                   <- UKN0, UKN1
+
+  4. unmatched codes     removed        18  remaining 1,658,795   (regions present only in some years: ES64, NO0B)
+  5. domestic flows      removed     1,273  remaining 1,657,522   (same origin and destination country)
+
+YEARLY NETWORKS:
+  yearly/network_2016.csv    319 regions   28,483 edges   219,175 students
+  yearly/network_2017.csv    319 regions   28,659 edges   225,090 students
+  yearly/network_2018.csv    318 regions   28,901 edges   230,532 students
+  yearly/network_2019.csv    319 regions   28,646 edges   230,552 students
+  yearly/network_2020.csv    318 regions   21,959 edges   122,344 students
+  yearly/network_2021.csv    318 regions   25,165 edges   197,161 students
+  yearly/network_2022.csv    317 regions   25,679 edges   211,624 students
+  yearly/network_2023.csv    318 regions   25,077 edges   221,044 students
+
+PERIOD NETWORKS (annual average):
+  periods/network_pre_covid.csv (2018-2019)    319 regions   33,988 edges     230,542 students/year
+  periods/network_covid.csv (2020-2021)    319 regions   29,675 edges     159,752 students/year
+  periods/network_post_covid.csv (2022-2023)    318 regions   31,108 edges     216,334 students/year
+
+Total: 319 regions across 36 countries
