@@ -1,0 +1,47 @@
+============================================================================================
+LOAD CHECK: networks loaded in networkx vs numbers in the pipeline logs
+networkx 3.7 - node set: 319 regions in 36 countries
+'active' = regions with at least one edge; 'isolates' = regions in the node set with no edges
+============================================================================================
+
+YEARLY NETWORKS (weighted, directed; weight = students in the year)
+  network       nodes  active  isolates    edges   students   check
+  2016            319     319         0   28,483    219,175   OK (= log)
+  2017            319     319         0   28,659    225,090   OK (= log)
+  2018            319     318         1   28,901    230,532   OK (= log)
+  2019            319     319         0   28,646    230,552   OK (= log)
+  2020            319     318         1   21,959    122,344   OK (= log)
+  2021            319     318         1   25,165    197,161   OK (= log)
+  2022            319     317         2   25,679    211,624   OK (= log)
+  2023            319     318         1   25,077    221,044   OK (= log)
+
+PERIOD NETWORKS (weighted, directed; weight = average students per year)
+  network       nodes  active  isolates    edges stud./year   check
+  pre_covid       319     319         0   33,988    230,542   OK (= log)
+  covid           319     319         0   29,675    159,752   OK (= log)
+  post_covid      319     318         1   31,108    216,334   OK (= log)   isolates: NL13
+
+BINARY NETWORKS (directed; edge = at least N students/year in the period)
+  network      thresh  nodes  active  isolates    edges  dens.319 dens.active  giant WCC  undir. edges   check
+  pre_covid         5    319     307        12   11,371    0.1121      0.1210        307         8,046   OK (= log)
+  covid             5    319     295        24    8,049    0.0793      0.0928        295         5,822   OK (= log)
+  post_covid        5    319     301        18    9,963    0.0982      0.1103        301         6,983   OK (= log)
+
+  pre_covid         3    319     313         6   16,560    0.1632      0.1696        313        11,481   OK (= log)
+  covid             3    319     309        10   12,289    0.1211      0.1291        309         8,779   OK (= log)
+  post_covid        3    319     313         6   14,401    0.1420      0.1475        313        10,027   OK (= log)
+
+  dens.319 = density over all 319 regions; dens.active = over the regions with edges only
+  (dens.active and giant WCC are the figures reported in logs/threshold_checks.csv)
+  undir. edges = edges of the undirected version (at least one direction), used for small-world
+
+NODE ATTRIBUTES attached to every graph
+  name             present for 319 of 319 regions
+  country          present for 319 of 319 regions
+  gdp_pre_covid    present for 276 of 319 regions
+  gdp_covid        present for 276 of 319 regions
+  gdp_post_covid   present for 276 of 319 regions
+
+============================================================================================
+RESULT: all networks loaded correctly; every number matches the pipeline logs.
+============================================================================================
