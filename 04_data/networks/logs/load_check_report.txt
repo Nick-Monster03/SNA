@@ -45,3 +45,5 @@ NODE ATTRIBUTES attached to every graph
 ============================================================================================
 RESULT: all networks loaded correctly; every number matches the pipeline logs.
 ============================================================================================
+
+Gephi files saved in 04_data\networks\gephi/
