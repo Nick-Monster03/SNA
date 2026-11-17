@@ -1,0 +1,4 @@
+period,active_regions,isolated_regions,edges,density_all_319,density_active,density_feasible,density_feasible_any_flow,weak_components,giant_wcc,giant_scc,avg_path_directed_scc,diameter_directed_scc,avg_path_undirected,diameter_undirected
+pre_covid,313,6,16560,0.1632,0.1696,0.1738,0.3567,1,313,290,1.895,4,1.807,3
+covid,309,10,12289,0.1211,0.1291,0.129,0.3115,1,309,265,1.942,6,1.916,4
+post_covid,313,6,14401,0.142,0.1475,0.1512,0.3265,1,313,271,1.905,4,1.878,4

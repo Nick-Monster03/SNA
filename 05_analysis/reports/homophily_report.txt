@@ -1,0 +1,118 @@
+
+==========================================================================================
+MEASURE 11: HOMOPHILY AND ASSORTATIVITY
+==========================================================================================
+Weighted: every student counts once; binary: every edge (>= 5 students/year) counts once. Regions without GDP (UK, IS, LI) excluded from GDP rows.
+
+==========================================================================================
+WEALTH: correlation between GDP per capita of origin and destination
+==========================================================================================
+p-values: 2000 permutations of GDP across regions. share_to_richer: share of students (or edges) going to a region with higher GDP per capita.
+    period   network  r_log  p_log  r_raw  p_raw  share_to_richer  p_share_to_richer  median_gdp_ratio_dest_origin  regions  edges
+ pre_covid  weighted 0.3081 0.0005 0.2490 0.0005           0.5356             0.0025                        1.0960      276  28140
+ pre_covid binary_b5 0.3249 0.0005 0.2539 0.0005           0.5488             0.0005                        1.0819      276   9858
+     covid  weighted 0.2862 0.0005 0.2248 0.0005           0.5242             0.0580                        1.0916      276  25186
+     covid binary_b5 0.3161 0.0005 0.2477 0.0005           0.5282             0.0255                        1.0475      276   7302
+post_covid  weighted 0.2700 0.0005 0.2015 0.0005           0.5212             0.0470                        1.0808      276  27344
+post_covid binary_b5 0.2852 0.0005 0.2072 0.0005           0.5259             0.0125                        1.0375      276   9328
+
+==========================================================================================
+GROUPS: E-I index (observed vs expected over feasible pairs) and Newman assortativity
+==========================================================================================
+EI = (external - internal) / total. EI_observed < EI_expected = more ties inside the group than chance.
+    period       attribute   network  EI_observed  EI_expected  share_inside_observed  share_inside_expected  assortativity_newman
+ pre_covid     gdp_tercile  weighted       0.0818       0.2733                 0.4591                 0.3633                0.1172
+ pre_covid      macro_area  weighted       0.5154       0.5946                 0.2423                 0.2027               -0.0272
+ pre_covid programme_group  weighted      -0.3121      -0.2037                 0.6560                 0.6019                0.0661
+ pre_covid     gdp_tercile binary_b5       0.1136       0.3039                 0.4432                 0.3480                0.1115
+ pre_covid      macro_area binary_b5       0.5788       0.6028                 0.2106                 0.1986               -0.0560
+ pre_covid programme_group binary_b5      -0.2664      -0.1638                 0.6332                 0.5819                0.0595
+     covid     gdp_tercile  weighted       0.0963       0.2801                 0.4518                 0.3600                0.0971
+     covid      macro_area  weighted       0.5075       0.5856                 0.2463                 0.2072               -0.0321
+     covid programme_group  weighted      -0.3146      -0.2148                 0.6573                 0.6074                0.0524
+     covid     gdp_tercile binary_b5       0.0970       0.2892                 0.4515                 0.3554                0.1082
+     covid      macro_area binary_b5       0.5672       0.5965                 0.2164                 0.2018               -0.0552
+     covid programme_group binary_b5      -0.2600      -0.1688                 0.6300                 0.5844                0.0430
+post_covid     gdp_tercile  weighted       0.0673       0.2365                 0.4664                 0.3818                0.1030
+post_covid      macro_area  weighted       0.4794       0.5673                 0.2603                 0.2164               -0.0257
+post_covid programme_group  weighted      -0.3179      -0.2300                 0.6589                 0.6150                0.0374
+post_covid     gdp_tercile binary_b5       0.0982       0.2709                 0.4509                 0.3645                0.0989
+post_covid      macro_area binary_b5       0.5546       0.5841                 0.2227                 0.2079               -0.0531
+post_covid programme_group binary_b5      -0.2560      -0.1729                 0.6280                 0.5865                0.0347
+
+==========================================================================================
+MIXING MATRICES (weighted network): ratio observed / expected students
+==========================================================================================
+ratio > 1: more students than expected from the sizes of the two groups.
+
+gdp_tercile - pre_covid (rows = origin, columns = destination)
+to        1 low  2 middle  3 high
+from                             
+1 low     2.236     0.951   0.627
+2 middle  1.028     1.184   0.918
+3 high    0.495     0.933   1.215
+
+gdp_tercile - covid (rows = origin, columns = destination)
+to        1 low  2 middle  3 high
+from                             
+1 low     2.375     0.909   0.620
+2 middle  1.022     1.187   0.908
+3 high    0.475     0.933   1.217
+
+gdp_tercile - post_covid (rows = origin, columns = destination)
+to        1 low  2 middle  3 high
+from                             
+1 low     2.439     0.995   0.624
+2 middle  1.032     1.189   0.914
+3 high    0.533     0.908   1.175
+
+programme_group - pre_covid (rows = origin, columns = destination)
+to          Candidates   EFTA  EU-13  EU-15
+from                                       
+Candidates       2.025  0.077  2.470  0.588
+EFTA             0.278  2.989  0.297  1.107
+EU-13            1.732  0.586  1.286  0.886
+EU-15            0.835  1.061  0.781  1.082
+
+programme_group - covid (rows = origin, columns = destination)
+to          Candidates   EFTA  EU-13  EU-15
+from                                       
+Candidates       3.187  0.070  2.432  0.579
+EFTA             0.324  4.339  0.279  1.100
+EU-13            1.826  0.542  1.203  0.896
+EU-15            0.807  1.042  0.810  1.077
+
+programme_group - post_covid (rows = origin, columns = destination)
+to          Candidates   EFTA  EU-13  EU-15
+from                                       
+Candidates       3.422  0.083  2.425  0.630
+EFTA             0.314  2.583  0.362  1.086
+EU-13            1.595  0.528  1.171  0.907
+EU-15            0.836  1.048  0.822  1.067
+
+macro_area - pre_covid (rows = origin, columns = destination)
+to            Eastern  Northern  Southern  Western  Western Asia
+from                                                            
+Eastern         1.220     0.541     1.130    0.968         1.711
+Northern        0.431     0.927     0.820    1.422         0.869
+Southern        1.116     0.655     1.477    0.982         0.453
+Western         0.606     1.428     0.877    0.985         1.313
+Western Asia    2.843     0.403     0.611    0.810         0.000
+
+macro_area - covid (rows = origin, columns = destination)
+to            Eastern  Northern  Southern  Western  Western Asia
+from                                                            
+Eastern         1.018     0.563     1.133    0.968         1.870
+Northern        0.393     0.967     0.806    1.407         0.719
+Southern        1.179     0.626     1.436    0.985         0.536
+Western         0.614     1.383     0.906    1.007         1.217
+Western Asia    2.920     0.397     0.545    0.849         0.000
+
+macro_area - post_covid (rows = origin, columns = destination)
+to            Eastern  Northern  Southern  Western  Western Asia
+from                                                            
+Eastern         1.002     0.545     1.120    0.932         1.731
+Northern        0.443     1.037     0.776    1.370         0.577
+Southern        1.132     0.626     1.434    0.987         0.535
+Western         0.657     1.369     0.900    0.994         1.272
+Western Asia    2.883     0.385     0.566    0.961         0.000

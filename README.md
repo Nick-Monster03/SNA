@@ -23,7 +23,8 @@ Social Network Analysis project investigating the structure of the European Eras
     ├── 01_build_networks.py
     ├── 02_verify_data.py
     ├── 03_build_binary_networks.py
-    └── 04_prepare_attributes.py
+    ├── 04_prepare_attributes.py
+    └── 05_load_networks.py
 ```
 
 ## Prerequisites
@@ -63,7 +64,25 @@ python src/03_build_binary_networks.py
 
 # 5) Attach regional GDP, great-circle distances, and language attributes
 python src/04_prepare_attributes.py
+
+# 6) Load every network in networkx and check the numbers against the logs
+python src/05_load_networks.py
 ```
+
+## Network Measures (Phase 3)
+
+Run from the project root, after the data pipeline, in this order:
+
+```bash
+python 05_analysis/01_centrality.py               # measures 1-4  (~10 s)
+python 05_analysis/02_structure.py                # measures 5-10 (~3 min)
+python 05_analysis/03_homophily.py                # measure 11    (~5 s)
+python 05_analysis/04_figures.py                  # figures for the report
+python 05_analysis/02_structure.py --threshold 3  # robustness check (outputs end in _t3)
+```
+
+Outputs: `05_analysis/tables/` (CSV), `05_analysis/figures/` (PNG + PDF), `05_analysis/reports/` (text reports).
+`05_analysis/measures_summary.md` summarises the results with the A → B → C sentence for every measure.
 
 ## Main Generated Outputs
 

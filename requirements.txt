@@ -2,4 +2,6 @@ pandas
 pyarrow
 shapely
 networkx
-shapely
+scipy
+matplotlib
+powerlaw

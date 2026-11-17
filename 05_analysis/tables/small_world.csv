@@ -1,0 +1,4 @@
+period,regions,edges,mean_degree,clustering_avg,transitivity,avg_path,clustering_random,avg_path_random,clustering_lattice,sigma,clustering_erdos_renyi,C_over_C_erdos_renyi,omega
+pre_covid,307,8046,52.4,0.526,0.449,1.943,0.568,1.9,0.735,0.906,0.183,2.88,0.262
+covid,295,5822,39.5,0.491,0.411,2.038,0.555,1.98,0.731,0.86,0.143,3.43,0.3
+post_covid,301,6983,46.4,0.515,0.458,1.995,0.579,1.943,0.733,0.866,0.165,3.13,0.272

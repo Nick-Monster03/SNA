@@ -1,0 +1,146 @@
+
+==========================================================================================
+MEASURES 5-10: STRUCTURE (binary networks: edge if >= 5 students/year)
+==========================================================================================
+Densities and null models use feasible pairs only (regions in different countries).
+
+==========================================================================================
+7. DENSITY, COMPONENTS, DISTANCES
+==========================================================================================
+period                      pre_covid      covid  post_covid
+active_regions               307.0000   295.0000    301.0000
+isolated_regions              12.0000    24.0000     18.0000
+edges                      11371.0000  8049.0000   9963.0000
+density_all_319                0.1121     0.0793      0.0982
+density_active                 0.1210     0.0928      0.1103
+density_feasible               0.1194     0.0845      0.1046
+density_feasible_any_flow      0.3567     0.3115      0.3265
+weak_components                1.0000     1.0000      1.0000
+giant_wcc                    307.0000   295.0000    301.0000
+giant_scc                    266.0000   239.0000    248.0000
+avg_path_directed_scc          1.9680     2.0230      1.9870
+diameter_directed_scc          4.0000     5.0000      5.0000
+avg_path_undirected            1.9430     2.0380      1.9950
+diameter_undirected            4.0000     5.0000      4.0000
+
+==========================================================================================
+5. K-CORE AND CORE-PERIPHERY (undirected binary network)
+==========================================================================================
+period                       pre_covid   covid  post_covid
+k_max                           52.000  40.000      49.000
+max_kcore_size                  85.000  85.000      81.000
+max_kcore_countries             25.000  26.000      25.000
+mean_core_number                31.600  23.100      28.000
+cp_core_size                    96.000  82.000      90.000
+cp_core_countries               26.000  24.000      25.000
+cp_correlation                   0.746   0.738       0.770
+density_core_core                0.771   0.730       0.785
+density_core_periphery           0.207   0.183       0.189
+density_periphery_periphery      0.039   0.025       0.030
+
+  pre_covid: core-periphery core by country: DE 15, FR 12, ES 11, IT 8, NL 6, PL 5, BE 4, FI 4, SE 4, PT 3, AT 2, CZ 2, DK 2, EL 2, IE 2, LT 2, TR 2, UK 2, EE 1, HR 1, HU 1, LV 1, NO 1, RO 1, SI 1, SK 1
+
+  covid: core-periphery core by country: DE 11, ES 11, FR 11, IT 8, BE 4, FI 4, PL 4, SE 4, PT 3, AT 2, CZ 2, DK 2, IE 2, LT 2, NL 2, TR 2, EE 1, EL 1, HR 1, HU 1, LV 1, NO 1, RO 1, SI 1
+
+  post_covid: core-periphery core by country: DE 14, FR 11, ES 9, IT 8, NL 5, BE 4, FI 4, PL 4, SE 4, CZ 3, PT 3, AT 2, DK 2, EL 2, IE 2, LT 2, NO 2, TR 2, EE 1, HR 1, HU 1, LV 1, RO 1, SI 1, SK 1
+  core overlap pre_covid vs covid (Jaccard): 0.85
+  core overlap covid vs post_covid (Jaccard): 0.87
+  core overlap pre_covid vs post_covid (Jaccard): 0.90
+
+==========================================================================================
+6. COMMUNITIES (Louvain on the weighted directed network)
+==========================================================================================
+
+pre_covid: modularity Q = 0.136 (runs: 0.130-0.136), 4 communities, stability across runs (NMI) 0.67, flow inside communities 50.4%
+  NMI with: country 0.23, macro-area 0.24, programme group 0.22 | modularity of partition by macro-area -0.020, by programme group 0.024
+ community  regions  countries  incoming_students                     programme_groups                                                           macro_areas                                                                                                     countries_by_regions
+         1       97         18             116636         EU-15 92%, EFTA 6%, EU-13 2%                   Northern 49%, Western 39%, Southern 10%, Eastern 1%            UK 31, DE 12, FR 11, NL 7, BE 5, IT 5, SE 5, DK 4, NO 4, ES 3, AT 2, IE 2, CZ 1, FI 1, IS 1, LI 1, MT 1, PT 1
+         2      146         25              74282 EU-15 40%, EU-13 38%, Candidates 23% Southern 34%, Eastern 32%, Western Asia 18%, Western 12%, Northern 3% TR 26, PL 17, IT 12, ES 11, EL 10, DE 8, FR 8, RO 8, HU 7, CZ 6, PT 6, BG 5, SK 4, RS 3, AL 2, HR 2, LT 2, SI 2, AT 1...
+         3       61         19              27748   EU-15 92%, EU-13 5%, Candidates 3%                   Western 59%, Northern 25%, Southern 13%, Eastern 3%        DE 16, AT 6, FR 6, UK 6, NL 4, BE 3, FI 3, IT 3, SE 3, ES 2, AL 1, CZ 1, DK 1, EE 1, EL 1, HU 1, IE 1, LU 1, RS 1
+         4       15          9              11876                  EU-15 93%, EU-13 7%                   Western 47%, Southern 27%, Northern 20%, Eastern 7%                                                                     BE 3, UK 3, DE 2, EL 2, BG 1, ES 1, FR 1, IT 1, NL 1
+
+covid: modularity Q = 0.135 (runs: 0.129-0.135), 4 communities, stability across runs (NMI) 0.73, flow inside communities 48.9%
+  NMI with: country 0.21, macro-area 0.22, programme group 0.21 | modularity of partition by macro-area -0.023, by programme group 0.019
+ community  regions  countries  incoming_students                            programme_groups                                                           macro_areas                                                                                                     countries_by_regions
+         1       87         18              75065                EU-15 93%, EFTA 6%, EU-13 1%                   Northern 47%, Western 40%, Southern 11%, Eastern 1%            UK 27, DE 11, FR 10, NL 6, BE 5, IT 5, DK 4, SE 4, ES 3, NO 3, AT 2, CZ 1, EL 1, FI 1, IE 1, IS 1, LI 1, PT 1
+         2      151         26              53233        EU-15 42%, EU-13 36%, Candidates 23% Southern 34%, Eastern 30%, Western Asia 18%, Western 13%, Northern 5% TR 26, PL 17, IT 12, DE 11, ES 11, EL 10, RO 8, FR 7, CZ 6, HU 6, PT 6, BG 5, RS 4, SK 4, UK 3, AL 2, HR 2, LT 2, SI ...
+         3       64         19              22982 EU-15 91%, EU-13 6%, Candidates 2%, EFTA 2%                   Western 58%, Northern 28%, Southern 11%, Eastern 3%        DE 15, FR 7, UK 7, AT 6, BE 4, NL 4, FI 3, IT 3, SE 3, ES 2, IE 2, AL 1, CZ 1, DK 1, EE 1, HU 1, LU 1, MT 1, NO 1
+         4       17         11               8473                        EU-15 88%, EU-13 12%                  Western 35%, Northern 29%, Southern 24%, Eastern 12%                                                         UK 4, BE 2, EL 2, FR 2, BG 1, DE 1, ES 1, HU 1, IT 1, NL 1, SE 1
+
+post_covid: modularity Q = 0.131 (runs: 0.128-0.131), 3 communities, stability across runs (NMI) 0.76, flow inside communities 51.6%
+  NMI with: country 0.21, macro-area 0.24, programme group 0.19 | modularity of partition by macro-area -0.019, by programme group 0.013
+ community  regions  countries  incoming_students                            programme_groups                                                           macro_areas                                                                                                     countries_by_regions
+         1       90         19             107273 EU-15 91%, EFTA 6%, EU-13 2%, Candidates 1%                   Northern 52%, Western 34%, Southern 12%, Eastern 1%       UK 30, DE 10, NL 7, FR 6, BE 5, DK 5, IT 5, SE 5, ES 3, NO 3, AT 2, FI 2, CZ 1, IE 1, IS 1, LI 1, PT 1, RS 1, SI 1
+         2      158         25              76133        EU-15 44%, EU-13 35%, Candidates 21% Southern 35%, Eastern 30%, Western Asia 16%, Western 15%, Northern 4% TR 25, PL 17, IT 14, ES 13, EL 11, FR 11, DE 8, RO 8, HU 7, BG 6, CZ 6, PT 6, SK 4, AL 3, RS 3, UK 3, AT 2, BE 2, HR ...
+         3       70         19              32928 EU-15 91%, EU-13 6%, Candidates 1%, EFTA 1%   Western 61%, Northern 26%, Southern 9%, Eastern 3%, Western Asia 1%        DE 20, FR 9, UK 8, AT 5, BE 4, NL 4, FI 3, SE 3, EL 2, IE 2, IT 2, CZ 1, EE 1, ES 1, HU 1, LU 1, MT 1, NO 1, TR 1
+
+Note: the modularity null model also expects flows between regions of the same country, which
+are impossible here, so Q values are deflated (e.g. Q < 0 for the macro-area partition): compare
+Q across periods and partitions, not with values from other networks.
+
+==========================================================================================
+8. CLUSTERING AND SMALL-WORLD (undirected binary, giant component)
+==========================================================================================
+period                  pre_covid     covid  post_covid
+regions                   307.000   295.000     301.000
+edges                    8046.000  5822.000    6983.000
+mean_degree                52.400    39.500      46.400
+clustering_avg              0.526     0.491       0.515
+transitivity                0.449     0.411       0.458
+avg_path                    1.943     2.038       1.995
+clustering_random           0.568     0.555       0.579
+avg_path_random             1.900     1.980       1.943
+clustering_lattice          0.735     0.731       0.733
+sigma                       0.906     0.860       0.866
+clustering_erdos_renyi      0.183     0.143       0.165
+C_over_C_erdos_renyi        2.880     3.430       3.130
+omega                       0.262     0.300       0.272
+sigma > 1: small-world. omega near 0: small-world; near -1: lattice-like; near +1: random-like.
+Random graphs: same degrees, no same-country edges. Lattice clustering: ring lattice formula.
+Erdos-Renyi: random graph with the same density (no degree heterogeneity).
+
+==========================================================================================
+9. DEGREE DISTRIBUTION (powerlaw package; R > 0 favours power law, p < 0.1 = significant)
+==========================================================================================
+    period          variable   n  mean    max  max_over_mean  coef_variation  powerlaw_alpha  powerlaw_xmin  n_tail  R_vs_exponential  p_vs_exponential  R_vs_lognormal  p_vs_lognormal
+ pre_covid  in_degree_binary 281  40.5  199.0            4.9            1.00            2.64           41.0     110             -3.82             0.000           -2.75           0.006
+ pre_covid out_degree_binary 292  38.9  197.0            5.1            0.96            2.92           41.0     121             -2.53             0.011           -2.37           0.018
+ pre_covid       in_strength 318 725.0 7421.5           10.2            1.47            2.94         1256.0      60              1.29             0.196           -0.43           0.664
+ pre_covid      out_strength 313 736.6 7187.5            9.8            1.40            2.68          898.5      84              1.23             0.220           -0.84           0.399
+     covid  in_degree_binary 266  30.3  171.0            5.7            1.11            2.92           44.0      67             -3.33             0.001           -2.42           0.015
+     covid out_degree_binary 268  30.0  170.0            5.7            1.06            2.96           41.0      71             -2.00             0.046           -1.89           0.059
+     covid       in_strength 318 502.4 5204.0           10.4            1.55            2.75          829.5      61              0.85             0.394           -0.71           0.475
+     covid      out_strength 312 512.0 6400.5           12.5            1.57            2.58          663.5      74              1.17             0.242           -0.75           0.451
+post_covid  in_degree_binary 276  36.1  181.0            5.0            1.06            2.99           50.0      79             -3.75             0.000           -2.61           0.009
+post_covid out_degree_binary 273  36.5  187.0            5.1            1.01            2.94           42.0     102             -3.01             0.003           -2.64           0.008
+post_covid       in_strength 318 680.3 7432.0           10.9            1.65            2.72         1304.5      48              0.74             0.462           -0.63           0.529
+post_covid      out_strength 311 695.6 7949.5           11.4            1.55            2.63          951.5      72              1.15             0.250           -0.73           0.465
+
+==========================================================================================
+10. TRIAD CENSUS vs U|MAN random graphs (same mutual/asymmetric/null dyads)
+==========================================================================================
+
+pre_covid: 3,325 mutual dyads, 4,721 asymmetric dyads
+
+covid: 2,227 mutual dyads, 3,595 asymmetric dyads
+
+post_covid: 2,980 mutual dyads, 4,003 asymmetric dyads
+         observed                        ratio                           z                     
+period      covid post_covid  pre_covid  covid post_covid pre_covid  covid post_covid pre_covid
+triad                                                                                          
+003     3905367.0  3665579.0  3437636.0   1.05       1.07      1.08  546.8      510.4     472.8
+012      744955.0   788740.0   897787.0   0.83       0.84      0.85 -279.4     -229.1    -259.2
+102      379978.0   479233.0   506169.0   0.69       0.68      0.68 -456.2     -556.3    -444.6
+021D      29142.0    31948.0    38953.0   1.63       1.48      1.33   80.9       72.0      51.3
+021U      34631.0    36990.0    49319.0   1.93       1.71      1.68  138.0       94.9     107.6
+021C      31249.0    35966.0    47603.0   0.87       0.83      0.81  -27.0      -34.9     -48.4
+111D      62097.0    81384.0   101912.0   1.40       1.26      1.23   85.4       78.2      75.1
+111U      56810.0    73514.0    80714.0   1.28       1.14      0.98   67.6       41.9      -7.7
+030T       7886.0     8976.0    12399.0   5.53       4.57      3.83  172.4      170.5     159.0
+030C        408.0      439.0      589.0   0.85       0.66      0.55   -3.1      -10.7     -13.4
+201       53087.0    72461.0    88654.0   1.93       1.51      1.52  160.1      112.1     157.6
+120D       8108.0    11380.0    14863.0   9.15       7.76      6.50  248.0      261.8     280.1
+120U       6073.0     8552.0     9368.0   6.86       5.81      4.10  216.8      219.4     137.8
+120C       5229.0     6897.0     8782.0   2.95       2.35      1.93   83.5       75.1      59.4
+210       22007.0    33602.0    39404.0  10.02       7.68      6.13  481.3      416.8     461.2
+300       12492.0    23858.0    25367.0  27.49      21.82     16.77  538.1      725.5     657.3

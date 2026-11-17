@@ -1,0 +1,159 @@
+
+==========================================================================================
+MEASURES 1-4: CENTRALITY ON THE THREE PERIOD NETWORKS
+==========================================================================================
+Weighted network: weight = average students/year. Binary network: edge if >= 5 students/year.
+Densities for rho use only feasible pairs (regions in different countries).
+
+NETWORK-LEVEL SUMMARY
+period                          pre_covid       covid  post_covid
+students_per_year              230542.000  159752.000  216334.000
+edges_weighted                  33988.000   29675.000   31108.000
+edges_b5                        11371.000    8049.000    9963.000
+mean_partners                     106.500      93.000      97.800
+gini_in_strength                    0.626       0.645       0.661
+gini_out_strength                   0.599       0.633       0.645
+top10pct_share_in                   0.450       0.471       0.493
+top10pct_share_out                  0.436       0.471       0.474
+reciprocity_any_flow                0.730       0.687       0.703
+rho_any_flow                        0.580       0.546       0.560
+reciprocity_b5                      0.585       0.553       0.598
+rho_b5                              0.529       0.512       0.551
+reciprocity_weighted                0.594       0.573       0.616
+UK_share_in                         0.071       0.050       0.035
+UK_share_out                        0.039       0.032       0.014
+UK_regions_in_top50_authority       4.000       3.000       0.000
+
+==========================================================================================
+IN-STRENGTH (incoming students/year): main destinations
+==========================================================================================
+                                             pre_covid                                               covid                                          post_covid
+1                               ES61 Andalucía (7,422)                              ES61 Andalucía (5,204)                              ES61 Andalucía (7,432)
+2                     ES30 Comunidad de Madrid (6,680)                          FR10 Ile-de-France (5,092)                    ES30 Comunidad de Madrid (7,190)
+3                           FR10 Ile-de-France (6,435)                    ES30 Comunidad de Madrid (4,724)                          FR10 Ile-de-France (6,751)
+4                    ES52 Comunidad Valenciana (5,509)                 PT17 Área Metropolitana de  (4,164)                               ES51 Cataluña (5,879)
+5                  PT17 Área Metropolitana de  (5,492)                   ES52 Comunidad Valenciana (3,896)                 PT17 Área Metropolitana de  (5,804)
+6                                ES51 Cataluña (5,239)                               ES51 Cataluña (3,680)                   ES52 Comunidad Valenciana (5,455)
+7                               ITC4 Lombardia (4,268)  NO01+NO03+NO04+NO05 Oslo og Akershus + Sør (3,026)                              ITC4 Lombardia (5,232)
+8   NO01+NO03+NO04+NO05 Oslo og Akershus + Sør (4,111)                              ITC4 Lombardia (3,022)                                  ITI4 Lazio (4,646)
+9                                   CZ01 Praha (4,030)                                  ITI4 Lazio (2,879)  NO01+NO03+NO04+NO05 Oslo og Akershus + Sør (4,616)
+10                                  ITI4 Lazio (3,391)                                  CZ01 Praha (2,738)                                  CZ01 Praha (3,844)
+
+==========================================================================================
+OUT-STRENGTH (outgoing students/year): main senders
+==========================================================================================
+                            pre_covid                              covid                           post_covid
+1    ES30 Comunidad de Madrid (7,188)         FR10 Ile-de-France (6,400)           FR10 Ile-de-France (7,950)
+2          FR10 Ile-de-France (6,967)   ES30 Comunidad de Madrid (5,773)     ES30 Comunidad de Madrid (6,964)
+3              ES61 Andalucía (6,756)             ES61 Andalucía (4,920)               ES61 Andalucía (6,380)
+4              ITC4 Lombardia (5,479)             ITC4 Lombardia (4,280)               ITC4 Lombardia (5,848)
+5               ES51 Cataluña (4,700)           FRK2 Rhône-Alpes (3,744)                ES51 Cataluña (5,319)
+6            FRK2 Rhône-Alpes (4,488)              ES51 Cataluña (3,658)             FRK2 Rhône-Alpes (4,486)
+7               TR10 Istanbul (4,436)  ES52 Comunidad Valenciana (3,119)                   ITI4 Lazio (4,324)
+8   ES52 Comunidad Valenciana (4,216)                 ITI4 Lazio (2,668)    ES52 Comunidad Valenciana (4,280)
+9                  ITI4 Lazio (4,024)              TR10 Istanbul (2,598)  PT17 Área Metropolitana de  (3,866)
+10        ITH5 Emilia-Romagna (3,676)        ITH5 Emilia-Romagna (2,564)                TR10 Istanbul (3,696)
+
+==========================================================================================
+NET BALANCE, highest (regions with >= 100 students/year): net receivers
+==========================================================================================
+                               pre_covid                                 covid                            post_covid
+1                  UKD1 Cumbria (1.0000)              CZ06 Jihovýchod (0.8815)          UKE4 West Yorkshire (0.8840)
+2      UKK2 Dorset and Somerset (0.8252)                    HU12 Pest (0.8803)  UKE1 East Yorkshire and Nor (0.8824)
+3      SE31 Norra Mellansverige (0.7388)   PL92 Mazowiecki regionalny (0.7398)                   UKK4 Devon (0.8814)
+4               FRY1 Guadeloupe (0.7033)  UKE1 East Yorkshire and Nor (0.7346)  UKF1 Derbyshire and Notting (0.8657)
+5       SE32 Mellersta Norrland (0.6932)     SE31 Norra Mellansverige (0.7100)                    HU12 Pest (0.8211)
+6    PL92 Mazowiecki regionalny (0.6832)              NO07 Nord-Norge (0.7027)               NO06 Trøndelag (0.7831)
+7       NO02 Hedmark og Oppland (0.6694)  UKH2 Bedfordshire and Hertf (0.6940)              NO07 Nord-Norge (0.7802)
+8                     HU12 Pest (0.6547)      NO02 Hedmark og Oppland (0.6800)         UKE3 South Yorkshire (0.7553)
+9   UKH2 Bedfordshire and Hertf (0.6467)           SE33 Övre Norrland (0.6441)              UKD4 Lancashire (0.7527)
+10  PT20 Região Autónoma dos Aç (0.6393)          HU21 Közép-Dunántúl (0.6255)      SE32 Mellersta Norrland (0.7388)
+
+==========================================================================================
+NET BALANCE, lowest (regions with >= 100 students/year): net senders
+==========================================================================================
+                                pre_covid                                  covid                             post_covid
+1   TRC1 Gaziantep, Adiyaman, K (-0.9939)  TR33 Manisa, Afyonkarahisar (-0.9823)  TR71 Kirikkale, Aksaray, Ni (-0.9773)
+2   TR82 Kastamonu, Çankiri, Si (-0.9935)  TR82 Kastamonu, Çankiri, Si (-0.9498)  TRA2 Agri, Kars, Igdir, Ard (-0.9755)
+3   TR63 Hatay, Kahramanmaras,  (-0.9866)                 TR90 Trabzon (-0.9474)          TR52 Konya, Karaman (-0.9724)
+4   TRA1 Erzurum, Erzincan, Bay (-0.9857)  TRB1 Malatya, Elazig, Bingö (-0.9410)  TR83 Samsun, Tokat, Çorum,  (-0.9512)
+5   TR72 Kayseri, Sivas, Yozgat (-0.9797)  TR83 Samsun, Tokat, Çorum,  (-0.9331)  TRC1 Gaziantep, Adiyaman, K (-0.9394)
+6   TR71 Kirikkale, Aksaray, Ni (-0.9635)  TR72 Kayseri, Sivas, Yozgat (-0.9245)  TRA1 Erzurum, Erzincan, Bay (-0.9377)
+7           TR52 Konya, Karaman (-0.9561)                  AL02 Qender (-0.9208)                 TR90 Trabzon (-0.9236)
+8                  TR90 Trabzon (-0.9458)  TR81 Zonguldak, Karabük, Ba (-0.9042)  TRB1 Malatya, Elazig, Bingö (-0.9138)
+9   TR33 Manisa, Afyonkarahisar (-0.9415)          TR52 Konya, Karaman (-0.8970)  TR21 Tekirdag, Edirne, Kirk (-0.8992)
+10  TRA2 Agri, Kars, Igdir, Ard (-0.9293)  TR41 Bursa, Eskisehir, Bile (-0.8685)  TR33 Manisa, Afyonkarahisar (-0.8940)
+
+==========================================================================================
+PAGERANK (weighted)
+==========================================================================================
+                                              pre_covid                                                covid                                           post_covid
+1                               ES61 Andalucía (0.0257)                          FR10 Ile-de-France (0.0281)                              ES61 Andalucía (0.0286)
+2                     ES30 Comunidad de Madrid (0.0252)                              ES61 Andalucía (0.0262)                    ES30 Comunidad de Madrid (0.0286)
+3                           FR10 Ile-de-France (0.0246)                    ES30 Comunidad de Madrid (0.0249)                          FR10 Ile-de-France (0.0278)
+4                  PT17 Área Metropolitana de  (0.0213)                 PT17 Área Metropolitana de  (0.0235)                               ES51 Cataluña (0.0243)
+5                    ES52 Comunidad Valenciana (0.0210)                   ES52 Comunidad Valenciana (0.0217)                 PT17 Área Metropolitana de  (0.0236)
+6                                ES51 Cataluña (0.0208)                               ES51 Cataluña (0.0209)                   ES52 Comunidad Valenciana (0.0225)
+7                               ITC4 Lombardia (0.0175)                              ITC4 Lombardia (0.0175)                              ITC4 Lombardia (0.0218)
+8                                   CZ01 Praha (0.0163)  NO01+NO03+NO04+NO05 Oslo og Akershus + Sør (0.0170)                                  ITI4 Lazio (0.0187)
+9   NO01+NO03+NO04+NO05 Oslo og Akershus + Sør (0.0157)                                  CZ01 Praha (0.0162)  NO01+NO03+NO04+NO05 Oslo og Akershus + Sør (0.0181)
+10                                  ITI4 Lazio (0.0133)                                  ITI4 Lazio (0.0159)                                  CZ01 Praha (0.0159)
+
+==========================================================================================
+HITS AUTHORITY: destinations chosen by the best hubs
+==========================================================================================
+                                              pre_covid                                                covid                                           post_covid
+1                           FR10 Ile-de-France (0.0338)                          FR10 Ile-de-France (0.0353)                    ES30 Comunidad de Madrid (0.0381)
+2                     ES30 Comunidad de Madrid (0.0325)                    ES30 Comunidad de Madrid (0.0350)                          FR10 Ile-de-France (0.0359)
+3                               ES61 Andalucía (0.0306)                              ES61 Andalucía (0.0309)                              ES61 Andalucía (0.0323)
+4                  PT17 Área Metropolitana de  (0.0250)                 PT17 Área Metropolitana de  (0.0268)                              ITC4 Lombardia (0.0283)
+5                                ES51 Cataluña (0.0237)                               ES51 Cataluña (0.0229)                 PT17 Área Metropolitana de  (0.0274)
+6                    ES52 Comunidad Valenciana (0.0220)                                  ITI4 Lazio (0.0223)                               ES51 Cataluña (0.0273)
+7                               ITC4 Lombardia (0.0212)                              ITC4 Lombardia (0.0222)                                  ITI4 Lazio (0.0252)
+8                                   ITI4 Lazio (0.0176)                   ES52 Comunidad Valenciana (0.0212)                   ES52 Comunidad Valenciana (0.0229)
+9   NO01+NO03+NO04+NO05 Oslo og Akershus + Sør (0.0171)  NO01+NO03+NO04+NO05 Oslo og Akershus + Sør (0.0178)  NO01+NO03+NO04+NO05 Oslo og Akershus + Sør (0.0207)
+10                                  CZ01 Praha (0.0161)                                  CZ01 Praha (0.0169)                                  CZ01 Praha (0.0175)
+
+==========================================================================================
+HITS HUB: regions sending students to the best authorities
+==========================================================================================
+                            pre_covid                               covid                            post_covid
+1         FR10 Ile-de-France (0.0353)         FR10 Ile-de-France (0.0469)           FR10 Ile-de-France (0.0427)
+2             ITC4 Lombardia (0.0294)   ES30 Comunidad de Madrid (0.0336)               ITC4 Lombardia (0.0323)
+3   ES30 Comunidad de Madrid (0.0289)             ITC4 Lombardia (0.0318)     ES30 Comunidad de Madrid (0.0286)
+4                 ITI4 Lazio (0.0226)           FRK2 Rhône-Alpes (0.0233)                   ITI4 Lazio (0.0261)
+5             ES61 Andalucía (0.0218)             ES61 Andalucía (0.0232)                ES51 Cataluña (0.0219)
+6        ITH5 Emilia-Romagna (0.0195)                 ITI4 Lazio (0.0216)               ES61 Andalucía (0.0218)
+7              ES51 Cataluña (0.0182)              ES51 Cataluña (0.0205)             FRK2 Rhône-Alpes (0.0208)
+8           FRK2 Rhône-Alpes (0.0180)        ITH5 Emilia-Romagna (0.0195)          ITH5 Emilia-Romagna (0.0198)
+9              TR10 Istanbul (0.0152)                ITH3 Veneto (0.0152)  PT17 Área Metropolitana de  (0.0194)
+10               ITH3 Veneto (0.0149)  ES52 Comunidad Valenciana (0.0149)                  ITH3 Veneto (0.0180)
+
+==========================================================================================
+BETWEENNESS (weighted, edge length = 1/students)
+==========================================================================================
+                               pre_covid                                                covid                                           post_covid
+1                ES61 Andalucía (0.3995)                          FR10 Ile-de-France (0.4929)                              ES61 Andalucía (0.4262)
+2            FR10 Ile-de-France (0.3337)                              ES61 Andalucía (0.3807)                          FR10 Ile-de-France (0.3985)
+3      ES30 Comunidad de Madrid (0.2554)                    ES30 Comunidad de Madrid (0.2349)                              ITC4 Lombardia (0.2584)
+4                ITC4 Lombardia (0.2079)                              ITC4 Lombardia (0.1927)                    ES30 Comunidad de Madrid (0.1925)
+5     ES52 Comunidad Valenciana (0.1025)                   ES52 Comunidad Valenciana (0.1147)                                  ITI4 Lazio (0.1118)
+6   PT17 Área Metropolitana de  (0.0896)                               ES51 Cataluña (0.0822)                   ES52 Comunidad Valenciana (0.0943)
+7                 ES51 Cataluña (0.0890)                 PT17 Área Metropolitana de  (0.0799)                               ES51 Cataluña (0.0901)
+8                 TR10 Istanbul (0.0723)                                  ITI4 Lazio (0.0536)                               TR10 Istanbul (0.0663)
+9              FRK2 Rhône-Alpes (0.0619)                            FRK2 Rhône-Alpes (0.0516)  NO01+NO03+NO04+NO05 Oslo og Akershus + Sør (0.0636)
+10          ITH5 Emilia-Romagna (0.0577)  NO01+NO03+NO04+NO05 Oslo og Akershus + Sør (0.0458)                 PT17 Área Metropolitana de  (0.0541)
+
+==========================================================================================
+RANK STABILITY BETWEEN PERIODS (Spearman correlation over all regions)
+==========================================================================================
+from         pre_covid      covid  pre_covid
+to               covid post_covid post_covid
+measure                                     
+authority        0.989      0.983      0.974
+betweenness      0.780      0.772      0.676
+hub              0.983      0.951      0.950
+in_strength      0.989      0.988      0.976
+net_balance      0.943      0.915      0.902
+out_strength     0.982      0.955      0.956
+pagerank         0.988      0.987      0.973

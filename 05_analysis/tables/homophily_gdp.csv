@@ -1,0 +1,7 @@
+period,network,r_log,p_log,r_raw,p_raw,share_to_richer,p_share_to_richer,median_gdp_ratio_dest_origin,regions,edges
+pre_covid,weighted,0.3081,0.0005,0.249,0.0005,0.5356,0.0025,1.096,276,28140
+pre_covid,binary_b5,0.3249,0.0005,0.2539,0.0005,0.5488,0.0005,1.0819,276,9858
+covid,weighted,0.2862,0.0005,0.2248,0.0005,0.5242,0.058,1.0916,276,25186
+covid,binary_b5,0.3161,0.0005,0.2477,0.0005,0.5282,0.0255,1.0475,276,7302
+post_covid,weighted,0.27,0.0005,0.2015,0.0005,0.5212,0.047,1.0808,276,27344
+post_covid,binary_b5,0.2852,0.0005,0.2072,0.0005,0.5259,0.0125,1.0375,276,9328

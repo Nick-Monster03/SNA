@@ -1,0 +1,13 @@
+period,variable,n,mean,max,max_over_mean,coef_variation,powerlaw_alpha,powerlaw_xmin,n_tail,R_vs_exponential,p_vs_exponential,R_vs_lognormal,p_vs_lognormal
+pre_covid,in_degree_binary,299,55.4,226.0,4.1,0.88,2.95,60.0,119,-4.51,0.0,-2.91,0.004
+pre_covid,out_degree_binary,304,54.5,221.0,4.1,0.83,2.98,57.0,127,-6.23,0.0,-3.91,0.0
+pre_covid,in_strength,318,725.0,7421.5,10.2,1.47,2.94,1256.0,60,1.29,0.196,-0.43,0.664
+pre_covid,out_strength,313,736.6,7187.5,9.8,1.4,2.68,898.5,84,1.23,0.22,-0.84,0.399
+covid,in_degree_binary,285,43.1,201.0,4.7,0.97,1.83,14.0,205,-5.95,0.0,-5.42,0.0
+covid,out_degree_binary,289,42.5,195.0,4.6,0.94,2.76,41.0,128,-3.35,0.001,-2.77,0.006
+covid,in_strength,318,502.4,5204.0,10.4,1.55,2.75,829.5,61,0.85,0.394,-0.71,0.475
+covid,out_strength,312,512.0,6400.5,12.5,1.57,2.58,663.5,74,1.17,0.242,-0.75,0.451
+post_covid,in_degree_binary,293,49.2,208.0,4.2,0.93,2.99,59.0,102,-5.24,0.0,-3.28,0.001
+post_covid,out_degree_binary,291,49.5,204.0,4.1,0.89,2.86,50.0,129,-5.25,0.0,-3.43,0.001
+post_covid,in_strength,318,680.3,7432.0,10.9,1.65,2.72,1304.5,48,0.74,0.462,-0.63,0.529
+post_covid,out_strength,311,695.6,7949.5,11.4,1.55,2.63,951.5,72,1.15,0.25,-0.73,0.465

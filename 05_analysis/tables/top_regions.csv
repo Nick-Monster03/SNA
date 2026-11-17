@@ -1,0 +1,241 @@
+period,measure,rank,region,name,value
+pre_covid,in_strength,1,ES61,Andalucía,7421.5
+pre_covid,in_strength,2,ES30,Comunidad de Madrid,6679.5
+pre_covid,in_strength,3,FR10,Ile-de-France,6435.0
+pre_covid,in_strength,4,ES52,Comunidad Valenciana,5509.0
+pre_covid,in_strength,5,PT17,Área Metropolitana de Lisboa,5491.5
+pre_covid,in_strength,6,ES51,Cataluña,5239.0
+pre_covid,in_strength,7,ITC4,Lombardia,4267.5
+pre_covid,in_strength,8,NO01+NO03+NO04+NO05,Oslo og Akershus + Sør-Østlandet + Agder og Rogaland + Vestlandet,4111.0
+pre_covid,in_strength,9,CZ01,Praha,4029.5
+pre_covid,in_strength,10,ITI4,Lazio,3391.0
+pre_covid,out_strength,1,ES30,Comunidad de Madrid,7187.5
+pre_covid,out_strength,2,FR10,Ile-de-France,6967.0
+pre_covid,out_strength,3,ES61,Andalucía,6756.0
+pre_covid,out_strength,4,ITC4,Lombardia,5479.0
+pre_covid,out_strength,5,ES51,Cataluña,4700.0
+pre_covid,out_strength,6,FRK2,Rhône-Alpes,4488.5
+pre_covid,out_strength,7,TR10,Istanbul,4435.5
+pre_covid,out_strength,8,ES52,Comunidad Valenciana,4215.5
+pre_covid,out_strength,9,ITI4,Lazio,4023.5
+pre_covid,out_strength,10,ITH5,Emilia-Romagna,3676.5
+pre_covid,net_balance,1,UKD1,Cumbria,1.0
+pre_covid,net_balance,2,UKK2,Dorset and Somerset,0.8252
+pre_covid,net_balance,3,SE31,Norra Mellansverige,0.7388
+pre_covid,net_balance,4,FRY1,Guadeloupe,0.7033
+pre_covid,net_balance,5,SE32,Mellersta Norrland,0.6932
+pre_covid,net_balance,6,PL92,Mazowiecki regionalny,0.6832
+pre_covid,net_balance,7,NO02,Hedmark og Oppland,0.6694
+pre_covid,net_balance,8,HU12,Pest,0.6547
+pre_covid,net_balance,9,UKH2,Bedfordshire and Hertfordshire,0.6467
+pre_covid,net_balance,10,PT20,Região Autónoma dos Açores,0.6393
+pre_covid,net_balance_lowest,1,TRC1,"Gaziantep, Adiyaman, Kilis",-0.9939
+pre_covid,net_balance_lowest,2,TR82,"Kastamonu, Çankiri, Sinop",-0.9935
+pre_covid,net_balance_lowest,3,TR63,"Hatay, Kahramanmaras, Osmaniye",-0.9866
+pre_covid,net_balance_lowest,4,TRA1,"Erzurum, Erzincan, Bayburt",-0.9857
+pre_covid,net_balance_lowest,5,TR72,"Kayseri, Sivas, Yozgat",-0.9797
+pre_covid,net_balance_lowest,6,TR71,"Kirikkale, Aksaray, Nigde, Nevsehir, Kirsehir",-0.9635
+pre_covid,net_balance_lowest,7,TR52,"Konya, Karaman",-0.9561
+pre_covid,net_balance_lowest,8,TR90,Trabzon,-0.9458
+pre_covid,net_balance_lowest,9,TR33,"Manisa, Afyonkarahisar, Kütahya, Usak",-0.9415
+pre_covid,net_balance_lowest,10,TRA2,"Agri, Kars, Igdir, Ardahan",-0.9293
+pre_covid,pagerank,1,ES61,Andalucía,0.025709782545806917
+pre_covid,pagerank,2,ES30,Comunidad de Madrid,0.02520646171387727
+pre_covid,pagerank,3,FR10,Ile-de-France,0.024568449089187313
+pre_covid,pagerank,4,PT17,Área Metropolitana de Lisboa,0.021253462560890432
+pre_covid,pagerank,5,ES52,Comunidad Valenciana,0.021014879512134862
+pre_covid,pagerank,6,ES51,Cataluña,0.020797355371697496
+pre_covid,pagerank,7,ITC4,Lombardia,0.017512570911299243
+pre_covid,pagerank,8,CZ01,Praha,0.01628934793104926
+pre_covid,pagerank,9,NO01+NO03+NO04+NO05,Oslo og Akershus + Sør-Østlandet + Agder og Rogaland + Vestlandet,0.015730919687344254
+pre_covid,pagerank,10,ITI4,Lazio,0.01327424639650272
+pre_covid,authority,1,FR10,Ile-de-France,0.03379817868324363
+pre_covid,authority,2,ES30,Comunidad de Madrid,0.03247538786621566
+pre_covid,authority,3,ES61,Andalucía,0.030627192400148058
+pre_covid,authority,4,PT17,Área Metropolitana de Lisboa,0.024953755956123837
+pre_covid,authority,5,ES51,Cataluña,0.023682684785771364
+pre_covid,authority,6,ES52,Comunidad Valenciana,0.02198203405374653
+pre_covid,authority,7,ITC4,Lombardia,0.021152573503232155
+pre_covid,authority,8,ITI4,Lazio,0.017582054416422736
+pre_covid,authority,9,NO01+NO03+NO04+NO05,Oslo og Akershus + Sør-Østlandet + Agder og Rogaland + Vestlandet,0.017124459859959577
+pre_covid,authority,10,CZ01,Praha,0.016100793074985298
+pre_covid,hub,1,FR10,Ile-de-France,0.035272609344684284
+pre_covid,hub,2,ITC4,Lombardia,0.029367391808277753
+pre_covid,hub,3,ES30,Comunidad de Madrid,0.028908269886918286
+pre_covid,hub,4,ITI4,Lazio,0.02257528313705535
+pre_covid,hub,5,ES61,Andalucía,0.021766851704519512
+pre_covid,hub,6,ITH5,Emilia-Romagna,0.019503126115112835
+pre_covid,hub,7,ES51,Cataluña,0.018232709109811653
+pre_covid,hub,8,FRK2,Rhône-Alpes,0.018027566125945884
+pre_covid,hub,9,TR10,Istanbul,0.015156732062235128
+pre_covid,hub,10,ITH3,Veneto,0.014931061422607137
+pre_covid,betweenness,1,ES61,Andalucía,0.3994504295379243
+pre_covid,betweenness,2,FR10,Ile-de-France,0.3336507747554709
+pre_covid,betweenness,3,ES30,Comunidad de Madrid,0.2553518639763506
+pre_covid,betweenness,4,ITC4,Lombardia,0.2078943713667837
+pre_covid,betweenness,5,ES52,Comunidad Valenciana,0.1024641390393429
+pre_covid,betweenness,6,PT17,Área Metropolitana de Lisboa,0.08963752157609665
+pre_covid,betweenness,7,ES51,Cataluña,0.08897287859849612
+pre_covid,betweenness,8,TR10,Istanbul,0.07231712398071544
+pre_covid,betweenness,9,FRK2,Rhône-Alpes,0.06186139713905918
+pre_covid,betweenness,10,ITH5,Emilia-Romagna,0.05770489851794536
+covid,in_strength,1,ES61,Andalucía,5204.0
+covid,in_strength,2,FR10,Ile-de-France,5092.0
+covid,in_strength,3,ES30,Comunidad de Madrid,4723.5
+covid,in_strength,4,PT17,Área Metropolitana de Lisboa,4164.5
+covid,in_strength,5,ES52,Comunidad Valenciana,3896.5
+covid,in_strength,6,ES51,Cataluña,3680.5
+covid,in_strength,7,NO01+NO03+NO04+NO05,Oslo og Akershus + Sør-Østlandet + Agder og Rogaland + Vestlandet,3026.0
+covid,in_strength,8,ITC4,Lombardia,3022.0
+covid,in_strength,9,ITI4,Lazio,2879.0
+covid,in_strength,10,CZ01,Praha,2737.5
+covid,out_strength,1,FR10,Ile-de-France,6400.5
+covid,out_strength,2,ES30,Comunidad de Madrid,5773.0
+covid,out_strength,3,ES61,Andalucía,4920.5
+covid,out_strength,4,ITC4,Lombardia,4280.5
+covid,out_strength,5,FRK2,Rhône-Alpes,3744.5
+covid,out_strength,6,ES51,Cataluña,3658.5
+covid,out_strength,7,ES52,Comunidad Valenciana,3119.0
+covid,out_strength,8,ITI4,Lazio,2668.0
+covid,out_strength,9,TR10,Istanbul,2597.5
+covid,out_strength,10,ITH5,Emilia-Romagna,2564.5
+covid,net_balance,1,CZ06,Jihovýchod,0.8815
+covid,net_balance,2,HU12,Pest,0.8803
+covid,net_balance,3,PL92,Mazowiecki regionalny,0.7398
+covid,net_balance,4,UKE1,East Yorkshire and Northern Lincolnshire,0.7346
+covid,net_balance,5,SE31,Norra Mellansverige,0.71
+covid,net_balance,6,NO07,Nord-Norge,0.7027
+covid,net_balance,7,UKH2,Bedfordshire and Hertfordshire,0.694
+covid,net_balance,8,NO02,Hedmark og Oppland,0.68
+covid,net_balance,9,SE33,Övre Norrland,0.6441
+covid,net_balance,10,HU21,Közép-Dunántúl,0.6255
+covid,net_balance_lowest,1,TR33,"Manisa, Afyonkarahisar, Kütahya, Usak",-0.9823
+covid,net_balance_lowest,2,TR82,"Kastamonu, Çankiri, Sinop",-0.9498
+covid,net_balance_lowest,3,TR90,Trabzon,-0.9474
+covid,net_balance_lowest,4,TRB1,"Malatya, Elazig, Bingöl, Tunceli",-0.941
+covid,net_balance_lowest,5,TR83,"Samsun, Tokat, Çorum, Amasya",-0.9331
+covid,net_balance_lowest,6,TR72,"Kayseri, Sivas, Yozgat",-0.9245
+covid,net_balance_lowest,7,AL02,Qender,-0.9208
+covid,net_balance_lowest,8,TR81,"Zonguldak, Karabük, Bartin",-0.9042
+covid,net_balance_lowest,9,TR52,"Konya, Karaman",-0.897
+covid,net_balance_lowest,10,TR41,"Bursa, Eskisehir, Bilecik",-0.8685
+covid,pagerank,1,FR10,Ile-de-France,0.028061370833696007
+covid,pagerank,2,ES61,Andalucía,0.026159154499913212
+covid,pagerank,3,ES30,Comunidad de Madrid,0.024852713350639523
+covid,pagerank,4,PT17,Área Metropolitana de Lisboa,0.02354800285603161
+covid,pagerank,5,ES52,Comunidad Valenciana,0.02166579524143688
+covid,pagerank,6,ES51,Cataluña,0.020873206904202093
+covid,pagerank,7,ITC4,Lombardia,0.017504108552332153
+covid,pagerank,8,NO01+NO03+NO04+NO05,Oslo og Akershus + Sør-Østlandet + Agder og Rogaland + Vestlandet,0.01699161837737761
+covid,pagerank,9,CZ01,Praha,0.01621589115059289
+covid,pagerank,10,ITI4,Lazio,0.015921423363785416
+covid,authority,1,FR10,Ile-de-France,0.03526575930498285
+covid,authority,2,ES30,Comunidad de Madrid,0.03501834664383402
+covid,authority,3,ES61,Andalucía,0.030858897293652945
+covid,authority,4,PT17,Área Metropolitana de Lisboa,0.02679182774673007
+covid,authority,5,ES51,Cataluña,0.022884278829822056
+covid,authority,6,ITI4,Lazio,0.02230423176197241
+covid,authority,7,ITC4,Lombardia,0.022211767359452746
+covid,authority,8,ES52,Comunidad Valenciana,0.02119170647153416
+covid,authority,9,NO01+NO03+NO04+NO05,Oslo og Akershus + Sør-Østlandet + Agder og Rogaland + Vestlandet,0.017760361614649545
+covid,authority,10,CZ01,Praha,0.016897046596397722
+covid,hub,1,FR10,Ile-de-France,0.04685461993004135
+covid,hub,2,ES30,Comunidad de Madrid,0.033628241151372536
+covid,hub,3,ITC4,Lombardia,0.03182034867410416
+covid,hub,4,FRK2,Rhône-Alpes,0.02329641542880185
+covid,hub,5,ES61,Andalucía,0.02322554375613443
+covid,hub,6,ITI4,Lazio,0.021642723630545188
+covid,hub,7,ES51,Cataluña,0.020476722661105593
+covid,hub,8,ITH5,Emilia-Romagna,0.01952432146563306
+covid,hub,9,ITH3,Veneto,0.015181993678427878
+covid,hub,10,ES52,Comunidad Valenciana,0.014862967765204084
+covid,betweenness,1,FR10,Ile-de-France,0.4928526079796837
+covid,betweenness,2,ES61,Andalucía,0.38074618574291214
+covid,betweenness,3,ES30,Comunidad de Madrid,0.23489673233736086
+covid,betweenness,4,ITC4,Lombardia,0.1926869432375057
+covid,betweenness,5,ES52,Comunidad Valenciana,0.11470547388052298
+covid,betweenness,6,ES51,Cataluña,0.08223716842251454
+covid,betweenness,7,PT17,Área Metropolitana de Lisboa,0.07994563815645894
+covid,betweenness,8,ITI4,Lazio,0.05356823998571513
+covid,betweenness,9,FRK2,Rhône-Alpes,0.05156439100847172
+covid,betweenness,10,NO01+NO03+NO04+NO05,Oslo og Akershus + Sør-Østlandet + Agder og Rogaland + Vestlandet,0.04577108505446104
+post_covid,in_strength,1,ES61,Andalucía,7432.0
+post_covid,in_strength,2,ES30,Comunidad de Madrid,7189.5
+post_covid,in_strength,3,FR10,Ile-de-France,6751.0
+post_covid,in_strength,4,ES51,Cataluña,5879.0
+post_covid,in_strength,5,PT17,Área Metropolitana de Lisboa,5804.0
+post_covid,in_strength,6,ES52,Comunidad Valenciana,5455.0
+post_covid,in_strength,7,ITC4,Lombardia,5231.5
+post_covid,in_strength,8,ITI4,Lazio,4646.0
+post_covid,in_strength,9,NO01+NO03+NO04+NO05,Oslo og Akershus + Sør-Østlandet + Agder og Rogaland + Vestlandet,4615.5
+post_covid,in_strength,10,CZ01,Praha,3844.5
+post_covid,out_strength,1,FR10,Ile-de-France,7949.5
+post_covid,out_strength,2,ES30,Comunidad de Madrid,6964.0
+post_covid,out_strength,3,ES61,Andalucía,6380.5
+post_covid,out_strength,4,ITC4,Lombardia,5848.0
+post_covid,out_strength,5,ES51,Cataluña,5319.0
+post_covid,out_strength,6,FRK2,Rhône-Alpes,4485.5
+post_covid,out_strength,7,ITI4,Lazio,4324.0
+post_covid,out_strength,8,ES52,Comunidad Valenciana,4280.0
+post_covid,out_strength,9,PT17,Área Metropolitana de Lisboa,3866.0
+post_covid,out_strength,10,TR10,Istanbul,3696.5
+post_covid,net_balance,1,UKE4,West Yorkshire,0.884
+post_covid,net_balance,2,UKE1,East Yorkshire and Northern Lincolnshire,0.8824
+post_covid,net_balance,3,UKK4,Devon,0.8814
+post_covid,net_balance,4,UKF1,Derbyshire and Nottinghamshire,0.8657
+post_covid,net_balance,5,HU12,Pest,0.8211
+post_covid,net_balance,6,NO06,Trøndelag,0.7831
+post_covid,net_balance,7,NO07,Nord-Norge,0.7802
+post_covid,net_balance,8,UKE3,South Yorkshire,0.7553
+post_covid,net_balance,9,UKD4,Lancashire,0.7527
+post_covid,net_balance,10,SE32,Mellersta Norrland,0.7388
+post_covid,net_balance_lowest,1,TR71,"Kirikkale, Aksaray, Nigde, Nevsehir, Kirsehir",-0.9773
+post_covid,net_balance_lowest,2,TRA2,"Agri, Kars, Igdir, Ardahan",-0.9755
+post_covid,net_balance_lowest,3,TR52,"Konya, Karaman",-0.9724
+post_covid,net_balance_lowest,4,TR83,"Samsun, Tokat, Çorum, Amasya",-0.9512
+post_covid,net_balance_lowest,5,TRC1,"Gaziantep, Adiyaman, Kilis",-0.9394
+post_covid,net_balance_lowest,6,TRA1,"Erzurum, Erzincan, Bayburt",-0.9377
+post_covid,net_balance_lowest,7,TR90,Trabzon,-0.9236
+post_covid,net_balance_lowest,8,TRB1,"Malatya, Elazig, Bingöl, Tunceli",-0.9138
+post_covid,net_balance_lowest,9,TR21,"Tekirdag, Edirne, Kirklareli",-0.8992
+post_covid,net_balance_lowest,10,TR33,"Manisa, Afyonkarahisar, Kütahya, Usak",-0.894
+post_covid,pagerank,1,ES61,Andalucía,0.02864310597056611
+post_covid,pagerank,2,ES30,Comunidad de Madrid,0.028560381289947943
+post_covid,pagerank,3,FR10,Ile-de-France,0.027752374928661193
+post_covid,pagerank,4,ES51,Cataluña,0.024290562345495856
+post_covid,pagerank,5,PT17,Área Metropolitana de Lisboa,0.023622718643035678
+post_covid,pagerank,6,ES52,Comunidad Valenciana,0.022538513180519647
+post_covid,pagerank,7,ITC4,Lombardia,0.021801482502638483
+post_covid,pagerank,8,ITI4,Lazio,0.01867950543428291
+post_covid,pagerank,9,NO01+NO03+NO04+NO05,Oslo og Akershus + Sør-Østlandet + Agder og Rogaland + Vestlandet,0.018124485046810045
+post_covid,pagerank,10,CZ01,Praha,0.015866767625918217
+post_covid,authority,1,ES30,Comunidad de Madrid,0.03809427566239309
+post_covid,authority,2,FR10,Ile-de-France,0.035895274255058306
+post_covid,authority,3,ES61,Andalucía,0.03230089462145796
+post_covid,authority,4,ITC4,Lombardia,0.028291109559316022
+post_covid,authority,5,PT17,Área Metropolitana de Lisboa,0.027421482696299584
+post_covid,authority,6,ES51,Cataluña,0.027291528300424455
+post_covid,authority,7,ITI4,Lazio,0.025248560260312067
+post_covid,authority,8,ES52,Comunidad Valenciana,0.022856785101194103
+post_covid,authority,9,NO01+NO03+NO04+NO05,Oslo og Akershus + Sør-Østlandet + Agder og Rogaland + Vestlandet,0.020678301606045276
+post_covid,authority,10,CZ01,Praha,0.017523886533727547
+post_covid,hub,1,FR10,Ile-de-France,0.042724998596269576
+post_covid,hub,2,ITC4,Lombardia,0.03231869153894766
+post_covid,hub,3,ES30,Comunidad de Madrid,0.02864885111202148
+post_covid,hub,4,ITI4,Lazio,0.026090840573432077
+post_covid,hub,5,ES51,Cataluña,0.02193945100542976
+post_covid,hub,6,ES61,Andalucía,0.021774463016812354
+post_covid,hub,7,FRK2,Rhône-Alpes,0.020759628838697454
+post_covid,hub,8,ITH5,Emilia-Romagna,0.019751413602427874
+post_covid,hub,9,PT17,Área Metropolitana de Lisboa,0.019360134188374078
+post_covid,hub,10,ITH3,Veneto,0.01798170838526006
+post_covid,betweenness,1,ES61,Andalucía,0.426179989286352
+post_covid,betweenness,2,FR10,Ile-de-France,0.39847330516040713
+post_covid,betweenness,3,ITC4,Lombardia,0.2583725175088784
+post_covid,betweenness,4,ES30,Comunidad de Madrid,0.19252822252643692
+post_covid,betweenness,5,ITI4,Lazio,0.11179890085907584
+post_covid,betweenness,6,ES52,Comunidad Valenciana,0.09428506239707954
+post_covid,betweenness,7,ES51,Cataluña,0.09010376366486121
+post_covid,betweenness,8,TR10,Istanbul,0.06632541713786877
+post_covid,betweenness,9,NO01+NO03+NO04+NO05,Oslo og Akershus + Sør-Østlandet + Agder og Rogaland + Vestlandet,0.06362716504969942
+post_covid,betweenness,10,PT17,Área Metropolitana de Lisboa,0.054143602563339485

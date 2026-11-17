@@ -1,0 +1,4 @@
+period,students_per_year,edges_weighted,edges_b5,mean_partners,gini_in_strength,gini_out_strength,top10pct_share_in,top10pct_share_out,reciprocity_any_flow,rho_any_flow,reciprocity_b5,rho_b5,reciprocity_weighted,UK_share_in,UK_share_out,UK_regions_in_top50_authority
+pre_covid,230542,33988,11371,106.5,0.626,0.599,0.45,0.436,0.73,0.58,0.585,0.529,0.594,0.071,0.039,4
+covid,159752,29675,8049,93.0,0.645,0.633,0.471,0.471,0.687,0.546,0.553,0.512,0.573,0.05,0.032,3
+post_covid,216334,31108,9963,97.8,0.661,0.645,0.493,0.474,0.703,0.56,0.598,0.551,0.616,0.035,0.014,0

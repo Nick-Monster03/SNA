@@ -1,0 +1,4 @@
+period,k_max,max_kcore_size,max_kcore_countries,mean_core_number,cp_core_size,cp_core_countries,cp_correlation,density_core_core,density_core_periphery,density_periphery_periphery,cp_core_by_country
+pre_covid,52,85,25,31.6,96,26,0.746,0.771,0.207,0.039,"DE 15, FR 12, ES 11, IT 8, NL 6, PL 5, BE 4, FI 4, SE 4, PT 3, AT 2, CZ 2, DK 2, EL 2, IE 2, LT 2, TR 2, UK 2, EE 1, HR 1, HU 1, LV 1, NO 1, RO 1, SI 1, SK 1"
+covid,40,85,26,23.1,82,24,0.738,0.73,0.183,0.025,"DE 11, ES 11, FR 11, IT 8, BE 4, FI 4, PL 4, SE 4, PT 3, AT 2, CZ 2, DK 2, IE 2, LT 2, NL 2, TR 2, EE 1, EL 1, HR 1, HU 1, LV 1, NO 1, RO 1, SI 1"
+post_covid,49,81,25,28.0,90,25,0.77,0.785,0.189,0.03,"DE 14, FR 11, ES 9, IT 8, NL 5, BE 4, FI 4, PL 4, SE 4, CZ 3, PT 3, AT 2, DK 2, EL 2, IE 2, LT 2, NO 2, TR 2, EE 1, HR 1, HU 1, LV 1, RO 1, SI 1, SK 1"

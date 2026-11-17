@@ -1,0 +1,301 @@
+period,attribute,network,from,to,observed,expected,ratio
+pre_covid,gdp_tercile,weighted,1 low,1 low,9667.0,4323.282,2.236
+pre_covid,gdp_tercile,weighted,1 low,2 middle,12996.5,13673.298,0.951
+pre_covid,gdp_tercile,weighted,1 low,3 high,11187.5,17833.116,0.627
+pre_covid,gdp_tercile,weighted,2 middle,1 low,11545.5,11234.176,1.028
+pre_covid,gdp_tercile,weighted,2 middle,2 middle,30443.5,25718.382,1.184
+pre_covid,gdp_tercile,weighted,2 middle,3 high,34451.5,37509.766,0.918
+pre_covid,gdp_tercile,weighted,3 high,1 low,6951.0,14054.279,0.495
+pre_covid,gdp_tercile,weighted,3 high,2 middle,33403.0,35800.398,0.933
+pre_covid,gdp_tercile,weighted,3 high,3 high,53709.0,44207.803,1.215
+pre_covid,macro_area,weighted,Eastern,Eastern,3345.5,2742.124,1.22
+pre_covid,macro_area,weighted,Eastern,Northern,3278.5,6056.622,0.541
+pre_covid,macro_area,weighted,Eastern,Southern,9902.5,8762.173,1.13
+pre_covid,macro_area,weighted,Eastern,Western,7239.5,7482.653,0.968
+pre_covid,macro_area,weighted,Eastern,Western Asia,675.0,394.439,1.711
+pre_covid,macro_area,weighted,Northern,Eastern,1849.5,4287.078,0.431
+pre_covid,macro_area,weighted,Northern,Northern,5372.5,5795.536,0.927
+pre_covid,macro_area,weighted,Northern,Southern,8270.5,10088.993,0.82
+pre_covid,macro_area,weighted,Northern,Western,12255.0,8615.72,1.422
+pre_covid,macro_area,weighted,Northern,Western Asia,394.5,454.167,0.869
+pre_covid,macro_area,weighted,Southern,Eastern,13574.0,12166.272,1.116
+pre_covid,macro_area,weighted,Southern,Northern,12965.0,19790.763,0.655
+pre_covid,macro_area,weighted,Southern,Southern,28740.0,19458.947,1.477
+pre_covid,macro_area,weighted,Southern,Western,24001.5,24450.497,0.982
+pre_covid,macro_area,weighted,Southern,Western Asia,583.5,1288.879,0.453
+pre_covid,macro_area,weighted,Western,Eastern,7792.5,12858.264,0.606
+pre_covid,macro_area,weighted,Western,Northern,29870.0,20916.421,1.428
+pre_covid,macro_area,weighted,Western,Southern,26551.0,30259.989,0.877
+pre_covid,macro_area,weighted,Western,Western,18404.0,18691.172,0.985
+pre_covid,macro_area,weighted,Western,Western Asia,1789.0,1362.187,1.313
+pre_covid,macro_area,weighted,Western Asia,Eastern,5929.0,2085.27,2.843
+pre_covid,macro_area,weighted,Western Asia,Northern,1366.0,3392.09,0.403
+pre_covid,macro_area,weighted,Western Asia,Southern,2997.5,4907.369,0.611
+pre_covid,macro_area,weighted,Western Asia,Western,3396.0,4190.757,0.81
+pre_covid,macro_area,weighted,Western Asia,Western Asia,0.0,43.616,0.0
+pre_covid,programme_group,weighted,Candidates,Candidates,98.0,48.384,2.025
+pre_covid,programme_group,weighted,Candidates,EFTA,36.5,471.107,0.077
+pre_covid,programme_group,weighted,Candidates,EU-13,7524.0,3046.248,2.47
+pre_covid,programme_group,weighted,Candidates,EU-15,7322.5,12450.152,0.588
+pre_covid,programme_group,weighted,EFTA,Candidates,11.5,41.343,0.278
+pre_covid,programme_group,weighted,EFTA,EFTA,41.5,13.884,2.989
+pre_covid,programme_group,weighted,EFTA,EU-13,165.5,557.255,0.297
+pre_covid,programme_group,weighted,EFTA,EU-15,2522.0,2277.528,1.107
+pre_covid,programme_group,weighted,EU-13,Candidates,822.5,474.969,1.732
+pre_covid,programme_group,weighted,EU-13,EFTA,580.5,990.091,0.586
+pre_covid,programme_group,weighted,EU-13,EU-13,6889.5,5355.28,1.286
+pre_covid,programme_group,weighted,EU-13,EU-15,23192.0,26165.597,0.886
+pre_covid,programme_group,weighted,EU-15,Candidates,2285.5,2735.6,0.835
+pre_covid,programme_group,weighted,EU-15,EFTA,6048.5,5702.462,1.061
+pre_covid,programme_group,weighted,EU-15,EU-13,28789.5,36873.002,0.781
+pre_covid,programme_group,weighted,EU-15,EU-15,144212.5,133339.099,1.082
+pre_covid,gdp_tercile,binary_b5,1 low,1 low,557.0,274.487,2.029
+pre_covid,gdp_tercile,binary_b5,1 low,2 middle,731.0,736.17,0.993
+pre_covid,gdp_tercile,binary_b5,1 low,3 high,596.0,960.81,0.62
+pre_covid,gdp_tercile,binary_b5,2 middle,1 low,643.0,625.615,1.028
+pre_covid,gdp_tercile,binary_b5,2 middle,2 middle,1421.0,1259.512,1.128
+pre_covid,gdp_tercile,binary_b5,2 middle,3 high,1697.0,1816.248,0.934
+pre_covid,gdp_tercile,binary_b5,3 high,1 low,351.0,711.503,0.493
+pre_covid,gdp_tercile,binary_b5,3 high,2 middle,1471.0,1576.812,0.933
+pre_covid,gdp_tercile,binary_b5,3 high,3 high,2391.0,1896.843,1.261
+pre_covid,macro_area,binary_b5,Eastern,Eastern,174.0,155.081,1.122
+pre_covid,macro_area,binary_b5,Eastern,Northern,187.0,362.458,0.516
+pre_covid,macro_area,binary_b5,Eastern,Southern,525.0,394.741,1.33
+pre_covid,macro_area,binary_b5,Eastern,Western,402.0,429.765,0.935
+pre_covid,macro_area,binary_b5,Eastern,Western Asia,34.0,21.314,1.595
+pre_covid,macro_area,binary_b5,Northern,Eastern,92.0,248.552,0.37
+pre_covid,macro_area,binary_b5,Northern,Northern,313.0,355.72,0.88
+pre_covid,macro_area,binary_b5,Northern,Southern,444.0,469.389,0.946
+pre_covid,macro_area,binary_b5,Northern,Western,701.0,511.037,1.372
+pre_covid,macro_area,binary_b5,Northern,Western Asia,22.0,25.344,0.868
+pre_covid,macro_area,binary_b5,Southern,Eastern,657.0,536.949,1.224
+pre_covid,macro_area,binary_b5,Southern,Northern,690.0,931.096,0.741
+pre_covid,macro_area,binary_b5,Southern,Southern,867.0,717.317,1.209
+pre_covid,macro_area,binary_b5,Southern,Western,1149.0,1103.995,1.041
+pre_covid,macro_area,binary_b5,Southern,Western Asia,33.0,54.752,0.603
+pre_covid,macro_area,binary_b5,Western,Eastern,399.0,686.839,0.581
+pre_covid,macro_area,binary_b5,Western,Northern,1636.0,1191.013,1.374
+pre_covid,macro_area,binary_b5,Western,Southern,1186.0,1297.09,0.914
+pre_covid,macro_area,binary_b5,Western,Western,1041.0,1027.272,1.013
+pre_covid,macro_area,binary_b5,Western,Western Asia,82.0,70.035,1.171
+pre_covid,macro_area,binary_b5,Western Asia,Eastern,355.0,116.529,3.046
+pre_covid,macro_area,binary_b5,Western Asia,Northern,82.0,202.066,0.406
+pre_covid,macro_area,binary_b5,Western Asia,Southern,145.0,220.063,0.659
+pre_covid,macro_area,binary_b5,Western Asia,Western,155.0,239.589,0.647
+pre_covid,macro_area,binary_b5,Western Asia,Western Asia,0.0,2.992,0.0
+pre_covid,programme_group,binary_b5,Candidates,Candidates,5.0,2.275,2.198
+pre_covid,programme_group,binary_b5,Candidates,EFTA,2.0,22.685,0.088
+pre_covid,programme_group,binary_b5,Candidates,EU-13,442.0,183.035,2.415
+pre_covid,programme_group,binary_b5,Candidates,EU-15,375.0,666.494,0.563
+pre_covid,programme_group,binary_b5,EFTA,Candidates,1.0,1.588,0.63
+pre_covid,programme_group,binary_b5,EFTA,EFTA,2.0,0.602,3.321
+pre_covid,programme_group,binary_b5,EFTA,EU-13,7.0,25.989,0.269
+pre_covid,programme_group,binary_b5,EFTA,EU-15,107.0,94.636,1.131
+pre_covid,programme_group,binary_b5,EU-13,Candidates,41.0,23.474,1.747
+pre_covid,programme_group,binary_b5,EU-13,EFTA,32.0,47.6,0.672
+pre_covid,programme_group,binary_b5,EU-13,EU-13,376.0,325.429,1.155
+pre_covid,programme_group,binary_b5,EU-13,EU-15,1280.0,1398.505,0.915
+pre_covid,programme_group,binary_b5,EU-15,Candidates,97.0,118.131,0.821
+pre_covid,programme_group,binary_b5,EU-15,EFTA,256.0,239.543,1.069
+pre_covid,programme_group,binary_b5,EU-15,EU-13,1531.0,1932.755,0.792
+pre_covid,programme_group,binary_b5,EU-15,EU-15,6817.0,6288.258,1.084
+covid,gdp_tercile,weighted,1 low,1 low,5610.0,2361.974,2.375
+covid,gdp_tercile,weighted,1 low,2 middle,8078.0,8883.566,0.909
+covid,gdp_tercile,weighted,1 low,3 high,5968.5,9630.708,0.62
+covid,gdp_tercile,weighted,2 middle,1 low,9443.0,9242.905,1.022
+covid,gdp_tercile,weighted,2 middle,2 middle,28313.0,23852.268,1.187
+covid,gdp_tercile,weighted,2 middle,3 high,27640.5,30427.858,0.908
+covid,gdp_tercile,weighted,3 high,1 low,4136.0,8710.736,0.475
+covid,gdp_tercile,weighted,3 high,2 middle,24663.0,26431.452,0.933
+covid,gdp_tercile,weighted,3 high,3 high,31962.0,26272.534,1.217
+covid,macro_area,weighted,Eastern,Eastern,1769.5,1738.387,1.018
+covid,macro_area,weighted,Eastern,Northern,2077.5,3689.207,0.563
+covid,macro_area,weighted,Eastern,Southern,6632.5,5855.367,1.133
+covid,macro_area,weighted,Eastern,Western,4657.5,4809.166,0.968
+covid,macro_area,weighted,Eastern,Western Asia,537.0,287.099,1.87
+covid,macro_area,weighted,Northern,Eastern,1051.5,2673.54,0.393
+covid,macro_area,weighted,Northern,Northern,3429.5,3546.706,0.967
+covid,macro_area,weighted,Northern,Southern,5314.5,6592.798,0.806
+covid,macro_area,weighted,Northern,Western,7620.0,5414.838,1.407
+covid,macro_area,weighted,Northern,Western Asia,232.5,323.257,0.719
+covid,macro_area,weighted,Southern,Eastern,10169.5,8627.424,1.179
+covid,macro_area,weighted,Southern,Northern,8397.0,13404.269,0.626
+covid,macro_area,weighted,Southern,Southern,20605.5,14351.386,1.436
+covid,macro_area,weighted,Southern,Western,17218.5,17473.499,0.985
+covid,macro_area,weighted,Southern,Western Asia,559.0,1043.139,0.536
+covid,macro_area,weighted,Western,Eastern,5705.0,9293.612,0.614
+covid,macro_area,weighted,Western,Northern,19972.0,14439.314,1.383
+covid,macro_area,weighted,Western,Southern,20767.0,22917.518,0.906
+covid,macro_area,weighted,Western,Western,13536.0,13439.793,1.007
+covid,macro_area,weighted,Western,Western Asia,1367.0,1123.688,1.217
+covid,macro_area,weighted,Western Asia,Eastern,3598.0,1232.24,2.92
+covid,macro_area,weighted,Western Asia,Northern,761.0,1914.509,0.397
+covid,macro_area,weighted,Western Asia,Southern,1655.0,3038.634,0.545
+covid,macro_area,weighted,Western Asia,Western,2120.0,2495.71,0.849
+covid,macro_area,weighted,Western Asia,Western Asia,0.0,27.4,0.0
+covid,programme_group,weighted,Candidates,Candidates,95.0,29.806,3.187
+covid,programme_group,weighted,Candidates,EFTA,21.5,307.522,0.07
+covid,programme_group,weighted,Candidates,EU-13,4602.5,1892.799,2.432
+covid,programme_group,weighted,Candidates,EU-15,4326.5,7467.902,0.579
+covid,programme_group,weighted,EFTA,Candidates,9.5,29.351,0.324
+covid,programme_group,weighted,EFTA,EFTA,49.5,11.409,4.339
+covid,programme_group,weighted,EFTA,EU-13,102.5,367.03,0.279
+covid,programme_group,weighted,EFTA,EU-15,1592.5,1448.09,1.1
+covid,programme_group,weighted,EU-13,Candidates,619.0,338.947,1.826
+covid,programme_group,weighted,EU-13,EFTA,373.0,688.631,0.542
+covid,programme_group,weighted,EU-13,EU-13,4274.0,3554.05,1.203
+covid,programme_group,weighted,EU-13,EU-15,14989.5,16722.799,0.896
+covid,programme_group,weighted,EU-15,Candidates,1739.0,2153.572,0.807
+covid,programme_group,weighted,EU-15,EFTA,4559.0,4375.358,1.042
+covid,programme_group,weighted,EU-15,EU-13,21814.5,26930.358,0.81
+covid,programme_group,weighted,EU-15,EU-15,100585.0,93434.877,1.077
+covid,gdp_tercile,binary_b5,1 low,1 low,312.0,140.232,2.225
+covid,gdp_tercile,binary_b5,1 low,2 middle,457.0,457.113,1.0
+covid,gdp_tercile,binary_b5,1 low,3 high,301.0,523.573,0.575
+covid,gdp_tercile,binary_b5,2 middle,1 low,539.0,501.115,1.076
+covid,gdp_tercile,binary_b5,2 middle,2 middle,1340.0,1166.376,1.149
+covid,gdp_tercile,binary_b5,2 middle,3 high,1370.0,1521.72,0.9
+covid,gdp_tercile,binary_b5,3 high,1 low,211.0,467.187,0.452
+covid,gdp_tercile,binary_b5,3 high,2 middle,1127.0,1235.989,0.912
+covid,gdp_tercile,binary_b5,3 high,3 high,1645.0,1288.694,1.276
+covid,macro_area,binary_b5,Eastern,Eastern,87.0,97.406,0.893
+covid,macro_area,binary_b5,Eastern,Northern,114.0,213.939,0.533
+covid,macro_area,binary_b5,Eastern,Southern,355.0,267.147,1.329
+covid,macro_area,binary_b5,Eastern,Western,241.0,261.604,0.921
+covid,macro_area,binary_b5,Eastern,Western Asia,33.0,15.741,2.096
+covid,macro_area,binary_b5,Northern,Eastern,50.0,159.426,0.314
+covid,macro_area,binary_b5,Northern,Northern,199.0,218.749,0.91
+covid,macro_area,binary_b5,Northern,Southern,292.0,318.323,0.917
+covid,macro_area,binary_b5,Northern,Western,434.0,311.719,1.392
+covid,macro_area,binary_b5,Northern,Western Asia,14.0,18.756,0.746
+covid,macro_area,binary_b5,Southern,Eastern,532.0,411.38,1.293
+covid,macro_area,binary_b5,Southern,Northern,461.0,657.798,0.701
+covid,macro_area,binary_b5,Southern,Southern,709.0,569.645,1.245
+covid,macro_area,binary_b5,Southern,Western,821.0,804.354,1.021
+covid,macro_area,binary_b5,Southern,Western Asia,29.0,48.398,0.599
+covid,macro_area,binary_b5,Western,Eastern,318.0,515.675,0.617
+covid,macro_area,binary_b5,Western,Northern,1106.0,824.568,1.341
+covid,macro_area,binary_b5,Western,Southern,962.0,1029.641,0.934
+covid,macro_area,binary_b5,Western,Western,747.0,736.366,1.014
+covid,macro_area,binary_b5,Western,Western Asia,66.0,60.668,1.088
+covid,macro_area,binary_b5,Western Asia,Eastern,220.0,77.214,2.849
+covid,macro_area,binary_b5,Western Asia,Northern,50.0,123.466,0.405
+covid,macro_area,binary_b5,Western Asia,Southern,92.0,154.173,0.597
+covid,macro_area,binary_b5,Western Asia,Western,117.0,150.974,0.775
+covid,macro_area,binary_b5,Western Asia,Western Asia,0.0,1.872,0.0
+covid,programme_group,binary_b5,Candidates,Candidates,3.0,1.098,2.733
+covid,programme_group,binary_b5,Candidates,EFTA,0.0,16.579,0.0
+covid,programme_group,binary_b5,Candidates,EU-13,284.0,121.952,2.329
+covid,programme_group,binary_b5,Candidates,EU-15,239.0,418.614,0.571
+covid,programme_group,binary_b5,EFTA,Candidates,1.0,1.324,0.755
+covid,programme_group,binary_b5,EFTA,EFTA,2.0,0.526,3.805
+covid,programme_group,binary_b5,EFTA,EU-13,4.0,19.475,0.205
+covid,programme_group,binary_b5,EFTA,EU-15,77.0,66.851,1.152
+covid,programme_group,binary_b5,EU-13,Candidates,32.0,17.43,1.836
+covid,programme_group,binary_b5,EU-13,EFTA,19.0,34.86,0.545
+covid,programme_group,binary_b5,EU-13,EU-13,239.0,216.409,1.104
+covid,programme_group,binary_b5,EU-13,EU-15,816.0,880.204,0.927
+covid,programme_group,binary_b5,EU-15,Candidates,82.0,99.804,0.822
+covid,programme_group,binary_b5,EU-15,EFTA,215.0,199.607,1.077
+covid,programme_group,binary_b5,EU-15,EU-13,1209.0,1468.297,0.823
+covid,programme_group,binary_b5,EU-15,EU-15,4827.0,4485.971,1.076
+post_covid,gdp_tercile,weighted,1 low,1 low,6187.5,2536.795,2.439
+post_covid,gdp_tercile,weighted,1 low,2 middle,10992.5,11049.487,0.995
+post_covid,gdp_tercile,weighted,1 low,3 high,8661.0,13876.313,0.624
+post_covid,gdp_tercile,weighted,2 middle,1 low,10296.0,9974.444,1.032
+post_covid,gdp_tercile,weighted,2 middle,2 middle,35655.0,29975.092,1.189
+post_covid,gdp_tercile,weighted,2 middle,3 high,38780.0,42418.422,0.914
+post_covid,gdp_tercile,weighted,3 high,1 low,6010.0,11265.707,0.533
+post_covid,gdp_tercile,weighted,3 high,2 middle,34606.0,38095.905,0.908
+post_covid,gdp_tercile,weighted,3 high,3 high,53717.0,45712.837,1.175
+post_covid,macro_area,weighted,Eastern,Eastern,2244.5,2239.351,1.002
+post_covid,macro_area,weighted,Eastern,Northern,2562.5,4703.536,0.545
+post_covid,macro_area,weighted,Eastern,Southern,10254.0,9153.248,1.12
+post_covid,macro_area,weighted,Eastern,Western,6282.5,6743.166,0.932
+post_covid,macro_area,weighted,Eastern,Western Asia,854.5,493.768,1.731
+post_covid,macro_area,weighted,Northern,Eastern,1362.5,3077.578,0.443
+post_covid,macro_area,weighted,Northern,Northern,4300.0,4146.943,1.037
+post_covid,macro_area,weighted,Northern,Southern,7221.5,9306.022,0.776
+post_covid,macro_area,weighted,Northern,Western,9395.0,6855.714,1.37
+post_covid,macro_area,weighted,Northern,Western Asia,289.5,502.01,0.577
+post_covid,macro_area,weighted,Southern,Eastern,12076.0,10663.352,1.132
+post_covid,macro_area,weighted,Southern,Northern,10369.0,16569.064,0.626
+post_covid,macro_area,weighted,Southern,Southern,31381.0,21882.702,1.434
+post_covid,macro_area,weighted,Southern,Western,23439.5,23754.032,0.987
+post_covid,macro_area,weighted,Southern,Western Asia,931.0,1739.388,0.535
+post_covid,macro_area,weighted,Western,Eastern,7455.0,11341.228,0.657
+post_covid,macro_area,weighted,Western,Northern,24121.5,17622.369,1.369
+post_covid,macro_area,weighted,Western,Southern,30854.5,34293.753,0.9
+post_covid,macro_area,weighted,Western,Western,18383.0,18495.194,0.994
+post_covid,macro_area,weighted,Western,Western Asia,2353.5,1849.962,1.272
+post_covid,macro_area,weighted,Western Asia,Eastern,4011.0,1391.412,2.883
+post_covid,macro_area,weighted,Western Asia,Northern,832.0,2162.021,0.385
+post_covid,macro_area,weighted,Western Asia,Southern,2382.5,4207.368,0.566
+post_covid,macro_area,weighted,Western Asia,Western,2978.0,3099.554,0.961
+post_covid,macro_area,weighted,Western Asia,Western Asia,0.0,41.265,0.0
+post_covid,programme_group,weighted,Candidates,Candidates,151.5,44.274,3.422
+post_covid,programme_group,weighted,Candidates,EFTA,35.5,426.392,0.083
+post_covid,programme_group,weighted,Candidates,EU-13,5065.0,2088.601,2.425
+post_covid,programme_group,weighted,Candidates,EU-15,5929.5,9405.304,0.63
+post_covid,programme_group,weighted,EFTA,Candidates,18.5,58.854,0.314
+post_covid,programme_group,weighted,EFTA,EFTA,36.0,13.935,2.583
+post_covid,programme_group,weighted,EFTA,EU-13,193.5,535.062,0.362
+post_covid,programme_group,weighted,EFTA,EU-15,2616.5,2409.47,1.086
+post_covid,programme_group,weighted,EU-13,Candidates,937.0,587.474,1.595
+post_covid,programme_group,weighted,EU-13,EFTA,576.0,1090.357,0.528
+post_covid,programme_group,weighted,EU-13,EU-13,5263.0,4494.774,1.171
+post_covid,programme_group,weighted,EU-13,EU-15,21817.0,24050.964,0.907
+post_covid,programme_group,weighted,EU-15,Candidates,2983.5,3568.752,0.836
+post_covid,programme_group,weighted,EU-15,EFTA,6944.5,6623.631,1.048
+post_covid,programme_group,weighted,EU-15,EU-13,26666.5,32444.623,0.822
+post_covid,programme_group,weighted,EU-15,EU-15,137100.5,128491.534,1.067
+post_covid,gdp_tercile,binary_b5,1 low,1 low,341.0,161.071,2.117
+post_covid,gdp_tercile,binary_b5,1 low,2 middle,604.0,576.543,1.048
+post_covid,gdp_tercile,binary_b5,1 low,3 high,425.0,696.988,0.61
+post_covid,gdp_tercile,binary_b5,2 middle,1 low,597.0,538.948,1.108
+post_covid,gdp_tercile,binary_b5,2 middle,2 middle,1579.0,1391.114,1.135
+post_covid,gdp_tercile,binary_b5,2 middle,3 high,1704.0,1882.134,0.905
+post_covid,gdp_tercile,binary_b5,3 high,1 low,287.0,575.202,0.499
+post_covid,gdp_tercile,binary_b5,3 high,2 middle,1505.0,1657.871,0.908
+post_covid,gdp_tercile,binary_b5,3 high,3 high,2286.0,1848.13,1.237
+post_covid,macro_area,binary_b5,Eastern,Eastern,117.0,127.504,0.918
+post_covid,macro_area,binary_b5,Eastern,Northern,143.0,275.154,0.52
+post_covid,macro_area,binary_b5,Eastern,Southern,508.0,387.363,1.311
+post_covid,macro_area,binary_b5,Eastern,Western,331.0,369.587,0.896
+post_covid,macro_area,binary_b5,Eastern,Western Asia,47.0,26.046,1.804
+post_covid,macro_area,binary_b5,Northern,Eastern,66.0,178.601,0.37
+post_covid,macro_area,binary_b5,Northern,Northern,245.0,248.507,0.986
+post_covid,macro_area,binary_b5,Northern,Southern,348.0,402.912,0.864
+post_covid,macro_area,binary_b5,Northern,Western,517.0,384.422,1.345
+post_covid,macro_area,binary_b5,Northern,Western Asia,16.0,27.092,0.591
+post_covid,macro_area,binary_b5,Southern,Eastern,584.0,455.343,1.283
+post_covid,macro_area,binary_b5,Southern,Northern,512.0,729.661,0.702
+post_covid,macro_area,binary_b5,Southern,Southern,873.0,730.261,1.195
+post_covid,macro_area,binary_b5,Southern,Western,1025.0,980.083,1.046
+post_covid,macro_area,binary_b5,Southern,Western Asia,45.0,69.071,0.652
+post_covid,macro_area,binary_b5,Western,Eastern,387.0,605.475,0.639
+post_covid,macro_area,binary_b5,Western,Northern,1276.0,970.241,1.315
+post_covid,macro_area,binary_b5,Western,Southern,1291.0,1365.911,0.945
+post_covid,macro_area,binary_b5,Western,Western,984.0,962.112,1.023
+post_covid,macro_area,binary_b5,Western,Western Asia,103.0,91.844,1.121
+post_covid,macro_area,binary_b5,Western Asia,Eastern,237.0,81.659,2.902
+post_covid,macro_area,binary_b5,Western Asia,Northern,53.0,130.854,0.405
+post_covid,macro_area,binary_b5,Western Asia,Southern,118.0,184.217,0.641
+post_covid,macro_area,binary_b5,Western Asia,Western,137.0,175.764,0.779
+post_covid,macro_area,binary_b5,Western Asia,Western Asia,0.0,3.316,0.0
+post_covid,programme_group,binary_b5,Candidates,Candidates,3.0,1.608,1.866
+post_covid,programme_group,binary_b5,Candidates,EFTA,1.0,19.292,0.052
+post_covid,programme_group,binary_b5,Candidates,EU-13,298.0,131.238,2.271
+post_covid,programme_group,binary_b5,Candidates,EU-15,297.0,481.656,0.617
+post_covid,programme_group,binary_b5,EFTA,Candidates,1.0,1.955,0.511
+post_covid,programme_group,binary_b5,EFTA,EFTA,2.0,0.66,3.031
+post_covid,programme_group,binary_b5,EFTA,EU-13,7.0,24.1,0.29
+post_covid,programme_group,binary_b5,EFTA,EU-15,100.0,88.451,1.131
+post_covid,programme_group,binary_b5,EU-13,Candidates,43.0,26.837,1.602
+post_covid,programme_group,binary_b5,EU-13,EFTA,25.0,48.633,0.514
+post_covid,programme_group,binary_b5,EU-13,EU-13,313.0,282.164,1.109
+post_covid,programme_group,binary_b5,EU-13,EU-15,1129.0,1214.192,0.93
+post_covid,programme_group,binary_b5,EU-15,Candidates,118.0,137.635,0.857
+post_covid,programme_group,binary_b5,EU-15,EFTA,271.0,249.412,1.087
+post_covid,programme_group,binary_b5,EU-15,EU-13,1416.0,1696.668,0.835
+post_covid,programme_group,binary_b5,EU-15,EU-15,5939.0,5558.499,1.068
