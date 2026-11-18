@@ -1,0 +1,288 @@
+PUNTI NON RIPORTATI (O NON AGGIORNATI) NEI DOCUMENTI DELLA REPO
+Progetto SNA - Rete Erasmus+ tra regioni europee - controllo del 18/11/2026 (commit 8877115)
+
+Documenti controllati: 01_organization/decisions.txt, README.md, 06_report/*.md
+(section_2_data_draft, section_3_network_measures, appunti_preliminari, Table_Hypothesis_tests).
+Confrontati con: 05_analysis/reports/*.txt, 05_analysis/tables/*.csv, 03_reading_notes/.
+
+AGGIORNAMENTO 18/11 ore 17:02 (commit 2597adb, aggiunte a section_3_network_measures.md)
+  RISOLTI          : D2 (interpretazione dei risultati di H2), D4 (elenco unico dei limiti,
+                     sezione 13)
+  RISOLTI IN PARTE : B1 (il limite del 2023 e' nei limiti, ma non ancora nella bozza Data)
+                     A4 (aggiunti i risultati della Fase 4, ma le righe vecchie "Still to do"
+                        e "Expectation: uncertain" sono ancora li')
+                     C5 (c'e' "coerente con Gadar, non con Rusu", ma non il fatto che la
+                        distanza non si indebolisce nel tempo)
+                     C7 (c'e' il Gini 0,671 nel 2023, ma non che il salto 2022->2023 e' il
+                        piu' grande della serie)
+                     D1 (confronto con Gadar e Rusu solo per H2, in una frase)
+  NUOVO            : section_3 rimanda a "table_hypothesis_tests.md" con la t minuscola, ma il
+                     file si chiama "Table_Hypothesis_tests.md": su GitHub il link non funziona.
+  TUTTI GLI ALTRI PUNTI SONO ANCORA APERTI.
+
+Per ogni punto:  DOVE = file della repo in cui annotarlo  ->  sezione del report in cui finisce.
+Priorita': ALTA = senza, il report ha un errore o un buco che il professore nota;
+           MEDIA = rende il report piu' solido; BASSA = facoltativo, solo se avanza spazio.
+Decisione del gruppo: [ ] si'  [ ] no
+
+
+==========================================================================================
+A. DOCUMENTI DA CORREGGERE (incoerenze o testo superato)
+==========================================================================================
+
+A1. Manca 05_analysis/measures_summary.md (frasi A -> B -> C delle 11 misure)       ALTA
+    Il README (riga 85) e section_3_network_measures.md lo citano, ma il file non esiste.
+    Le frasi A -> B -> C sono richieste esplicitamente dal professore per ogni misura.
+    DOVE: creare 05_analysis/measures_summary.md (base: roadmap 7.2 + numeri di section_3)
+          -> Methods.
+    [ ] si'  [ ] no
+
+A2. Bozza Data: motivo sbagliato per l'esclusione del 2014-2015                       ALTA
+    La bozza dice "2014 reflects partial rollout of the programme" e non dice nulla del 2015.
+    decisions.txt (punto 2): 2014-2015 usano i codici NUTS 2013, e il PIL parte dal 2016.
+    DOVE: 06_report/section_2_data_draft.md, punto 2 -> Data.
+    [ ] si'  [ ] no
+
+A3. Bozza Data: la codifica della lingua e' cambiata                                  ALTA
+    La bozza descrive la lingua come "official languages" (vecchio punto 16).
+    In H2 si usa ora la lingua piu' parlata di ogni regione (decisions.txt, punto 22),
+    con la vecchia codifica come controllo.
+    DOVE: section_2_data_draft.md, ultimo paragrafo -> Data (o Methods, insieme a H2).
+    [ ] si'  [ ] no
+
+A4. Appunti sulle misure: due parti superate dalla Fase 4                             MEDIA
+    - sezione 10: "Still to do in Phase 4: QAP correlation..." -> ora e' fatto;
+    - sezione 11: "H1 ... Expectation: uncertain" -> ora H1 e' respinta.
+    Chi scrive il report potrebbe copiare testo vecchio.
+    DOVE: 06_report/section_3_network_measures.md, sezioni 10-11 (aggiornare o rimandare a
+          Table_Hypothesis_tests.md).
+    [ ] si'  [ ] no
+
+A5. README non aggiornato alla Fase 4                                                 BASSA
+    Non cita gli script 05_h1_wealth.py, 06_h2_mrqap.py, 07_h3_change.py ne'
+    Table_Hypothesis_tests.md. Non va nel report, ma la repo deve restare leggibile.
+    DOVE: README.md, sezione "Network Measures (Phase 3)" -> aggiungere "Phase 4".
+    [ ] si'  [ ] no
+
+
+==========================================================================================
+B. BOZZA DATA: SCELTE PRESENTI IN decisions.txt MA NON NELLA BOZZA
+   (attenzione: la bozza e' gia' ~690 parole su 600; alcune possono andare in una nota o
+   in una riga di tabella)
+==========================================================================================
+
+B1. Limite del 2023: il paper valida i dati solo fino al 2022                          ALTA
+    (decisions.txt, SOURCE). Il 2023 pesa molto su H3 (crollo del Regno Unito), quindi il
+    limite va dichiarato. decisions.txt (punto 25) da' anche la risposta: nel 2023 il resto
+    della rete e' a 99-100, quindi il crollo UK non dipende dalla qualita' dei dati.
+    DOVE: section_2_data_draft.md, "Source and Scope" -> Data (+ una riga nei limiti).
+    [ ] si'  [ ] no
+
+B2. PIL in euro correnti, senza correzione per l'inflazione (punto 11)                 MEDIA
+    Va bene per confrontare le regioni nello stesso periodo, non i periodi tra loro;
+    con il logaritmo l'inflazione sposta solo l'intercetta (punto 18).
+    DOVE: section_2_data_draft.md, "Regional Attributes" -> Data.
+    [ ] si'  [ ] no
+
+B3. Perche' non la soglia 10 (punto 8)                                                 MEDIA
+    Con soglia 10 la rete Covid si spezza (solo l'82% delle regioni connesse). Mezza frase
+    che giustifica la scelta della soglia 5 (validity).
+    DOVE: section_2_data_draft.md, "Network Definition and Thresholding" -> Data.
+    [ ] si'  [ ] no
+
+B4. Mobilita' con i paesi partner incluse (~9.000 studenti, punto 1)                   BASSA
+    DOVE: section_2_data_draft.md, punto 1 -> Data.
+    [ ] si'  [ ] no
+
+B5. Il Regno Unito resta nelle reti, e perche' (punto 10)                              MEDIA
+    La bozza dice solo che il Regno Unito esce dalle analisi sul PIL. Va detto che resta in
+    tutte le reti perche' il suo calo e' parte di H3.
+    DOVE: section_2_data_draft.md -> Data.
+    [ ] si'  [ ] no
+
+B6. Ambito del dataset: studenti maggiorenni e soggiorni di almeno 3 mesi              BASSA
+    E' nella scheda di lettura di Vaisanen (03_reading_notes), non nella bozza.
+    DA VERIFICARE sul paper prima di scriverlo.
+    DOVE: section_2_data_draft.md, "Source and Scope" -> Data.
+    [ ] si'  [ ] no
+
+
+==========================================================================================
+C. RISULTATI NELLE TABELLE / NEI REPORT MA NON NEGLI APPUNTI
+==========================================================================================
+
+--- H1 (05_analysis/reports/h1_report.txt, tables/h1_data.csv) ---
+
+C1. 7 regioni con meno di 20 studenti l'anno: saldo netto poco affidabile             MEDIA
+    Pre-Covid: BE34, BG31, EL42, FI20, FRY2, NL13 e NL23 (queste due con 0 in uscita, quindi
+    saldo = +1). Con numeri cosi' piccoli bastano pochi studenti per spostare il saldo.
+    Compaiono tra i residui piu' grandi del modello M1. Non e' stato fatto un controllo
+    senza di loro. Difficile che cambi la conclusione (H1 respinta), ma conviene rifare H1
+    escludendole e scriverlo in una riga.
+    DOVE: Table_Hypothesis_tests.md, "Robustness" di H1 (da creare) -> Results H1.
+    [ ] si'  [ ] no
+
+C2. Esempio per la Discussion: il Lussemburgo                                          BASSA
+    E' la regione piu' ricca (PIL ~100.000 euro) ma e' mittente netta (saldo -0,55): il
+    residuo negativo piu' grande. Possibile spiegazione: l'Universita' del Lussemburgo rende
+    obbligatorio un periodo all'estero per la triennale (DA VERIFICARE). Esempio concreto del
+    fatto che contano le regole delle universita', non la ricchezza.
+    DOVE: Table_Hypothesis_tests.md, H1 -> Discussion.
+    [ ] si'  [ ] no
+
+--- H2 (05_analysis/reports/h2_report.txt) ---
+
+C3. Quali variabili pesano di piu' (coefficienti standardizzati, M2 pesato)           ALTA
+    - dimensione di origine e destinazione: circa 0,40-0,44  -> di gran lunga le piu' forti;
+    - differenza di PIL: -0,15/-0,16 (in M1: -0,25/-0,27)    -> la piu' forte delle variabili
+      della roadmap;
+    - stessa famiglia linguistica ~0,05, distanza ~0,06, stessa lingua ~ -0,02 -> deboli.
+    La tabella riassuntiva da' le % ma non dice quale variabile conta di piu': e' la frase
+    chiave dei risultati di H2.
+    DOVE: Table_Hypothesis_tests.md, H2 -> Results H2.
+    [ ] si'  [ ] no
+
+C4. Controllo di multicollinearita'                                                    MEDIA
+    Tutte le correlazioni tra le variabili esplicative sono sotto 0,35 in valore assoluto:
+    i coefficienti si possono separare. Una frase basta, e risponde a un'obiezione tipica.
+    DOVE: Table_Hypothesis_tests.md, "Robustness checks" di H2 -> Methods.
+    [ ] si'  [ ] no
+
+C5. Confronto con Rusu et al.: la distanza NON si indebolisce nel tempo                ALTA
+    Il report h2 ha una sezione apposta ("does its effect weaken over time, as in Rusu"),
+    ma il risultato non e' negli appunti. Coefficiente standardizzato della distanza:
+    M1 -0,030 / -0,006 / -0,012 (mai significativo); M3 da +0,018 a +0,037.
+    Lettura: non c'e' un effetto negativo che si indebolisce, perche' l'effetto negativo non
+    c'e' proprio.
+    DOVE: Table_Hypothesis_tests.md, H2 -> Discussion (confronto con la letteratura).
+    [ ] si'  [ ] no
+
+C6. Effetti nella versione binaria in punti percentuali                                BASSA
+    Es. stessa lingua, M1 pre-Covid: -12 punti nella probabilita' di un arco >= 5 studenti
+    (su una media del 14%). La tabella dice solo "stessi segni".
+    DOVE: Table_Hypothesis_tests.md, robustezza H2 -> Results (solo se avanza spazio).
+    [ ] si'  [ ] no
+
+--- H3 (05_analysis/reports/h3_report.txt, tables/h3_*.csv) ---
+
+C7. La concentrazione cresce di piu' DOPO il Covid che durante                         ALTA
+    Gini degli arrivi, variazione annua: 2019->2020 +1,6%, 2020->2021 +1,8%,
+    2022->2023 +2,8% (la piu' alta della serie; normale 2016-2019: +0,1% / +0,9%).
+    Quota del top 10%: 45,3% (2019) -> 50,1% (2023).
+    Rafforza la sfumatura "concentrazione non reversibile": il 2023 e' l'anno piu'
+    concentrato di tutti. Possibile ruolo dell'uscita del Regno Unito, da verificare.
+    DOVE: Table_Hypothesis_tests.md, riga "More concentrated" -> Results H3 / Discussion.
+    [ ] si'  [ ] no
+
+C8. Nel 2021 la rete si ricostruisce con molti collegamenti nuovi                      MEDIA
+    Il 42% degli archi del 2021 non esisteva nel 2020 (normale: 20-22%). La ripresa non e'
+    solo "riaccendere" i vecchi collegamenti.
+    DOVE: Table_Hypothesis_tests.md, riga "Does the recovery rebuild the same ties?"
+          -> Results H3.
+    [ ] si'  [ ] no
+
+C9. Brexit: chi guadagna e chi perde 2019 -> 2023 (h3_country_change.csv)              MEDIA
+    Arrivi: Malta +34%, Cipro +26%, Italia +23%, Norvegia +21%, Islanda +21%;
+            Irlanda -2% (non beneficia, pur essendo anglofona); Germania -16%, Polonia -22%.
+    Partenze: Serbia -67%, Bulgaria -36%, Turchia -24%; Irlanda +23%, Svezia +19%.
+    Ipotesi da discutere: gli studenti che prima andavano nel Regno Unito si spostano su
+    mete con l'inglese molto diffuso (Malta, Cipro). ATTENZIONE: il confronto 2019-2023
+    mescola Brexit e ripresa dal Covid, quindi va scritto con prudenza.
+    DOVE: Table_Hypothesis_tests.md, H3 -> Discussion (eventualmente Results).
+    [ ] si'  [ ] no
+
+C10. Archi in uscita del Regno Unito: da 521 (2019) a 29 (2023)                        BASSA
+     Dato molto incisivo per una frase sola (archi con almeno 5 studenti).
+     DOVE: Table_Hypothesis_tests.md, riga "UK loses centrality" -> Results H3.
+     [ ] si'  [ ] no
+
+--- Fase 3 (05_analysis/tables/) ---
+
+C11. La quarta comunita'                                                               BASSA
+     Pre-Covid e Covid hanno 4 comunita', post-Covid 3. Gli appunti descrivono solo 3
+     blocchi: la quarta e' piccola (15-17 regioni: Belgio, Regno Unito, Germania, Grecia...)
+     e sparisce dopo il Covid. Basta una frase per non lasciare il lettore confuso.
+     DOVE: section_3_network_measures.md, sezione 4 -> Results.
+     [ ] si'  [ ] no
+
+C12. Altre preferenze tra gruppi di paesi (mixing_matrices.csv)                        BASSA
+     EFTA verso EFTA: 2,6-4,3 volte l'atteso; Turchia e Cipro verso l'Est: 2,8-2,9 volte;
+     Nord <-> Ovest: 1,4 volte. Gli appunti citano solo candidati -> EU-13.
+     DOVE: section_3_network_measures.md, sezione 9 -> Results (solo se avanza spazio).
+     [ ] si'  [ ] no
+
+
+==========================================================================================
+D. MATERIALE CHE MANCA DEL TUTTO PER IL REPORT
+==========================================================================================
+
+D1. Confronto dei risultati di H1 e H2 con i paper                                     ALTA
+    Negli appunti non c'e'. E' il cuore della Discussion e il vostro "contributo":
+    - Gadar et al.: la distanza non conta, contano le regioni di partenza e di arrivo
+      -> coerente con voi (M3, con gli effetti per regione, porta R2 da 0,41 a 0,55);
+    - Rusu et al.: distanza e PIL della destinazione contano, la distanza si indebolisce nel
+      tempo -> non coerente con voi (vedi C5); differenza di livello: paesi vs regioni;
+    - Batagelj: la Spagna e' l'attrattore principale -> coerente (4 delle prime 6 regioni).
+    DOVE: nuovo file 06_report/notes_discussion.md (o appunti_preliminari) -> Discussion.
+    [ ] si'  [ ] no
+
+D2. Interpretazione dei due risultati "strani" di H2                                    ALTA
+    Gli appunti dicono COSA succede, non PERCHE':
+    - stessa lingua -> meno flussi: chi fa l'Erasmus cerca un'altra lingua; le coppie con la
+      stessa lingua (Austria-Germania, Belgio-Francia...) sono vicine e "troppo simili";
+    - distanza positiva dopo aver controllato la dimensione: le mete del Sud (Spagna,
+      Portogallo, Italia) sono lontane dalle origini del Nord e attirano comunque.
+    DOVE: notes_discussion.md -> Discussion.
+    [ ] si'  [ ] no
+
+D3. Materiale per l'Introduction                                                       ALTA
+    Nella repo non c'e' niente: contesto Erasmus+ (dimensione del programma), problema
+    (manca una lettura regionale e recente, con Covid e Brexit), motivazione (politiche di
+    coesione), domanda di ricerca. Vale il 20% del voto. Gli elementi sono nella roadmap
+    (pag. 1 e sezioni 2 e 7.1), ma vanno trasformati in testo.
+    DOVE: nuovo file 06_report/section_1_introduction_draft.md -> Introduction.
+    [ ] si'  [ ] no
+
+D4. Un solo elenco dei limiti                                                          MEDIA
+    I limiti sono sparsi: section_3 (sezione 13), decisions.txt (punti 11, 18, 21, 24, 25,
+    26, SOURCE). Per la Critique servono in un posto solo, ordinati per importanza:
+    2023 non validato; PIL in euro correnti; prestigio non misurabile; materie solo a livello
+    di universita'; programma 2021-27 come confondente; Regno Unito in calo gia' prima della
+    Brexit; "anni normali" = solo 3 variazioni, nessun p-value; betweenness solo strutturale;
+    modularita' e assortativita' di Newman ignorano gli zeri strutturali; core-periphery
+    trovato con un'euristica; 43 regioni senza PIL.
+    DOVE: notes_discussion.md -> Discussion / Critique.
+    [ ] si'  [ ] no
+
+D5. Bibliografia                                                                       ALTA
+    Non c'e' un elenco delle fonti. Oltre ai 5 paper (Vaisanen e' di citazione obbligatoria)
+    servono le fonti dei metodi usati, per esempio: Dekker, Krackhardt e Snijders (2007,
+    MRQAP-DSP), Krackhardt (QAP), Borgatti ed Everett (1999, core-periphery), Blondel et al.
+    (2008, Louvain), Clauset, Shalizi e Newman (2009, power law), Humphries e Gurney (2008,
+    sigma), Telesford et al. (2011, omega), Holland e Leinhardt (triad census),
+    Krackhardt e Stern (1988, E-I index), Newman (2003, assortativita'), Eurostat e GISCO,
+    governo UK (Turing scheme).
+    DOVE: nuovo file 06_report/references.md (o gruppo Zotero) -> References.
+    [ ] si'  [ ] no
+
+D6. Schede di lettura mancanti                                                         BASSA
+    In 03_reading_notes ci sono Vaisanen, Gadar (Report-SAMA.docx) e De Benedictis-Leoni.
+    Mancano Batagelj e Rusu. Servono solo se aiutano a scrivere D1.
+    DOVE: 03_reading_notes/.
+    [ ] si'  [ ] no
+
+D7. Nessuna figura per la Fase 4                                                       BASSA
+    Ci sono 5 figure, tutte della Fase 3 (la roadmap ne prevede 4-6). Se ne aggiungete una,
+    la piu' utile e' la serie anno per anno del Regno Unito contro il resto (indice
+    2019 = 100, h3_uk_yearly.csv): mostra Covid e Brexit in un solo grafico. In cambio si
+    puo' togliere la figura del triad census o della distribuzione del grado.
+    DOVE: 05_analysis/04_figures.py (o nuovo script) -> Results H3.
+    [ ] si'  [ ] no
+
+
+==========================================================================================
+RIEPILOGO PRIORITA'
+==========================================================================================
+ALTA  : A1, A2, A3, B1, C3, C5, C7, D1, D2, D3, D5
+MEDIA : A4, B2, B3, B5, C1, C4, C8, C9, D4
+BASSA : A5, B4, B6, C2, C6, C10, C11, C12, D6, D7
