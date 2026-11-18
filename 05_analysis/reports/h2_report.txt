@@ -10,36 +10,53 @@ Dependent variable: weighted = log(1 + students/year); binary_b5 = 1 if >= 5 stu
   M3_fixed_effects  log_distance, same_language, same_family, gdp_difference + one effect per origin and per destination
 
 ==========================================================================================
+LANGUAGE CODING: THE MOST SPOKEN LANGUAGE OF EVERY REGION
+==========================================================================================
+Default: the first language of the country in languages.csv. Regions where it differs:
+region language   family
+  BE10   French  Romance
+  BE31   French  Romance
+  BE32   French  Romance
+  BE33   French  Romance
+  BE34   French  Romance
+  BE35   French  Romance
+  FI20  Swedish Germanic
+  ITH1   German Germanic
+  ME00  Serbian   Slavic
+main                ordered cross-country pairs with the same language: 1,260; same family: 13,012
+official_languages  ordered cross-country pairs with the same language: 2,886; same family: 15,878
+
+==========================================================================================
 CORRELATIONS BETWEEN THE EXPLANATORY VARIABLES (cross-country pairs)
 ==========================================================================================
 High values (above about 0.7) would make the single coefficients hard to separate.
 
 pre_covid
                              log_distance  same_language  same_family  gdp_difference  log_out_strength_origin  log_in_strength_destination
-log_distance                         1.00          -0.29        -0.26            0.32                    -0.13                        -0.15
-same_language                       -0.29           1.00         0.38           -0.16                     0.01                         0.02
-same_family                         -0.26           0.38         1.00           -0.37                     0.05                         0.13
-gdp_difference                       0.32          -0.16        -0.37            1.00                    -0.08                        -0.24
-log_out_strength_origin             -0.13           0.01         0.05           -0.08                     1.00                        -0.01
-log_in_strength_destination         -0.15           0.02         0.13           -0.24                    -0.01                         1.00
+log_distance                         1.00          -0.19        -0.24            0.32                    -0.13                        -0.15
+same_language                       -0.19           1.00         0.28           -0.13                    -0.00                         0.01
+same_family                         -0.24           0.28         1.00           -0.34                     0.05                         0.11
+gdp_difference                       0.32          -0.13        -0.34            1.00                    -0.08                        -0.24
+log_out_strength_origin             -0.13          -0.00         0.05           -0.08                     1.00                        -0.01
+log_in_strength_destination         -0.15           0.01         0.11           -0.24                    -0.01                         1.00
 
 covid
                              log_distance  same_language  same_family  gdp_difference  log_out_strength_origin  log_in_strength_destination
-log_distance                         1.00          -0.29        -0.26            0.34                    -0.10                        -0.14
-same_language                       -0.29           1.00         0.38           -0.16                     0.02                         0.03
-same_family                         -0.26           0.38         1.00           -0.37                     0.07                         0.13
-gdp_difference                       0.34          -0.16        -0.37            1.00                    -0.08                        -0.23
-log_out_strength_origin             -0.10           0.02         0.07           -0.08                     1.00                        -0.01
-log_in_strength_destination         -0.14           0.03         0.13           -0.23                    -0.01                         1.00
+log_distance                         1.00          -0.19        -0.24            0.34                    -0.10                        -0.14
+same_language                       -0.19           1.00         0.28           -0.13                     0.01                         0.01
+same_family                         -0.24           0.28         1.00           -0.35                     0.06                         0.11
+gdp_difference                       0.34          -0.13        -0.35            1.00                    -0.08                        -0.23
+log_out_strength_origin             -0.10           0.01         0.06           -0.08                     1.00                        -0.01
+log_in_strength_destination         -0.14           0.01         0.11           -0.23                    -0.01                         1.00
 
 post_covid
                              log_distance  same_language  same_family  gdp_difference  log_out_strength_origin  log_in_strength_destination
-log_distance                         1.00          -0.29        -0.26            0.32                    -0.10                        -0.14
-same_language                       -0.29           1.00         0.38           -0.15                     0.02                         0.03
-same_family                         -0.26           0.38         1.00           -0.36                     0.07                         0.13
-gdp_difference                       0.32          -0.15        -0.36            1.00                    -0.09                        -0.22
-log_out_strength_origin             -0.10           0.02         0.07           -0.09                     1.00                        -0.01
-log_in_strength_destination         -0.14           0.03         0.13           -0.22                    -0.01                         1.00
+log_distance                         1.00          -0.19        -0.24            0.32                    -0.10                        -0.14
+same_language                       -0.19           1.00         0.28           -0.12                     0.01                         0.01
+same_family                         -0.24           0.28         1.00           -0.34                     0.06                         0.11
+gdp_difference                       0.32          -0.12        -0.34            1.00                    -0.09                        -0.22
+log_out_strength_origin             -0.10           0.01         0.06           -0.09                     1.00                        -0.01
+log_in_strength_destination         -0.14           0.01         0.11           -0.22                    -0.01                         1.00
 
 ==========================================================================================
 MODELS
@@ -47,24 +64,24 @@ MODELS
 mean_y: mean of the dependent variable (binary: share of pairs that are edges).
 r2 of M3_fixed_effects includes the 551 region effects, so it is not comparable with M1 and M2.
     period         y            model  regions  cells  mean_y  share_nonzero     r2  adj_r2
- pre_covid  weighted       M1_roadmap      276  71370  0.5993         0.3943 0.0955  0.0954
- pre_covid  weighted          M2_size      276  71370  0.5993         0.3943 0.4090  0.4090
- pre_covid  weighted M3_fixed_effects      276  71370  0.5993         0.3943 0.5506  0.5471
- pre_covid binary_b5       M1_roadmap      276  71370  0.1381         0.1381 0.0551  0.0551
- pre_covid binary_b5          M2_size      276  71370  0.1381         0.1381 0.2405  0.2404
- pre_covid binary_b5 M3_fixed_effects      276  71370  0.1381         0.1381 0.3635  0.3586
-     covid  weighted       M1_roadmap      276  71370  0.4838         0.3529 0.0857  0.0856
-     covid  weighted          M2_size      276  71370  0.4838         0.3529 0.3974  0.3973
-     covid  weighted M3_fixed_effects      276  71370  0.4838         0.3529 0.5347  0.5310
-     covid binary_b5       M1_roadmap      276  71370  0.1023         0.1023 0.0431  0.0431
-     covid binary_b5          M2_size      276  71370  0.1023         0.1023 0.2120  0.2119
-     covid binary_b5 M3_fixed_effects      276  71370  0.1023         0.1023 0.3340  0.3288
-post_covid  weighted       M1_roadmap      276  71370  0.5752         0.3831 0.0909  0.0909
-post_covid  weighted          M2_size      276  71370  0.5752         0.3831 0.4199  0.4199
-post_covid  weighted M3_fixed_effects      276  71370  0.5752         0.3831 0.5590  0.5555
-post_covid binary_b5       M1_roadmap      276  71370  0.1307         0.1307 0.0520  0.0519
-post_covid binary_b5          M2_size      276  71370  0.1307         0.1307 0.2529  0.2528
-post_covid binary_b5 M3_fixed_effects      276  71370  0.1307         0.1307 0.3769  0.3720
+ pre_covid  weighted       M1_roadmap      276  71370  0.5993         0.3943 0.0907  0.0906
+ pre_covid  weighted          M2_size      276  71370  0.5993         0.3943 0.4076  0.4075
+ pre_covid  weighted M3_fixed_effects      276  71370  0.5993         0.3943 0.5489  0.5454
+ pre_covid binary_b5       M1_roadmap      276  71370  0.1381         0.1381 0.0517  0.0516
+ pre_covid binary_b5          M2_size      276  71370  0.1381         0.1381 0.2392  0.2391
+ pre_covid binary_b5 M3_fixed_effects      276  71370  0.1381         0.1381 0.3622  0.3572
+     covid  weighted       M1_roadmap      276  71370  0.4838         0.3529 0.0823  0.0823
+     covid  weighted          M2_size      276  71370  0.4838         0.3529 0.3964  0.3963
+     covid  weighted M3_fixed_effects      276  71370  0.4838         0.3529 0.5335  0.5299
+     covid binary_b5       M1_roadmap      276  71370  0.1023         0.1023 0.0409  0.0409
+     covid binary_b5          M2_size      276  71370  0.1023         0.1023 0.2112  0.2111
+     covid binary_b5 M3_fixed_effects      276  71370  0.1023         0.1023 0.3332  0.3280
+post_covid  weighted       M1_roadmap      276  71370  0.5752         0.3831 0.0867  0.0866
+post_covid  weighted          M2_size      276  71370  0.5752         0.3831 0.4188  0.4188
+post_covid  weighted M3_fixed_effects      276  71370  0.5752         0.3831 0.5579  0.5544
+post_covid binary_b5       M1_roadmap      276  71370  0.1307         0.1307 0.0490  0.0489
+post_covid binary_b5          M2_size      276  71370  0.1307         0.1307 0.2519  0.2519
+post_covid binary_b5 M3_fixed_effects      276  71370  0.1307         0.1307 0.3760  0.3711
 
 ==========================================================================================
 COEFFICIENTS
@@ -75,103 +92,121 @@ as_expected: sign as expected and p_dsp < 0.05.
 
 Dependent variable: weighted
     period            model                    variable expected_sign  coefficient  std_coefficient        t  p_dsp   effect    effect_of  as_expected
- pre_covid       M1_roadmap                log_distance             -      -0.0557          -0.0414 -10.6014 0.2328  -3.7868  distance x2        False
- pre_covid       M1_roadmap               same_language             +      -0.4495          -0.0927 -23.4507 0.0010 -36.2084       0 -> 1        False
- pre_covid       M1_roadmap                 same_family             +       0.2082           0.0906  22.0785 0.0010  23.1451       0 -> 1         True
- pre_covid       M1_roadmap              gdp_difference             -      -0.3923          -0.2596 -65.7463 0.0010 -23.8088 GDP ratio x2         True
- pre_covid          M2_size                log_distance             -       0.0675           0.0501  15.7205 0.0080   4.7910  distance x2        False
- pre_covid          M2_size               same_language             +      -0.2457          -0.0507 -15.8210 0.0010 -21.7859       0 -> 1        False
- pre_covid          M2_size                 same_family             +       0.1337           0.0582  17.5100 0.0010  14.2996       0 -> 1         True
- pre_covid          M2_size              gdp_difference             -      -0.2433          -0.1610 -49.5605 0.0010 -15.5179 GDP ratio x2         True
- pre_covid          M2_size     log_out_strength_origin             +       0.2452           0.3997 137.2961 0.0010  18.5292      size x2         True
- pre_covid          M2_size log_in_strength_destination             +       0.2206           0.4278 143.4771 0.0010  16.5221      size x2         True
- pre_covid M3_fixed_effects                log_distance             -       0.0110           0.0082   1.7637 0.1508   0.7650  distance x2        False
- pre_covid M3_fixed_effects               same_language             +      -0.2582          -0.0532 -16.4643 0.0010 -22.7538       0 -> 1        False
- pre_covid M3_fixed_effects                 same_family             +       0.1334           0.0581  17.7507 0.0010  14.2704       0 -> 1         True
- pre_covid M3_fixed_effects              gdp_difference             -      -0.3712          -0.2456 -63.1439 0.0010 -22.6855 GDP ratio x2         True
-     covid       M1_roadmap                log_distance             -      -0.0168          -0.0141  -3.5830 0.6613  -1.1601  distance x2        False
-     covid       M1_roadmap               same_language             +      -0.3197          -0.0745 -18.7555 0.0010 -27.3626       0 -> 1        False
-     covid       M1_roadmap                 same_family             +       0.1949           0.0959  23.2105 0.0010  21.5129       0 -> 1         True
-     covid       M1_roadmap              gdp_difference             -      -0.3352          -0.2490 -62.1882 0.0010 -20.7299 GDP ratio x2         True
-     covid          M2_size                log_distance             -       0.0608           0.0511  15.8604 0.0050   4.3073  distance x2        False
-     covid          M2_size               same_language             +      -0.1908          -0.0445 -13.7730 0.0010 -17.3743       0 -> 1        False
-     covid          M2_size                 same_family             +       0.1065           0.0524  15.5915 0.0010  11.2393       0 -> 1         True
-     covid          M2_size              gdp_difference             -      -0.2057          -0.1528 -46.2437 0.0010 -13.2859 GDP ratio x2         True
-     covid          M2_size     log_out_strength_origin             +       0.2168           0.4065 138.7935 0.0010  16.2128      size x2         True
-     covid          M2_size log_in_strength_destination             +       0.1912           0.4150 138.1694 0.0010  14.1726      size x2         True
-     covid M3_fixed_effects                log_distance             -       0.0292           0.0245   5.1888 0.0010   2.0447  distance x2        False
-     covid M3_fixed_effects               same_language             +      -0.1902          -0.0443 -13.4810 0.0010 -17.3193       0 -> 1        False
-     covid M3_fixed_effects                 same_family             +       0.1126           0.0554  16.6105 0.0010  11.9194       0 -> 1         True
-     covid M3_fixed_effects              gdp_difference             -      -0.3291          -0.2444 -60.5133 0.0010 -20.3947 GDP ratio x2         True
-post_covid       M1_roadmap                log_distance             -      -0.0281          -0.0210  -5.3653 0.5405  -1.9277  distance x2        False
-post_covid       M1_roadmap               same_language             +      -0.3758          -0.0781 -19.6938 0.0010 -31.3262       0 -> 1        False
-post_covid       M1_roadmap                 same_family             +       0.2245           0.0984  23.9735 0.0010  25.1681       0 -> 1         True
-post_covid       M1_roadmap              gdp_difference             -      -0.4199          -0.2551 -64.5921 0.0010 -25.2505 GDP ratio x2         True
-post_covid          M2_size                log_distance             -       0.0641           0.0480  15.2477 0.0100   4.5457  distance x2        False
-post_covid          M2_size               same_language             +      -0.2184          -0.0454 -14.3084 0.0010 -19.6201       0 -> 1        False
-post_covid          M2_size                 same_family             +       0.1183           0.0519  15.7687 0.0010  12.5529       0 -> 1         True
-post_covid          M2_size              gdp_difference             -      -0.2554          -0.1552 -48.4251 0.0010 -16.2260 GDP ratio x2         True
-post_covid          M2_size     log_out_strength_origin             +       0.2463           0.4116 143.0962 0.0010  18.6140      size x2         True
-post_covid          M2_size log_in_strength_destination             +       0.2232           0.4334 147.2856 0.0010  16.7354      size x2         True
-post_covid M3_fixed_effects                log_distance             -       0.0374           0.0280   6.1160 0.0010   2.6271  distance x2        False
-post_covid M3_fixed_effects               same_language             +      -0.1992          -0.0414 -12.9197 0.0010 -18.0612       0 -> 1        False
-post_covid M3_fixed_effects                 same_family             +       0.1092           0.0479  14.7661 0.0010  11.5441       0 -> 1         True
-post_covid M3_fixed_effects              gdp_difference             -      -0.4280          -0.2600 -66.3355 0.0010 -25.6720 GDP ratio x2         True
+ pre_covid       M1_roadmap                log_distance             -      -0.0410          -0.0304  -7.9324 0.3656  -2.7994  distance x2        False
+ pre_covid       M1_roadmap               same_language             +      -0.3935          -0.0542 -14.4414 0.0020 -32.5294       0 -> 1        False
+ pre_covid       M1_roadmap                 same_family             +       0.1657           0.0670  16.9500 0.0010  18.0213       0 -> 1         True
+ pre_covid       M1_roadmap              gdp_difference             -      -0.4013          -0.2656 -67.6290 0.0010 -24.2835 GDP ratio x2         True
+ pre_covid          M2_size                log_distance             -       0.0780           0.0579  18.5055 0.0020   5.5541  distance x2        False
+ pre_covid          M2_size               same_language             +      -0.1622          -0.0224  -7.3664 0.0030 -14.9768       0 -> 1        False
+ pre_covid          M2_size                 same_family             +       0.1189           0.0480  15.0621 0.0010  12.6272       0 -> 1         True
+ pre_covid          M2_size              gdp_difference             -      -0.2457          -0.1626 -50.3295 0.0010 -15.6597 GDP ratio x2         True
+ pre_covid          M2_size     log_out_strength_origin             +       0.2461           0.4010 137.6451 0.0010  18.5988      size x2         True
+ pre_covid          M2_size log_in_strength_destination             +       0.2217           0.4299 144.1230 0.0010  16.6085      size x2         True
+ pre_covid M3_fixed_effects                log_distance             -       0.0248           0.0184   4.0844 0.0020   1.7332  distance x2        False
+ pre_covid M3_fixed_effects               same_language             +      -0.1479          -0.0204  -7.2226 0.0010 -13.7517       0 -> 1        False
+ pre_covid M3_fixed_effects                 same_family             +       0.1104           0.0446  14.6580 0.0010  11.6768       0 -> 1         True
+ pre_covid M3_fixed_effects              gdp_difference             -      -0.3752          -0.2483 -64.1268 0.0010 -22.8996 GDP ratio x2         True
+     covid       M1_roadmap                log_distance             -      -0.0066          -0.0055  -1.4212 0.8741  -0.4535  distance x2        False
+     covid       M1_roadmap               same_language             +      -0.2719          -0.0424 -11.2354 0.0020 -23.8070       0 -> 1        False
+     covid       M1_roadmap                 same_family             +       0.1665           0.0761  19.1379 0.0010  18.1125       0 -> 1         True
+     covid       M1_roadmap              gdp_difference             -      -0.3428          -0.2547 -63.9750 0.0010 -21.1510 GDP ratio x2         True
+     covid          M2_size                log_distance             -       0.0700           0.0588  18.6127 0.0020   4.9747  distance x2        False
+     covid          M2_size               same_language             +      -0.1056          -0.0165  -5.3760 0.0160 -10.0237       0 -> 1        False
+     covid          M2_size                 same_family             +       0.1023           0.0467  14.4800 0.0010  10.7676       0 -> 1         True
+     covid          M2_size              gdp_difference             -      -0.2063          -0.1532 -46.6132 0.0010 -13.3217 GDP ratio x2         True
+     covid          M2_size     log_out_strength_origin             +       0.2171           0.4072 138.9618 0.0010  16.2433      size x2         True
+     covid          M2_size log_in_strength_destination             +       0.1920           0.4167 138.7360 0.0010  14.2339      size x2         True
+     covid M3_fixed_effects                log_distance             -       0.0400           0.0336   7.3035 0.0010   2.8133  distance x2        False
+     covid M3_fixed_effects               same_language             +      -0.0893          -0.0139  -4.8485 0.0020  -8.5420       0 -> 1        False
+     covid M3_fixed_effects                 same_family             +       0.0983           0.0449  14.4792 0.0010  10.3314       0 -> 1         True
+     covid M3_fixed_effects              gdp_difference             -      -0.3314          -0.2462 -61.3032 0.0010 -20.5261 GDP ratio x2         True
+post_covid       M1_roadmap                log_distance             -      -0.0159          -0.0119  -3.0859 0.7323  -1.0933  distance x2        False
+post_covid       M1_roadmap               same_language             +      -0.2901          -0.0403 -10.7030 0.0030 -25.1795       0 -> 1        False
+post_covid       M1_roadmap                 same_family             +       0.1836           0.0747  18.8897 0.0010  20.1531       0 -> 1         True
+post_covid       M1_roadmap              gdp_difference             -      -0.4301          -0.2613 -66.4220 0.0010 -25.7802 GDP ratio x2         True
+post_covid          M2_size                log_distance             -       0.0754           0.0564  18.2692 0.0010   5.3622  distance x2        False
+post_covid          M2_size               same_language             +      -0.0943          -0.0131  -4.3570 0.0589  -8.9987       0 -> 1        False
+post_covid          M2_size                 same_family             +       0.1105           0.0450  14.2322 0.0010  11.6802       0 -> 1         True
+post_covid          M2_size              gdp_difference             -      -0.2561          -0.1556 -48.7244 0.0010 -16.2655 GDP ratio x2         True
+post_covid          M2_size     log_out_strength_origin             +       0.2469           0.4127 143.3736 0.0010  18.6656      size x2         True
+post_covid          M2_size log_in_strength_destination             +       0.2242           0.4352 147.9339 0.0010  16.8140      size x2         True
+post_covid M3_fixed_effects                log_distance             -       0.0494           0.0370   8.3019 0.0010   3.4853  distance x2        False
+post_covid M3_fixed_effects               same_language             +      -0.0559          -0.0078  -2.7755 0.0280  -5.4330       0 -> 1        False
+post_covid M3_fixed_effects                 same_family             +       0.0898           0.0366  12.1058 0.0010   9.3940       0 -> 1         True
+post_covid M3_fixed_effects              gdp_difference             -      -0.4302          -0.2613 -67.0060 0.0010 -25.7838 GDP ratio x2         True
 
 Dependent variable: binary_b5
     period            model                    variable expected_sign  coefficient  std_coefficient        t  p_dsp   effect    effect_of  as_expected
- pre_covid       M1_roadmap                log_distance             -      -0.0036          -0.0075  -1.8769 0.7852  -0.2522  distance x2        False
- pre_covid       M1_roadmap               same_language             +      -0.1343          -0.0767 -18.9782 0.0010 -13.4267       0 -> 1        False
- pre_covid       M1_roadmap                 same_family             +       0.0617           0.0744  17.7405 0.0010   6.1738       0 -> 1         True
- pre_covid       M1_roadmap              gdp_difference             -      -0.1106          -0.2026 -50.2090 0.0010  -7.6639 GDP ratio x2         True
- pre_covid          M2_size                log_distance             -       0.0307           0.0630  17.4338 0.0010   2.1245  distance x2        False
- pre_covid          M2_size               same_language             +      -0.0778          -0.0444 -12.2356 0.0010  -7.7792       0 -> 1        False
- pre_covid          M2_size                 same_family             +       0.0412           0.0496  13.1700 0.0010   4.1151       0 -> 1         True
- pre_covid          M2_size              gdp_difference             -      -0.0696          -0.1275 -34.6262 0.0010  -4.8229 GDP ratio x2         True
- pre_covid          M2_size     log_out_strength_origin             +       0.0690           0.3116  94.4319 0.0010   4.7861      size x2         True
- pre_covid          M2_size log_in_strength_destination             +       0.0604           0.3246  96.0332 0.0010   4.1897      size x2         True
- pre_covid M3_fixed_effects                log_distance             -       0.0131           0.0269   4.8874 0.0010   0.9074  distance x2        False
- pre_covid M3_fixed_effects               same_language             +      -0.0842          -0.0481 -12.4979 0.0010  -8.4213       0 -> 1        False
- pre_covid M3_fixed_effects                 same_family             +       0.0354           0.0427  10.9735 0.0010   3.5436       0 -> 1         True
- pre_covid M3_fixed_effects              gdp_difference             -      -0.1151          -0.2110 -45.5710 0.0010  -7.9790 GDP ratio x2         True
-     covid       M1_roadmap                log_distance             -       0.0056           0.0132   3.2768 0.6334   0.3916  distance x2        False
-     covid       M1_roadmap               same_language             +      -0.0908          -0.0590 -14.5095 0.0010  -9.0761       0 -> 1        False
-     covid       M1_roadmap                 same_family             +       0.0524           0.0720  17.0209 0.0010   5.2438       0 -> 1         True
-     covid       M1_roadmap              gdp_difference             -      -0.0876          -0.1815 -44.3100 0.0010  -6.0744 GDP ratio x2         True
-     covid          M2_size                log_distance             -       0.0262           0.0613  16.6221 0.0020   1.8130  distance x2        False
-     covid          M2_size               same_language             +      -0.0569          -0.0370 -10.0106 0.0010  -5.6901       0 -> 1        False
-     covid          M2_size                 same_family             +       0.0292           0.0400  10.4062 0.0010   2.9161       0 -> 1         True
-     covid          M2_size              gdp_difference             -      -0.0537          -0.1113 -29.4591 0.0010  -3.7252 GDP ratio x2         True
-     covid          M2_size     log_out_strength_origin             +       0.0580           0.3031  90.5031 0.0010   4.0190      size x2         True
-     covid          M2_size log_in_strength_destination             +       0.0498           0.3014  87.7502 0.0010   3.4529      size x2         True
-     covid M3_fixed_effects                log_distance             -       0.0173           0.0406   7.1723 0.0010   1.2007  distance x2        False
-     covid M3_fixed_effects               same_language             +      -0.0550          -0.0357  -9.0837 0.0010  -5.4996       0 -> 1        False
-     covid M3_fixed_effects                 same_family             +       0.0276           0.0379   9.4826 0.0010   2.7589       0 -> 1         True
-     covid M3_fixed_effects              gdp_difference             -      -0.0937          -0.1941 -40.1651 0.0010  -6.4971 GDP ratio x2         True
-post_covid       M1_roadmap                log_distance             -       0.0033           0.0070   1.7551 0.7862   0.2311  distance x2        False
-post_covid       M1_roadmap               same_language             +      -0.1107          -0.0647 -15.9790 0.0010 -11.0669       0 -> 1        False
-post_covid       M1_roadmap                 same_family             +       0.0652           0.0805  19.1851 0.0010   6.5204       0 -> 1         True
-post_covid       M1_roadmap              gdp_difference             -      -0.1150          -0.1966 -48.7573 0.0010  -7.9734 GDP ratio x2         True
-post_covid          M2_size                log_distance             -       0.0290           0.0610  17.0709 0.0010   2.0075  distance x2        False
-post_covid          M2_size               same_language             +      -0.0672          -0.0392 -10.9084 0.0010  -6.7163       0 -> 1        False
-post_covid          M2_size                 same_family             +       0.0358           0.0442  11.8363 0.0010   3.5804       0 -> 1         True
-post_covid          M2_size              gdp_difference             -      -0.0698          -0.1194 -32.8219 0.0010  -4.8403 GDP ratio x2         True
-post_covid          M2_size     log_out_strength_origin             +       0.0697           0.3276 100.3507 0.0010   4.8287      size x2         True
-post_covid          M2_size log_in_strength_destination             +       0.0609           0.3326  99.6156 0.0010   4.2215      size x2         True
-post_covid M3_fixed_effects                log_distance             -       0.0235           0.0494   9.0866 0.0010   1.6277  distance x2        False
-post_covid M3_fixed_effects               same_language             +      -0.0631          -0.0369  -9.6933 0.0010  -6.3142       0 -> 1        False
-post_covid M3_fixed_effects                 same_family             +       0.0280           0.0346   8.9613 0.0010   2.8011       0 -> 1         True
-post_covid M3_fixed_effects              gdp_difference             -      -0.1294          -0.2211 -47.4543 0.0010  -8.9667 GDP ratio x2         True
+ pre_covid       M1_roadmap                log_distance             -       0.0004           0.0008   0.2167 0.9710   0.0286  distance x2        False
+ pre_covid       M1_roadmap               same_language             +      -0.1215          -0.0464 -12.0940 0.0010 -12.1509       0 -> 1        False
+ pre_covid       M1_roadmap                 same_family             +       0.0461           0.0516  12.7853 0.0010   4.6087       0 -> 1         True
+ pre_covid       M1_roadmap              gdp_difference             -      -0.1138          -0.2086 -52.0230 0.0010  -7.8905 GDP ratio x2         True
+ pre_covid          M2_size                log_distance             -       0.0335           0.0690  19.4463 0.0010   2.3243  distance x2        False
+ pre_covid          M2_size               same_language             +      -0.0574          -0.0219  -6.3691 0.0010  -5.7402       0 -> 1        False
+ pre_covid          M2_size                 same_family             +       0.0332           0.0371  10.2684 0.0010   3.3173       0 -> 1         True
+ pre_covid          M2_size              gdp_difference             -      -0.0710          -0.1301 -35.5423 0.0010  -4.9215 GDP ratio x2         True
+ pre_covid          M2_size     log_out_strength_origin             +       0.0693           0.3128  94.7305 0.0010   4.8038      size x2         True
+ pre_covid          M2_size log_in_strength_destination             +       0.0608           0.3264  96.5670 0.0010   4.2128      size x2         True
+ pre_covid M3_fixed_effects                log_distance             -       0.0175           0.0359   6.6970 0.0010   1.2097  distance x2        False
+ pre_covid M3_fixed_effects               same_language             +      -0.0506          -0.0193  -5.7553 0.0010  -5.0616       0 -> 1        False
+ pre_covid M3_fixed_effects                 same_family             +       0.0260           0.0291   8.0448 0.0010   2.6025       0 -> 1         True
+ pre_covid M3_fixed_effects              gdp_difference             -      -0.1166          -0.2138 -46.4274 0.0010  -8.0844 GDP ratio x2         True
+     covid       M1_roadmap                log_distance             -       0.0084           0.0197   4.9824 0.4486   0.5844  distance x2        False
+     covid       M1_roadmap               same_language             +      -0.0798          -0.0347  -8.9862 0.0020  -7.9751       0 -> 1        False
+     covid       M1_roadmap                 same_family             +       0.0429           0.0547  13.4498 0.0010   4.2903       0 -> 1         True
+     covid       M1_roadmap              gdp_difference             -      -0.0901          -0.1865 -45.8224 0.0010  -6.2419 GDP ratio x2         True
+     covid          M2_size                log_distance             -       0.0287           0.0671  18.5726 0.0010   1.9866  distance x2        False
+     covid          M2_size               same_language             +      -0.0360          -0.0156  -4.4670 0.0300  -3.5991       0 -> 1        False
+     covid          M2_size                 same_family             +       0.0260           0.0331   8.9621 0.0010   2.5956       0 -> 1         True
+     covid          M2_size              gdp_difference             -      -0.0543          -0.1124 -29.9154 0.0010  -3.7627 GDP ratio x2         True
+     covid          M2_size     log_out_strength_origin             +       0.0581           0.3037  90.6577 0.0010   4.0268      size x2         True
+     covid          M2_size log_in_strength_destination             +       0.0500           0.3027  88.1701 0.0010   3.4683      size x2         True
+     covid M3_fixed_effects                log_distance             -       0.0203           0.0476   8.6532 0.0010   1.4098  distance x2        False
+     covid M3_fixed_effects               same_language             +      -0.0250          -0.0109  -3.1644 0.0060  -2.4995       0 -> 1        False
+     covid M3_fixed_effects                 same_family             +       0.0215           0.0274   7.3793 0.0010   2.1491       0 -> 1         True
+     covid M3_fixed_effects              gdp_difference             -      -0.0947          -0.1960 -40.8262 0.0010  -6.5621 GDP ratio x2         True
+post_covid       M1_roadmap                log_distance             -       0.0066           0.0140   3.5599 0.6244   0.4599  distance x2        False
+post_covid       M1_roadmap               same_language             +      -0.0911          -0.0356  -9.2650 0.0030  -9.1070       0 -> 1        False
+post_covid       M1_roadmap                 same_family             +       0.0514           0.0589  14.5833 0.0010   5.1406       0 -> 1         True
+post_covid       M1_roadmap              gdp_difference             -      -0.1185          -0.2025 -50.4381 0.0010  -8.2108 GDP ratio x2         True
+post_covid          M2_size                log_distance             -       0.0320           0.0674  19.2380 0.0010   2.2179  distance x2        False
+post_covid          M2_size               same_language             +      -0.0369          -0.0144  -4.2251 0.0380  -3.6873       0 -> 1        False
+post_covid          M2_size                 same_family             +       0.0311           0.0357   9.9506 0.0010   3.1144       0 -> 1         True
+post_covid          M2_size              gdp_difference             -      -0.0706          -0.1207 -33.3057 0.0010  -4.8930 GDP ratio x2         True
+post_covid          M2_size     log_out_strength_origin             +       0.0699           0.3285 100.5958 0.0010   4.8419      size x2         True
+post_covid          M2_size log_in_strength_destination             +       0.0612           0.3342 100.1315 0.0010   4.2418      size x2         True
+post_covid M3_fixed_effects                log_distance             -       0.0272           0.0573  10.8217 0.0010   1.8857  distance x2        False
+post_covid M3_fixed_effects               same_language             +      -0.0250          -0.0098  -2.9372 0.0100  -2.4962       0 -> 1        False
+post_covid M3_fixed_effects                 same_family             +       0.0216           0.0248   6.8994 0.0010   2.1607       0 -> 1         True
+post_covid M3_fixed_effects              gdp_difference             -      -0.1301          -0.2224 -47.9983 0.0010  -9.0192 GDP ratio x2         True
 
 ==========================================================================================
 DISTANCE ACROSS PERIODS (does its effect weaken over time, as in Rusu et al.?)
 ==========================================================================================
 period                      pre_covid   covid  post_covid
 y         model                                          
-weighted  M1_roadmap          -0.0414 -0.0141     -0.0210
-          M2_size              0.0501  0.0511      0.0480
-          M3_fixed_effects     0.0082  0.0245      0.0280
-binary_b5 M1_roadmap          -0.0075  0.0132      0.0070
-          M2_size              0.0630  0.0613      0.0610
-          M3_fixed_effects     0.0269  0.0406      0.0494
+weighted  M1_roadmap          -0.0304 -0.0055     -0.0119
+          M2_size              0.0579  0.0588      0.0564
+          M3_fixed_effects     0.0184  0.0336      0.0370
+binary_b5 M1_roadmap           0.0008  0.0197      0.0140
+          M2_size              0.0690  0.0671      0.0674
+          M3_fixed_effects     0.0359  0.0476      0.0573
 (standardised coefficients: they are comparable across periods even though the number of students changes)
+
+==========================================================================================
+LANGUAGE CODING CHECK: MOST SPOKEN LANGUAGE vs OFFICIAL_LANGUAGES (weighted)
+==========================================================================================
+official_languages: Phase 2 coding, 1 = the two countries share a national official language.
+effect = % change in (1 + students/year) for 0 -> 1, with the permutation p-value.
+language_coding                           main                                 official_languages                                
+period                               pre_covid           covid      post_covid          pre_covid           covid      post_covid
+variable      model                                                                                                              
+log_distance  M1_roadmap         -2.8% (0.366)   -0.5% (0.874)   -1.1% (0.732)      -3.8% (0.207)   -1.2% (0.648)   -1.9% (0.555)
+              M2_size            +5.6% (0.002)   +5.0% (0.002)   +5.4% (0.001)      +4.8% (0.003)   +4.3% (0.005)   +4.5% (0.007)
+              M3_fixed_effects   +1.7% (0.002)   +2.8% (0.001)   +3.5% (0.001)      +0.8% (0.142)   +2.0% (0.001)   +2.6% (0.001)
+same_language M1_roadmap        -32.5% (0.002)  -23.8% (0.002)  -25.2% (0.003)     -36.2% (0.001)  -27.4% (0.001)  -31.3% (0.001)
+              M2_size           -15.0% (0.003)  -10.0% (0.016)   -9.0% (0.059)     -21.8% (0.001)  -17.4% (0.001)  -19.6% (0.001)
+              M3_fixed_effects  -13.8% (0.001)   -8.5% (0.002)   -5.4% (0.028)     -22.8% (0.001)  -17.3% (0.001)  -18.1% (0.001)
+same_family   M1_roadmap        +18.0% (0.001)  +18.1% (0.001)  +20.2% (0.001)     +23.1% (0.001)  +21.5% (0.001)  +25.2% (0.001)
+              M2_size           +12.6% (0.001)  +10.8% (0.001)  +11.7% (0.001)     +14.3% (0.001)  +11.2% (0.001)  +12.6% (0.001)
+              M3_fixed_effects  +11.7% (0.001)  +10.3% (0.001)   +9.4% (0.001)     +14.3% (0.001)  +11.9% (0.001)  +11.5% (0.001)

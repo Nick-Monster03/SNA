@@ -24,7 +24,7 @@ The script puts together four pieces of evidence:
   4. United Kingdom    year by year 2016-2023 on the yearly networks (decision 10: the 2022-23
                        average hides the collapse of 2023), and a comparison with every other
                        country between 2019 and 2023, the last normal years before and after Covid
-                       (2023 is beyond the validation of the dataset: 01_organization/decisioni.txt, FONTE).
+                       (2023 is beyond the validation of the dataset: 01_organization/decisions.txt, SOURCE).
 
 QAP correlation (piece 2): Pearson correlation between two n x n matrices over the cross-country
 pairs (same-country pairs are zero by construction, decision 4), on log(1 + students) for the

@@ -22,14 +22,25 @@ Dependent variable, two versions:
 
 Explanatory variables (matrices):
   log_distance                  log of the great-circle distance between the regions (km)
-  same_language                 1 = the two countries share a national official language
-  same_family                   1 = they share a language family (Romance, Germanic, Slavic...).
-                                Pairs with the same language almost always also have the same
-                                family, so same_family measures "related but different" languages.
+  same_language                 1 = the most spoken language is the same in the two regions
+  same_family                   1 = the most spoken languages of the two regions belong to the same
+                                family (Romance, Germanic, Slavic...). Pairs with the same language
+                                also have the same family, so same_family measures "related but
+                                different" languages.
   gdp_difference                |log GDP per capita origin - log GDP per capita destination|
                                 (0 = equally rich; 0.69 = one region twice as rich as the other)
   log_out_strength_origin       log(1 + students/year sent by the origin to all regions)
   log_in_strength_destination   log(1 + students/year received by the destination from all regions)
+
+Language coding (decision 16, changed in Phase 4: decision 22). Every region gets ONE language,
+the most spoken one: the first language of its country in languages.csv (for the countries with
+several official languages - BE, CY, FI, IE, LU, MT - the first one listed is the most spoken),
+except the cases in LANGUAGE_EXCEPTIONS: Montenegro, where Serbian is more spoken than Montenegrin
+(2023 census), and four regions where most people speak another language than the rest of their
+country (Brussels and Wallonia: French; Aland: Swedish; Bolzano/Bozen: German). The coding of
+Phase 2 ("the two countries share a national official language", region_pairs.csv) made pairs
+such as Belgium-Germany or Finland-Sweden "same language" because of small minorities; it is kept
+as a robustness check (h2_language_check.csv).
 
 Three models:
   M1_roadmap         distance, language, language family, GDP difference (as in the roadmap)
@@ -65,12 +76,14 @@ institutions) find that it does not. GDP difference: negative, because measure 1
 regions exchange more with regions of similar wealth.
 
 Run from the project root directory (after src/01-04):
-    python 05_analysis/06_h2_mrqap.py          (~2 minutes)
+    python 05_analysis/06_h2_mrqap.py          (~2-3 minutes)
 
 Outputs (05_analysis/tables/ and 05_analysis/reports/):
-  h2_coefficients.csv   one row per period, dependent variable, model and explanatory variable
-  h2_models.csv         one row per period, dependent variable and model: sample size, R2
-  h2_report.txt         everything above, as text, with the correlations between the variables
+  h2_coefficients.csv     one row per period, dependent variable, model and explanatory variable
+  h2_models.csv           one row per period, dependent variable and model: sample size, R2
+  h2_language_check.csv   the three models (weighted network) with the Phase 2 language coding
+  h2_report.txt           everything above, as text, with the language of every region that
+                          differs from the default and the correlations between the variables
 """
 
 import networkx as nx
@@ -111,6 +124,17 @@ EFFECT_UNIT = {
     "weighted": "% change in (1 + students/year)",
     BINARY: "percentage points in the probability of an edge",
 }
+# Most spoken language (and its family) where it is NOT the first language of the country in
+# languages.csv. Key = start of the region code: a country (2 letters), a NUTS 1 area (3) or a
+# region (4); the longest matching key wins.
+LANGUAGE_EXCEPTIONS = {
+    "ME": ("Serbian", "Slavic"),       # 2023 census: Serbian 43.2%, Montenegrin 34.5% (mother tongue)
+    "BE1": ("French", "Romance"),      # Brussels-Capital Region
+    "BE3": ("French", "Romance"),      # Wallonia (the small German-speaking community is in BE33)
+    "FI20": ("Swedish", "Germanic"),   # Aland
+    "ITH1": ("German", "Germanic"),    # Bolzano/Bozen (South Tyrol)
+}
+LANGUAGE_CHECK = "official_languages"  # name of the Phase 2 coding in h2_language_check.csv
 
 log = common.Report("h2_report")
 
@@ -127,8 +151,9 @@ def sample_regions():
 
 
 def dyadic_matrices(regions):
-    """n x n matrices of distance, same country, same language and same family, built from the
-    list of unordered pairs in region_pairs.csv. The diagonal (a region with itself) stays NaN."""
+    """n x n matrices of distance, same country, and same language and same family with the
+    Phase 2 coding (a shared national official language), built from the list of unordered pairs
+    in region_pairs.csv. The diagonal (a region with itself) stays NaN."""
     index = {r: i for i, r in enumerate(regions)}
     n = len(regions)
     pairs = pd.read_csv(common.networks.METADATA_DIR / "region_pairs.csv")
@@ -140,6 +165,34 @@ def dyadic_matrices(regions):
         M = np.full((n, n), np.nan)
         M[a, b] = M[b, a] = pairs[column].to_numpy()  # every pair is symmetric
         matrices[column] = M
+    return matrices
+
+
+def main_languages(regions):
+    """The most spoken language of every region and its family: the first language (and first
+    family) of the country in languages.csv, unless LANGUAGE_EXCEPTIONS says otherwise."""
+    countries = pd.read_csv(common.networks.METADATA_DIR / "languages.csv").set_index("country")
+    rows = []
+    for r in regions:
+        language = countries.loc[r[:2], "languages"].split(";")[0]
+        family = countries.loc[r[:2], "families"].split(";")[0]
+        for key in sorted(LANGUAGE_EXCEPTIONS, key=len):  # shorter keys first, longer ones override
+            if r.startswith(key):
+                language, family = LANGUAGE_EXCEPTIONS[key]
+        rows.append({"region": r, "language": language, "family": family,
+                     "exception": any(r.startswith(key) for key in LANGUAGE_EXCEPTIONS)})
+    return pd.DataFrame(rows)
+
+
+def language_matrices(languages):
+    """n x n matrices of same language and same family from the most spoken language of every
+    region. The diagonal stays NaN, as in dyadic_matrices()."""
+    matrices = {}
+    for name, column in (("same_language", "language"), ("same_family", "family")):
+        values = languages[column].to_numpy()
+        M = (values[:, None] == values[None, :]).astype(float)
+        np.fill_diagonal(M, np.nan)
+        matrices[name] = M
     return matrices
 
 
@@ -155,13 +208,14 @@ def flow_matrices(period, regions):
     return {"weighted": np.log1p(students), BINARY: edges}, out_strength, in_strength
 
 
-def explanatory_matrices(dyads, log_gdp, out_strength, in_strength):
-    """All explanatory variables of a period as n x n matrices (row = origin, column = destination)."""
+def explanatory_matrices(dyads, language, log_gdp, out_strength, in_strength):
+    """All explanatory variables of a period as n x n matrices (row = origin, column = destination).
+    `language` holds the same_language and same_family matrices of the coding to use."""
     n = len(log_gdp)
     return {
         "log_distance": np.log(dyads["distance_km"]),
-        "same_language": dyads["same_language"],
-        "same_family": dyads["same_family"],
+        "same_language": language["same_language"],
+        "same_family": language["same_family"],
         "gdp_difference": np.abs(log_gdp[:, None] - log_gdp[None, :]),
         # the same value along a row (origin) or along a column (destination)
         "log_out_strength_origin": np.repeat(np.log1p(out_strength)[:, None], n, axis=1),
@@ -345,12 +399,17 @@ def main():
     regions, gdp = sample_regions()
     dyads = dyadic_matrices(regions)
     cells = np.nonzero(dyads["same_country"] == 0)  # cross-country pairs (the NaN diagonal is excluded)
+    languages = main_languages(regions)
+    coding = {
+        "main": language_matrices(languages),  # most spoken language (used in all the models)
+        LANGUAGE_CHECK: {k: dyads[k] for k in ("same_language", "same_family")},  # Phase 2 coding
+    }
 
-    coefficient_table, model_table, correlations = [], [], {}
+    coefficient_table, model_table, check_table, correlations = [], [], [], {}
     for period in PERIODS:
         log_gdp = np.log(gdp.loc[regions, f"gdp_{period}"].to_numpy())
         dependent, out_strength, in_strength = flow_matrices(period, regions)
-        X_all = explanatory_matrices(dyads, log_gdp, out_strength, in_strength)
+        X_all = explanatory_matrices(dyads, coding["main"], log_gdp, out_strength, in_strength)
         correlations[period] = pd.DataFrame({v: X_all[v][cells] for v in X_all}).corr()
 
         for y_version, y_matrix in dependent.items():
@@ -364,10 +423,21 @@ def main():
                      **{k: result[k] for k in ("cells", "mean_y", "share_nonzero", "r2", "adj_r2")}}
                 )
 
+        # Robustness check: the same three models (weighted network) with the Phase 2 coding
+        X_check = explanatory_matrices(dyads, coding[LANGUAGE_CHECK], log_gdp, out_strength, in_strength)
+        for model, variables in MODELS.items():
+            print(f"{period} | weighted | {model} | {LANGUAGE_CHECK} ...")
+            result = mrqap_dsp(dependent["weighted"], [X_check[v] for v in variables], cells, rng,
+                               fixed_effects=model in FIXED_EFFECTS_MODELS)
+            check_table += coefficient_rows(period, "weighted", model, variables, result)
+
     coefficients = pd.DataFrame(coefficient_table).round(4)
     coefficients.to_csv(common.TABLES_DIR / "h2_coefficients.csv", index=False)
     models = pd.DataFrame(model_table).round(4)
     models.to_csv(common.TABLES_DIR / "h2_models.csv", index=False)
+    check = pd.DataFrame(check_table).round(4)
+    check.insert(3, "language_coding", LANGUAGE_CHECK)
+    check.to_csv(common.TABLES_DIR / "h2_language_check.csv", index=False)
 
     # --- Report ------------------------------------------------------------------
     log.title("H2: DISTANCE, LANGUAGE AND FLOWS (MRQAP, DOUBLE SEMI-PARTIALLING)")
@@ -379,6 +449,14 @@ def main():
     for model, variables in MODELS.items():
         extra = " + one effect per origin and per destination" if model in FIXED_EFFECTS_MODELS else ""
         log(f"  {model:<17} {', '.join(variables)}{extra}")
+
+    log.title("LANGUAGE CODING: THE MOST SPOKEN LANGUAGE OF EVERY REGION")
+    log("Default: the first language of the country in languages.csv. Regions where it differs:")
+    log(languages[languages.exception][["region", "language", "family"]].to_string(index=False))
+    for name, matrices in coding.items():
+        log(f"{name:<19} ordered cross-country pairs with the same language: "
+            f"{int(matrices['same_language'][cells].sum()):,}; same family: "
+            f"{int(matrices['same_family'][cells].sum()):,}")
 
     log.title("CORRELATIONS BETWEEN THE EXPLANATORY VARIABLES (cross-country pairs)")
     log("High values (above about 0.7) would make the single coefficients hard to separate.")
@@ -408,6 +486,16 @@ def main():
                              sort=False)[list(PERIODS)].to_string())
     log("(standardised coefficients: they are comparable across periods even though the number of "
         "students changes)")
+
+    log.title(f"LANGUAGE CODING CHECK: MOST SPOKEN LANGUAGE vs {LANGUAGE_CHECK.upper()} (weighted)")
+    log(f"{LANGUAGE_CHECK}: Phase 2 coding, 1 = the two countries share a national official language.")
+    log("effect = % change in (1 + students/year) for 0 -> 1, with the permutation p-value.")
+    both = pd.concat([coefficients[coefficients.y == "weighted"].assign(language_coding="main"), check])
+    both = both[both.variable.isin(["same_language", "same_family", "log_distance"])]
+    both["effect (p)"] = both.apply(lambda r: f"{r.effect:+.1f}% ({r.p_dsp:.3f})", axis=1)
+    log(both.pivot_table(index=["variable", "model"], columns=["language_coding", "period"],
+                         values="effect (p)", aggfunc="first", sort=False)
+            .reindex(columns=list(PERIODS), level=1).to_string())
     log.save()
 
 

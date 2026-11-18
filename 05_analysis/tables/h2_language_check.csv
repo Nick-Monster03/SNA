@@ -1,0 +1,43 @@
+period,y,model,language_coding,variable,expected_sign,coefficient,std_coefficient,t,p_dsp,effect,effect_of,effect_unit,as_expected
+pre_covid,weighted,M1_roadmap,official_languages,log_distance,-,-0.0557,-0.0414,-10.6014,0.2068,-3.7868,distance x2,% change in (1 + students/year),False
+pre_covid,weighted,M1_roadmap,official_languages,same_language,+,-0.4495,-0.0927,-23.4507,0.001,-36.2084,0 -> 1,% change in (1 + students/year),False
+pre_covid,weighted,M1_roadmap,official_languages,same_family,+,0.2082,0.0906,22.0785,0.001,23.1451,0 -> 1,% change in (1 + students/year),True
+pre_covid,weighted,M1_roadmap,official_languages,gdp_difference,-,-0.3923,-0.2596,-65.7463,0.001,-23.8088,GDP ratio x2,% change in (1 + students/year),True
+pre_covid,weighted,M2_size,official_languages,log_distance,-,0.0675,0.0501,15.7205,0.003,4.791,distance x2,% change in (1 + students/year),False
+pre_covid,weighted,M2_size,official_languages,same_language,+,-0.2457,-0.0507,-15.821,0.001,-21.7859,0 -> 1,% change in (1 + students/year),False
+pre_covid,weighted,M2_size,official_languages,same_family,+,0.1337,0.0582,17.51,0.001,14.2996,0 -> 1,% change in (1 + students/year),True
+pre_covid,weighted,M2_size,official_languages,gdp_difference,-,-0.2433,-0.161,-49.5605,0.001,-15.5179,GDP ratio x2,% change in (1 + students/year),True
+pre_covid,weighted,M2_size,official_languages,log_out_strength_origin,+,0.2452,0.3997,137.2961,0.001,18.5292,size x2,% change in (1 + students/year),True
+pre_covid,weighted,M2_size,official_languages,log_in_strength_destination,+,0.2206,0.4278,143.4771,0.001,16.5221,size x2,% change in (1 + students/year),True
+pre_covid,weighted,M3_fixed_effects,official_languages,log_distance,-,0.011,0.0082,1.7637,0.1419,0.765,distance x2,% change in (1 + students/year),False
+pre_covid,weighted,M3_fixed_effects,official_languages,same_language,+,-0.2582,-0.0532,-16.4643,0.001,-22.7538,0 -> 1,% change in (1 + students/year),False
+pre_covid,weighted,M3_fixed_effects,official_languages,same_family,+,0.1334,0.0581,17.7507,0.001,14.2704,0 -> 1,% change in (1 + students/year),True
+pre_covid,weighted,M3_fixed_effects,official_languages,gdp_difference,-,-0.3712,-0.2456,-63.1439,0.001,-22.6855,GDP ratio x2,% change in (1 + students/year),True
+covid,weighted,M1_roadmap,official_languages,log_distance,-,-0.0168,-0.0141,-3.583,0.6484,-1.1601,distance x2,% change in (1 + students/year),False
+covid,weighted,M1_roadmap,official_languages,same_language,+,-0.3197,-0.0745,-18.7555,0.001,-27.3626,0 -> 1,% change in (1 + students/year),False
+covid,weighted,M1_roadmap,official_languages,same_family,+,0.1949,0.0959,23.2105,0.001,21.5129,0 -> 1,% change in (1 + students/year),True
+covid,weighted,M1_roadmap,official_languages,gdp_difference,-,-0.3352,-0.249,-62.1882,0.001,-20.7299,GDP ratio x2,% change in (1 + students/year),True
+covid,weighted,M2_size,official_languages,log_distance,-,0.0608,0.0511,15.8604,0.005,4.3073,distance x2,% change in (1 + students/year),False
+covid,weighted,M2_size,official_languages,same_language,+,-0.1908,-0.0445,-13.773,0.001,-17.3743,0 -> 1,% change in (1 + students/year),False
+covid,weighted,M2_size,official_languages,same_family,+,0.1065,0.0524,15.5915,0.001,11.2393,0 -> 1,% change in (1 + students/year),True
+covid,weighted,M2_size,official_languages,gdp_difference,-,-0.2057,-0.1528,-46.2437,0.001,-13.2859,GDP ratio x2,% change in (1 + students/year),True
+covid,weighted,M2_size,official_languages,log_out_strength_origin,+,0.2168,0.4065,138.7935,0.001,16.2128,size x2,% change in (1 + students/year),True
+covid,weighted,M2_size,official_languages,log_in_strength_destination,+,0.1912,0.415,138.1694,0.001,14.1726,size x2,% change in (1 + students/year),True
+covid,weighted,M3_fixed_effects,official_languages,log_distance,-,0.0292,0.0245,5.1888,0.001,2.0447,distance x2,% change in (1 + students/year),False
+covid,weighted,M3_fixed_effects,official_languages,same_language,+,-0.1902,-0.0443,-13.481,0.001,-17.3193,0 -> 1,% change in (1 + students/year),False
+covid,weighted,M3_fixed_effects,official_languages,same_family,+,0.1126,0.0554,16.6105,0.001,11.9194,0 -> 1,% change in (1 + students/year),True
+covid,weighted,M3_fixed_effects,official_languages,gdp_difference,-,-0.3291,-0.2444,-60.5133,0.001,-20.3947,GDP ratio x2,% change in (1 + students/year),True
+post_covid,weighted,M1_roadmap,official_languages,log_distance,-,-0.0281,-0.021,-5.3653,0.5554,-1.9277,distance x2,% change in (1 + students/year),False
+post_covid,weighted,M1_roadmap,official_languages,same_language,+,-0.3758,-0.0781,-19.6938,0.001,-31.3262,0 -> 1,% change in (1 + students/year),False
+post_covid,weighted,M1_roadmap,official_languages,same_family,+,0.2245,0.0984,23.9735,0.001,25.1681,0 -> 1,% change in (1 + students/year),True
+post_covid,weighted,M1_roadmap,official_languages,gdp_difference,-,-0.4199,-0.2551,-64.5921,0.001,-25.2505,GDP ratio x2,% change in (1 + students/year),True
+post_covid,weighted,M2_size,official_languages,log_distance,-,0.0641,0.048,15.2477,0.007,4.5457,distance x2,% change in (1 + students/year),False
+post_covid,weighted,M2_size,official_languages,same_language,+,-0.2184,-0.0454,-14.3084,0.001,-19.6201,0 -> 1,% change in (1 + students/year),False
+post_covid,weighted,M2_size,official_languages,same_family,+,0.1183,0.0519,15.7687,0.001,12.5529,0 -> 1,% change in (1 + students/year),True
+post_covid,weighted,M2_size,official_languages,gdp_difference,-,-0.2554,-0.1552,-48.4251,0.001,-16.226,GDP ratio x2,% change in (1 + students/year),True
+post_covid,weighted,M2_size,official_languages,log_out_strength_origin,+,0.2463,0.4116,143.0962,0.001,18.614,size x2,% change in (1 + students/year),True
+post_covid,weighted,M2_size,official_languages,log_in_strength_destination,+,0.2232,0.4334,147.2856,0.001,16.7354,size x2,% change in (1 + students/year),True
+post_covid,weighted,M3_fixed_effects,official_languages,log_distance,-,0.0374,0.028,6.116,0.001,2.6271,distance x2,% change in (1 + students/year),False
+post_covid,weighted,M3_fixed_effects,official_languages,same_language,+,-0.1992,-0.0414,-12.9197,0.001,-18.0612,0 -> 1,% change in (1 + students/year),False
+post_covid,weighted,M3_fixed_effects,official_languages,same_family,+,0.1092,0.0479,14.7661,0.001,11.5441,0 -> 1,% change in (1 + students/year),True
+post_covid,weighted,M3_fixed_effects,official_languages,gdp_difference,-,-0.428,-0.26,-66.3355,0.001,-25.672,GDP ratio x2,% change in (1 + students/year),True

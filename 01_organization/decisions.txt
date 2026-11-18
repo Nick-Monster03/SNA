@@ -1,0 +1,194 @@
+DECISIONS OF PHASES 2 AND 4 (DATA, NETWORKS AND HYPOTHESIS TESTS) AND WHY
+Erasmus+ project - Network Analysis - updated on 18/11/2026
+
+SOURCE
+Dataset by Vaisanen et al. (2025, Scientific Data), version 1.1 on Zenodo
+(file Erasmus_2014-2023_individual.parquet). The year in the dataset is the year in which the
+mobility starts.
+Limit: the paper validates the data up to 2022 (accuracy above 96%); 2023 goes beyond that
+validation.
+
+DATA AND FILTERS
+1. Only "for studies" mobility (78% of the participants 2016-2023).
+   Why: the question is about students who go to study at a university abroad. Excluded:
+   - traineeships, because the destination is a company and not a university;
+   - vocational training (VET) and youth activities (Youth), because they involve people who
+     are not university students.
+   Study mobility with partner countries is also included (about 9,000 students), because it
+   has a NUTS region both at departure and at arrival.
+2. Years 2016-2023.
+   Why:
+   - 2014-2015 are excluded because they use the NUTS 2013 codes;
+   - the GDP file starts in 2016;
+   - 2023 is needed to have two post-Covid years (2022-23) and to see the effect of Brexit
+     (departures from the United Kingdom from 5,349 in 2022 to 705 in 2023).
+3. Switzerland excluded (963 students, 0.06%).
+   Why: it does not take part in the programme. In the data it never sends students and only
+   receives them from 2021. The rule is general: only the countries that send students in
+   every year are kept.
+4. Flows within the same country removed (1,273 students).
+   Why: Erasmus is mobility abroad.
+5. NUTS codes changed in 2021: regions are merged following the cities that change code:
+   - Continental Croatia = HR04;
+   - Southern and Western Norway = NO01+NO03+NO04+NO05 (Oslo og Akershus, Sor-Ostlandet,
+     Agder og Rogaland, Vestlandet; NO02, NO06, NO07 stay separate);
+   - Northern Ireland = UKN0.
+   ES64 and NO0B removed (18 students), with no correspondence.
+   Why: every region must be the same territory in every year.
+
+NETWORKS
+6. Nodes = 319 NUTS 2 regions of 36 countries; directed edges origin -> destination;
+   weight = students.
+   Why: NUTS 2 is the level of the Eurostat GDP; countries are too few, NUTS 3 regions too
+   small.
+7. Three period networks: pre_covid 2018-19, covid 2020-21, post_covid 2022-23.
+   The weight is the yearly average. The yearly networks 2016-2023 are used for time series.
+   Why: the same design on three networks; two years are more stable than one.
+8. Binary network: edge if it has at least 5 students per year; check with threshold 3.
+   Why: with threshold 5, 80% of the students and over 92% of the regions stay connected.
+   Threshold 10 would be a stricter check (to do if time allows), but with threshold 10 the
+   Covid network breaks apart (only 82% of the regions stay connected).
+9. Small-world on the UNDIRECTED binary version: there is an edge if there is at least one
+   direction.
+   Why: the clustering and average path length of the small-world are defined on undirected
+   networks. One direction is enough because a stable flow in one direction is already a tie
+   between the two regions; requiring reciprocity would delete many ties (Erasmus is often
+   unbalanced).
+10. The United Kingdom stays in the networks.
+    Why: its fall (from 11.5% of the flows in 2018 to 2.9% in 2023) is part of H3.
+    For H3 the United Kingdom is looked at year by year (yearly networks), because the
+    2022-23 average hides the collapse of 2023 (departures from 5,349 in 2022 to 705 in 2023).
+
+ATTRIBUTES AND HYPOTHESES
+11. GDP per capita in euro (Eurostat), average of the two years of each period.
+    Merged regions are recombined with the population-weighted average.
+    Why: it measures wealth without depending on the size of the region.
+    Limit: it is in current euros, with no correction for inflation. It is fine for comparing
+    regions within the same period, but not for comparing the periods with each other.
+12. GDP is missing for the United Kingdom, Iceland and Liechtenstein (43 regions): they stay in
+    the networks and in the distances, but leave the GDP analyses, with a note in the report.
+    Why: they are not in the Eurostat file used. Mixing different sources or estimating the
+    values would complicate the analysis and make the data less comparable.
+13. GDP approximations, to be written in the Data section:
+    - PT16 Centro and PT18 Alentejo are approximated, because in 2024 Eurostat redrew them and
+      there is no exact correspondence;
+    - for Norway, post_covid uses the 2021 GDP, the last one available in the file;
+    - NL31 Utrecht and NL33 Zuid-Holland have the new codes (NL35 and NL36) in the GDP file:
+      their value is used, recoded, with no other change;
+    - for Albania (AL01, AL02, AL03) post_covid has the GDP of only one of the two years: that
+      year is used.
+14. H2: the same sample (the 276 regions with GDP) in all models.
+    Why: otherwise the models are not comparable.
+15. H2: pairs of the same country (column same_country in the file region_pairs.csv) are
+    removed.
+    Why: their flow is zero by construction (point 4), not because of distance.
+16. Distance: great-circle distance between the centres of the regions.
+    Language: "same language" = a shared national official language; "same family" = the same
+    language branch (Romance, Germanic, Slavic...).
+    Choice: Croatian, Serbian and Montenegrin are different languages (not "same language"),
+    but they are in the same family.
+    Why: they are the distinct official languages of the three states.
+    Changed in Phase 4 (point 22): the H2 tests use the most spoken language; this coding is
+    kept as a check.
+
+HYPOTHESIS TESTS (PHASE 4)
+Scripts: 05_analysis/05_h1_wealth.py, 06_h2_mrqap.py, 07_h3_change.py. Table with the outcome
+of the tests: 06_report/table_hypothesis_tests.md.
+17. All p-values come from permutations (seed 42, as in Phase 3).
+    Why: the regions of a network are not independent observations, so the classic p-values
+    are not valid. Example: in H2 (M1, pre_covid) the classic regression would give for
+    distance t = -7.9 ("highly significant"), the permutation test p = 0.37.
+18. H1: dependent variable = net balance (in - out)/(in + out) of the weighted network;
+    explanatory variable = log GDP per capita of the period; 5,000 permutations.
+    Three models: all regions with GDP; without the 26 Turkish regions; within each country
+    (differences from the country mean, permutations only among regions of the same country).
+    Why:
+    - the net balance does not depend on the size of the region;
+    - with the log, inflation only shifts the intercept: the slopes of the three periods can be
+      compared even though GDP is in current euros (point 11);
+    - the Turkish regions (poor and strong senders, net balance about -0.9) could create the
+      effect on their own;
+    - the within-country model removes everything that is the same in the whole country
+      (language, average cost of living, image of the country).
+    In post_covid NL13 Drenthe has no incoming or outgoing students: it leaves the test.
+    Limit: the prestige of single universities cannot be controlled for.
+19. H2: MRQAP with Double Semi-Partialling (Dekker, Krackhardt and Snijders 2007, the method of
+    netlm in R), 1,000 permutations. Dependent variable = log(1 + students per year); check
+    with the binary network (1 = edge with at least 5 students per year, linear probability
+    model).
+    Why: about 60% of the pairs have zero flow; the log keeps the zeros and reduces the weight
+    of the few very large flows. The binary version does not depend on the size of the flows.
+    The method is written in Python (numpy), because R is not used in the project; the
+    coefficients were checked against a full regression.
+20. H2: three models.
+    - M1: as in the roadmap (distance, same language, same family, GDP difference);
+    - M2: M1 + size of origin and destination = students sent to and received from all
+      regions, United Kingdom included;
+    - M3: M1 + one fixed effect for every origin region and one for every destination region.
+      Added after M1 and M2, as a check.
+    Why:
+    - without size, distance can be confused with how large the regions are;
+    - size comes from the students and not from total GDP: src/04 does not need to change and
+      it is a more direct measure of the university size of a region;
+    - the fixed effects absorb everything that characterises a region, measured or not (size,
+      prestige, climate, cost of living). They answer the objection "distance seems not to
+      matter because the distant destinations in the South are more attractive".
+    The conclusions are the same in the three models.
+21. H2: subject similarity (column Field of Education of the dataset) does not enter the
+    models.
+    Why: the data exist (99.97% of the students have an ISCED field), but the similarity between
+    two regions depends mostly on their size (correlation 0.39-0.45: large regions have all the
+    subjects and "look like" everybody). With size in the model, the distance coefficient does
+    not change; the fixed effects of M3 already cover the characteristics of every region.
+    Limit: the result of Gadar et al. on subjects concerns institutions and cannot be seen
+    with a regional network.
+22. Language in H2 (changes point 16): "same language" = the most spoken language is the same
+    in the two regions; "same family" = the two most spoken languages are in the same family.
+    Every region has one language only: the first language of its country in languages.csv
+    (for the countries with several official languages - BE, CY, FI, IE, LU, MT - the first one
+    is the most spoken), except:
+    - Montenegro (ME00): Serbian (2023 census, mother tongue: Serbian 43.2%, Montenegrin 34.5%);
+    - Brussels (BE10) and Wallonia (BE31-BE35): French; Flanders stays Dutch;
+    - Aland (FI20): Swedish;
+    - Bolzano/Bozen (ITH1): German.
+    Why: with point 16 many pairs were "same language" only because of small minorities
+    (Belgium-Germany for the German-speaking community, Finland-Sweden, Cyprus-Turkey). With
+    the new coding the ordered pairs with the same language fall from 2,886 to 1,260:
+    Austria-Germany, Belgium-France, Belgium-Netherlands, South Tyrol-Austria and Germany,
+    Cyprus-Greece, Aland-Sweden, Montenegro-Serbia.
+    Note: point 16 kept Montenegrin and Serbian separate; with the most spoken language
+    Montenegro and Serbia have the same language (8 pairs).
+    The coding of point 16 is kept as a check (table h2_language_check.csv).
+    Result: with the most spoken language the same-language effect stays negative but is
+    smaller (M1 from -24% to -33%; M2 and M3 from -5% to -15%); it is not significant only in
+    post_covid with M2 (p = 0.06). With the coding of point 16 it would be stronger (from -17%
+    to -36%).
+    To write in the report: the choice of the coding and the check with the coding of point 16.
+23. H3 is mainly a descriptive comparison between networks (roadmap, 7.3). The only formal test
+    is the QAP correlation between the period matrices: all 319 regions, cross-country pairs
+    only, 1,000 permutations, with two schemes (free permutation; permutation only among
+    regions of the same country).
+    Why: the second scheme tells how much of the stability belongs to the single regions and
+    not only to the countries.
+    In the report: "consistent with a Covid effect", not a proof of cause.
+24. H3: "normal" years = 2016-2019. The year-to-year changes of these years are the reference
+    for judging the 2019-2020 jump (correlation, edges kept, density, reciprocity, Gini, share
+    of the top 10%, k_max).
+    Why: it tells whether the 2020 change is outside the normal variation of the network.
+    Limit: three changes give a range, not a distribution: no p-value.
+25. H3, Brexit: comparison 2019-2023 (last normal year before Covid and first year after the
+    end of the United Kingdom's projects) and a year-by-year series with the index 2019 = 100,
+    United Kingdom against the rest of the network.
+    Why:
+    - Covid lowers everybody, Brexit only the United Kingdom: the comparison with the rest of
+      the network separates the two effects;
+    - 2022 is already partly "after Brexit" (UK departures at 60 against 93 for the rest of the
+      network);
+    - a difference-in-differences is not used: the United Kingdom was already losing weight
+      before 2019 (arrivals from 114 to 100 between 2016 and 2019, in the rest of the network
+      from 94 to 100). This must be written in the report.
+    Limit: 2023 goes beyond the validation of the dataset (SOURCE); but the rest of the network
+    in 2023 is at 99-100, so the UK collapse does not depend on the data quality of that year.
+26. Factors that can confound H3, to be cited among the limits (they cannot be measured with
+    these data): the new Erasmus+ programme 2021-2027 and the projects of the old programme
+    extended because of Covid, which overlap in 2021-2023.
