@@ -129,11 +129,22 @@
   * average PageRank position from 173rd to 211th of 319;
   * exit from the core.
 * Still to do in Phase 4: QAP correlation between the period matrices, and the UK year by year (2022 vs 2023).
+* **Phase 4 results** (added on 18/11, `07_h3_change.py`; full table in `table_hypothesis_tests.md`):
+  * **QAP correlation:** the period matrices are very similar (pre-Covid vs post-Covid r = 0.88 weighted, 0.74 binary, p = 0.001). If only the countries kept their ties, r would be about 0.22 / 0.15: the stability belongs to the single regions. 72% of the pre-Covid edges are still there post-Covid, 18% of the post-Covid edges are new.
+  * **Yearly benchmark (2016–2019 = normal year-to-year change):** in 2019 → 2020 every measure falls outside the normal range (density −41% vs −0.7% to +1.6%; edges kept 52% vs 79–80%; correlation with the previous year 0.835 vs 0.89). Reciprocity is back to the 2019 level in 2022; density is not (0.110 vs 0.126 in 2023).
+  * **Concentration started before Covid:** the yearly Gini of arrivals rises from 0.622 to 0.628 in 2016–2019; Covid accelerates the rise and the recovery does not reverse it (0.671 in 2023).
+  * **UK year by year (2019 = 100):** in 2022 UK departures are at 60 (rest of the network 93), in 2023 at 8 (rest 99); arrivals at 36 in 2023 (rest 100). Between 2019 and 2023 the UK has the largest fall of all 36 countries (departures −92%, arrivals −64%); mean PageRank position 177th → 226th.
+  * *Interpretation:* consistent with a Covid effect and with the end of UK participation, not a proof of cause. The UK was already losing weight before Brexit (arrivals index 114 → 100 in 2016–2019, rest of the network 94 → 100).
 
 ## 11. Pointers for H1 and H2 (Phase 4)
 
 * **H1** (GDP → net balance): the dependent variable is ready (`net_balance` in the `centrality_*.csv` tables). Expectation: uncertain. Poor Turkish regions are strong senders, but only 52–55% of flows go to richer regions, and Spain attracts without being among the richest.
 * **H2** (distance, language, GDP difference): macro-area homophily and geographic communities suggest a negative effect of distance.
+* **Phase 4 results** (added on 18/11; full table in `table_hypothesis_tests.md`):
+  * **H1 not supported** (`05_h1_wealth.py`). With all regions, richer regions do have a higher net balance (doubling GDP: +0.15, p = 0.0002 in every period), but the effect comes only from Turkey: without the 26 Turkish regions, or comparing regions of the same country, the slope is about 0 (p = 0.14–0.85).
+  * **H2 not supported** (`06_h2_mrqap.py`, MRQAP with three models: roadmap, + region size, + origin and destination fixed effects; language = the most spoken language of each region). No distance decay: the distance effect is null (M1) or slightly positive (M2, M3: +2% to +6% when distance doubles). A shared language *reduces* flows (−5% to −33%, significant in 8 of 9 cases); a shared language family increases them (+9% to +20%); a GDP difference reduces them (−13% to −26% when one region is twice as rich).
+  * *Interpretation:* students do not prefer nearby destinations, and they choose related but different languages (e.g. Romance to Romance) rather than their own. With fixed effects, prestige, climate and cost of living of the destinations cannot explain these results. Consistent with Gadár et al. (distance does not matter), not with Rusu et al.
+  * *Language coding:* every region gets its most spoken language (French for Brussels and Wallonia, Swedish for Åland, German for Bolzano/Bozen, Serbian for Montenegro). With the Phase 2 coding (any shared national official language) the negative effect is stronger (−17% to −36%), because pairs that share only a minority language (Belgium–Germany, Finland–Sweden, Cyprus–Turkey) have few students. The choice must be stated in the report.
 
 ## 12. Robustness: threshold 3 instead of 5
 
@@ -153,6 +164,14 @@
 * The degree distribution has too few nodes for strong formal tests.
 * Core–periphery is found with a heuristic search (degree ranking + single-node moves): it is a local optimum, not a guaranteed global one.
 * GDP homophily excludes 43 regions (United Kingdom, Iceland, Liechtenstein).
+* *Added in Phase 4:*
+  * H1 and H2 also exclude the 43 regions without GDP: the English-language pairs UK–Ireland and UK–Malta are missing from H2.
+  * H1 cannot control for the prestige of single universities (the within-country model controls only for what is the same in the whole country).
+  * "Same language" uses one language per region, the most spoken one: regional and minority languages are ignored, and the result depends partly on this choice (stronger negative effect with the Phase 2 coding).
+  * H3 is descriptive: no counterfactual network without Covid exists. Possible confounders: the new Erasmus+ programme 2021–2027 and the old projects extended because of Covid.
+  * 2023 is beyond the validation of the dataset; but the rest of the network in 2023 is at 99–100% of 2019, so the UK collapse is not a data-quality effect.
+  * The yearly benchmark uses only three normal year-to-year changes: it gives a range, not a p-value.
+  * Field of study is not used: at regional level the subject composition mostly reflects region size, and Gadár et al.'s subject effect works at the level of institutions.
 
 ## 14. Figures (in `05_analysis/figures/`, PNG and PDF)
 
