@@ -1,0 +1,10 @@
+period,gdp_tercile,regions,gdp_min,gdp_max,mean_net_balance,median_net_balance,share_net_receivers,turkish_regions
+pre_covid,1 low,92,2900.0,16800.0,-0.253,-0.172,0.424,26
+pre_covid,2 middle,92,17150.0,33300.0,-0.045,-0.078,0.37,0
+pre_covid,3 high,92,33950.0,99650.0,0.014,-0.026,0.467,0
+covid,1 low,92,2800.0,17050.0,-0.168,-0.109,0.478,26
+covid,2 middle,92,17450.0,34400.0,-0.07,-0.109,0.38,0
+covid,3 high,92,34500.0,108050.0,0.049,0.015,0.511,0
+post_covid,1 low,92,4150.0,20500.0,-0.197,-0.164,0.402,26
+post_covid,2 middle,91,20788.7,40650.0,-0.076,-0.075,0.396,0
+post_covid,3 high,92,40750.0,120050.0,0.016,-0.023,0.467,0

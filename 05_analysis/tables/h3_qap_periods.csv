@@ -1,0 +1,7 @@
+earlier,later,network,r,p_qap,null_mean_free,null_mean_within_country,p_within_country,edges_earlier,edges_later,common_edges,jaccard,share_kept,share_new
+pre_covid,covid,weighted,0.9047,0.001,-0.0003,0.2195,0.001,33988,29675,26016,0.6911,0.7654,0.1233
+pre_covid,covid,binary_b5,0.7386,0.001,-0.0006,0.1368,0.001,11371,8049,7305,0.603,0.6424,0.0924
+covid,post_covid,weighted,0.8967,0.001,0.0003,0.2262,0.001,29675,31108,24636,0.6816,0.8302,0.208
+covid,post_covid,binary_b5,0.7434,0.001,-0.0001,0.1409,0.001,8049,9963,6869,0.6164,0.8534,0.3105
+pre_covid,post_covid,weighted,0.8806,0.001,0.0004,0.2216,0.001,33988,31108,26172,0.6724,0.77,0.1587
+pre_covid,post_covid,binary_b5,0.7352,0.001,-0.0002,0.1446,0.001,11371,9963,8138,0.6167,0.7157,0.1832

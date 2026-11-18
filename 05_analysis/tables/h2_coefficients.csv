@@ -1,0 +1,85 @@
+period,y,model,variable,expected_sign,coefficient,std_coefficient,t,p_dsp,effect,effect_of,effect_unit,as_expected
+pre_covid,weighted,M1_roadmap,log_distance,-,-0.0557,-0.0414,-10.6014,0.2328,-3.7868,distance x2,% change in (1 + students/year),False
+pre_covid,weighted,M1_roadmap,same_language,+,-0.4495,-0.0927,-23.4507,0.001,-36.2084,0 -> 1,% change in (1 + students/year),False
+pre_covid,weighted,M1_roadmap,same_family,+,0.2082,0.0906,22.0785,0.001,23.1451,0 -> 1,% change in (1 + students/year),True
+pre_covid,weighted,M1_roadmap,gdp_difference,-,-0.3923,-0.2596,-65.7463,0.001,-23.8088,GDP ratio x2,% change in (1 + students/year),True
+pre_covid,weighted,M2_size,log_distance,-,0.0675,0.0501,15.7205,0.008,4.791,distance x2,% change in (1 + students/year),False
+pre_covid,weighted,M2_size,same_language,+,-0.2457,-0.0507,-15.821,0.001,-21.7859,0 -> 1,% change in (1 + students/year),False
+pre_covid,weighted,M2_size,same_family,+,0.1337,0.0582,17.51,0.001,14.2996,0 -> 1,% change in (1 + students/year),True
+pre_covid,weighted,M2_size,gdp_difference,-,-0.2433,-0.161,-49.5605,0.001,-15.5179,GDP ratio x2,% change in (1 + students/year),True
+pre_covid,weighted,M2_size,log_out_strength_origin,+,0.2452,0.3997,137.2961,0.001,18.5292,size x2,% change in (1 + students/year),True
+pre_covid,weighted,M2_size,log_in_strength_destination,+,0.2206,0.4278,143.4771,0.001,16.5221,size x2,% change in (1 + students/year),True
+pre_covid,weighted,M3_fixed_effects,log_distance,-,0.011,0.0082,1.7637,0.1508,0.765,distance x2,% change in (1 + students/year),False
+pre_covid,weighted,M3_fixed_effects,same_language,+,-0.2582,-0.0532,-16.4643,0.001,-22.7538,0 -> 1,% change in (1 + students/year),False
+pre_covid,weighted,M3_fixed_effects,same_family,+,0.1334,0.0581,17.7507,0.001,14.2704,0 -> 1,% change in (1 + students/year),True
+pre_covid,weighted,M3_fixed_effects,gdp_difference,-,-0.3712,-0.2456,-63.1439,0.001,-22.6855,GDP ratio x2,% change in (1 + students/year),True
+pre_covid,binary_b5,M1_roadmap,log_distance,-,-0.0036,-0.0075,-1.8769,0.7852,-0.2522,distance x2,percentage points in the probability of an edge,False
+pre_covid,binary_b5,M1_roadmap,same_language,+,-0.1343,-0.0767,-18.9782,0.001,-13.4267,0 -> 1,percentage points in the probability of an edge,False
+pre_covid,binary_b5,M1_roadmap,same_family,+,0.0617,0.0744,17.7405,0.001,6.1738,0 -> 1,percentage points in the probability of an edge,True
+pre_covid,binary_b5,M1_roadmap,gdp_difference,-,-0.1106,-0.2026,-50.209,0.001,-7.6639,GDP ratio x2,percentage points in the probability of an edge,True
+pre_covid,binary_b5,M2_size,log_distance,-,0.0307,0.063,17.4338,0.001,2.1245,distance x2,percentage points in the probability of an edge,False
+pre_covid,binary_b5,M2_size,same_language,+,-0.0778,-0.0444,-12.2356,0.001,-7.7792,0 -> 1,percentage points in the probability of an edge,False
+pre_covid,binary_b5,M2_size,same_family,+,0.0412,0.0496,13.17,0.001,4.1151,0 -> 1,percentage points in the probability of an edge,True
+pre_covid,binary_b5,M2_size,gdp_difference,-,-0.0696,-0.1275,-34.6262,0.001,-4.8229,GDP ratio x2,percentage points in the probability of an edge,True
+pre_covid,binary_b5,M2_size,log_out_strength_origin,+,0.069,0.3116,94.4319,0.001,4.7861,size x2,percentage points in the probability of an edge,True
+pre_covid,binary_b5,M2_size,log_in_strength_destination,+,0.0604,0.3246,96.0332,0.001,4.1897,size x2,percentage points in the probability of an edge,True
+pre_covid,binary_b5,M3_fixed_effects,log_distance,-,0.0131,0.0269,4.8874,0.001,0.9074,distance x2,percentage points in the probability of an edge,False
+pre_covid,binary_b5,M3_fixed_effects,same_language,+,-0.0842,-0.0481,-12.4979,0.001,-8.4213,0 -> 1,percentage points in the probability of an edge,False
+pre_covid,binary_b5,M3_fixed_effects,same_family,+,0.0354,0.0427,10.9735,0.001,3.5436,0 -> 1,percentage points in the probability of an edge,True
+pre_covid,binary_b5,M3_fixed_effects,gdp_difference,-,-0.1151,-0.211,-45.571,0.001,-7.979,GDP ratio x2,percentage points in the probability of an edge,True
+covid,weighted,M1_roadmap,log_distance,-,-0.0168,-0.0141,-3.583,0.6613,-1.1601,distance x2,% change in (1 + students/year),False
+covid,weighted,M1_roadmap,same_language,+,-0.3197,-0.0745,-18.7555,0.001,-27.3626,0 -> 1,% change in (1 + students/year),False
+covid,weighted,M1_roadmap,same_family,+,0.1949,0.0959,23.2105,0.001,21.5129,0 -> 1,% change in (1 + students/year),True
+covid,weighted,M1_roadmap,gdp_difference,-,-0.3352,-0.249,-62.1882,0.001,-20.7299,GDP ratio x2,% change in (1 + students/year),True
+covid,weighted,M2_size,log_distance,-,0.0608,0.0511,15.8604,0.005,4.3073,distance x2,% change in (1 + students/year),False
+covid,weighted,M2_size,same_language,+,-0.1908,-0.0445,-13.773,0.001,-17.3743,0 -> 1,% change in (1 + students/year),False
+covid,weighted,M2_size,same_family,+,0.1065,0.0524,15.5915,0.001,11.2393,0 -> 1,% change in (1 + students/year),True
+covid,weighted,M2_size,gdp_difference,-,-0.2057,-0.1528,-46.2437,0.001,-13.2859,GDP ratio x2,% change in (1 + students/year),True
+covid,weighted,M2_size,log_out_strength_origin,+,0.2168,0.4065,138.7935,0.001,16.2128,size x2,% change in (1 + students/year),True
+covid,weighted,M2_size,log_in_strength_destination,+,0.1912,0.415,138.1694,0.001,14.1726,size x2,% change in (1 + students/year),True
+covid,weighted,M3_fixed_effects,log_distance,-,0.0292,0.0245,5.1888,0.001,2.0447,distance x2,% change in (1 + students/year),False
+covid,weighted,M3_fixed_effects,same_language,+,-0.1902,-0.0443,-13.481,0.001,-17.3193,0 -> 1,% change in (1 + students/year),False
+covid,weighted,M3_fixed_effects,same_family,+,0.1126,0.0554,16.6105,0.001,11.9194,0 -> 1,% change in (1 + students/year),True
+covid,weighted,M3_fixed_effects,gdp_difference,-,-0.3291,-0.2444,-60.5133,0.001,-20.3947,GDP ratio x2,% change in (1 + students/year),True
+covid,binary_b5,M1_roadmap,log_distance,-,0.0056,0.0132,3.2768,0.6334,0.3916,distance x2,percentage points in the probability of an edge,False
+covid,binary_b5,M1_roadmap,same_language,+,-0.0908,-0.059,-14.5095,0.001,-9.0761,0 -> 1,percentage points in the probability of an edge,False
+covid,binary_b5,M1_roadmap,same_family,+,0.0524,0.072,17.0209,0.001,5.2438,0 -> 1,percentage points in the probability of an edge,True
+covid,binary_b5,M1_roadmap,gdp_difference,-,-0.0876,-0.1815,-44.31,0.001,-6.0744,GDP ratio x2,percentage points in the probability of an edge,True
+covid,binary_b5,M2_size,log_distance,-,0.0262,0.0613,16.6221,0.002,1.813,distance x2,percentage points in the probability of an edge,False
+covid,binary_b5,M2_size,same_language,+,-0.0569,-0.037,-10.0106,0.001,-5.6901,0 -> 1,percentage points in the probability of an edge,False
+covid,binary_b5,M2_size,same_family,+,0.0292,0.04,10.4062,0.001,2.9161,0 -> 1,percentage points in the probability of an edge,True
+covid,binary_b5,M2_size,gdp_difference,-,-0.0537,-0.1113,-29.4591,0.001,-3.7252,GDP ratio x2,percentage points in the probability of an edge,True
+covid,binary_b5,M2_size,log_out_strength_origin,+,0.058,0.3031,90.5031,0.001,4.019,size x2,percentage points in the probability of an edge,True
+covid,binary_b5,M2_size,log_in_strength_destination,+,0.0498,0.3014,87.7502,0.001,3.4529,size x2,percentage points in the probability of an edge,True
+covid,binary_b5,M3_fixed_effects,log_distance,-,0.0173,0.0406,7.1723,0.001,1.2007,distance x2,percentage points in the probability of an edge,False
+covid,binary_b5,M3_fixed_effects,same_language,+,-0.055,-0.0357,-9.0837,0.001,-5.4996,0 -> 1,percentage points in the probability of an edge,False
+covid,binary_b5,M3_fixed_effects,same_family,+,0.0276,0.0379,9.4826,0.001,2.7589,0 -> 1,percentage points in the probability of an edge,True
+covid,binary_b5,M3_fixed_effects,gdp_difference,-,-0.0937,-0.1941,-40.1651,0.001,-6.4971,GDP ratio x2,percentage points in the probability of an edge,True
+post_covid,weighted,M1_roadmap,log_distance,-,-0.0281,-0.021,-5.3653,0.5405,-1.9277,distance x2,% change in (1 + students/year),False
+post_covid,weighted,M1_roadmap,same_language,+,-0.3758,-0.0781,-19.6938,0.001,-31.3262,0 -> 1,% change in (1 + students/year),False
+post_covid,weighted,M1_roadmap,same_family,+,0.2245,0.0984,23.9735,0.001,25.1681,0 -> 1,% change in (1 + students/year),True
+post_covid,weighted,M1_roadmap,gdp_difference,-,-0.4199,-0.2551,-64.5921,0.001,-25.2505,GDP ratio x2,% change in (1 + students/year),True
+post_covid,weighted,M2_size,log_distance,-,0.0641,0.048,15.2477,0.01,4.5457,distance x2,% change in (1 + students/year),False
+post_covid,weighted,M2_size,same_language,+,-0.2184,-0.0454,-14.3084,0.001,-19.6201,0 -> 1,% change in (1 + students/year),False
+post_covid,weighted,M2_size,same_family,+,0.1183,0.0519,15.7687,0.001,12.5529,0 -> 1,% change in (1 + students/year),True
+post_covid,weighted,M2_size,gdp_difference,-,-0.2554,-0.1552,-48.4251,0.001,-16.226,GDP ratio x2,% change in (1 + students/year),True
+post_covid,weighted,M2_size,log_out_strength_origin,+,0.2463,0.4116,143.0962,0.001,18.614,size x2,% change in (1 + students/year),True
+post_covid,weighted,M2_size,log_in_strength_destination,+,0.2232,0.4334,147.2856,0.001,16.7354,size x2,% change in (1 + students/year),True
+post_covid,weighted,M3_fixed_effects,log_distance,-,0.0374,0.028,6.116,0.001,2.6271,distance x2,% change in (1 + students/year),False
+post_covid,weighted,M3_fixed_effects,same_language,+,-0.1992,-0.0414,-12.9197,0.001,-18.0612,0 -> 1,% change in (1 + students/year),False
+post_covid,weighted,M3_fixed_effects,same_family,+,0.1092,0.0479,14.7661,0.001,11.5441,0 -> 1,% change in (1 + students/year),True
+post_covid,weighted,M3_fixed_effects,gdp_difference,-,-0.428,-0.26,-66.3355,0.001,-25.672,GDP ratio x2,% change in (1 + students/year),True
+post_covid,binary_b5,M1_roadmap,log_distance,-,0.0033,0.007,1.7551,0.7862,0.2311,distance x2,percentage points in the probability of an edge,False
+post_covid,binary_b5,M1_roadmap,same_language,+,-0.1107,-0.0647,-15.979,0.001,-11.0669,0 -> 1,percentage points in the probability of an edge,False
+post_covid,binary_b5,M1_roadmap,same_family,+,0.0652,0.0805,19.1851,0.001,6.5204,0 -> 1,percentage points in the probability of an edge,True
+post_covid,binary_b5,M1_roadmap,gdp_difference,-,-0.115,-0.1966,-48.7573,0.001,-7.9734,GDP ratio x2,percentage points in the probability of an edge,True
+post_covid,binary_b5,M2_size,log_distance,-,0.029,0.061,17.0709,0.001,2.0075,distance x2,percentage points in the probability of an edge,False
+post_covid,binary_b5,M2_size,same_language,+,-0.0672,-0.0392,-10.9084,0.001,-6.7163,0 -> 1,percentage points in the probability of an edge,False
+post_covid,binary_b5,M2_size,same_family,+,0.0358,0.0442,11.8363,0.001,3.5804,0 -> 1,percentage points in the probability of an edge,True
+post_covid,binary_b5,M2_size,gdp_difference,-,-0.0698,-0.1194,-32.8219,0.001,-4.8403,GDP ratio x2,percentage points in the probability of an edge,True
+post_covid,binary_b5,M2_size,log_out_strength_origin,+,0.0697,0.3276,100.3507,0.001,4.8287,size x2,percentage points in the probability of an edge,True
+post_covid,binary_b5,M2_size,log_in_strength_destination,+,0.0609,0.3326,99.6156,0.001,4.2215,size x2,percentage points in the probability of an edge,True
+post_covid,binary_b5,M3_fixed_effects,log_distance,-,0.0235,0.0494,9.0866,0.001,1.6277,distance x2,percentage points in the probability of an edge,False
+post_covid,binary_b5,M3_fixed_effects,same_language,+,-0.0631,-0.0369,-9.6933,0.001,-6.3142,0 -> 1,percentage points in the probability of an edge,False
+post_covid,binary_b5,M3_fixed_effects,same_family,+,0.028,0.0346,8.9613,0.001,2.8011,0 -> 1,percentage points in the probability of an edge,True
+post_covid,binary_b5,M3_fixed_effects,gdp_difference,-,-0.1294,-0.2211,-47.4543,0.001,-8.9667,GDP ratio x2,percentage points in the probability of an edge,True

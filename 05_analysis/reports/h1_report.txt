@@ -1,0 +1,115 @@
+
+==========================================================================================
+H1: RICHER REGIONS RECEIVE MORE STUDENTS THAN THEY SEND
+==========================================================================================
+Dependent variable: net balance (in - out) / (in + out), weighted network.
+Explanatory variable: log GDP per capita of the period.
+p-values: 5000 permutations of the net balance across regions (two-sided).
+Models:
+  M1_all             all regions with GDP
+  M2_no_turkey       without the Turkish regions
+  M3_within_country  country fixed effects, permutations within each country
+
+Regions used:
+  pre_covid: 276 regions used; without GDP 43 (UK 41, IS 1, LI 1); without any student 0
+  covid: 276 regions used; without GDP 43 (UK 41, IS 1, LI 1); without any student 0
+  post_covid: 275 regions used; without GDP 43 (UK 41, IS 1, LI 1); without any student 1 (NL13)
+
+==========================================================================================
+TESTS
+==========================================================================================
+slope: change in net balance for +1 in log GDP; effect_doubling_gdp = slope x ln 2.
+supports_h1: slope > 0 and p_permutation < 0.05. In M3 'countries' counts only countries with at least 2 regions (the others add nothing).
+    period             model  regions  countries  slope  effect_doubling_gdp      r     r2  p_permutation  spearman_rho  p_spearman  supports_h1
+ pre_covid            M1_all      276         33 0.2229               0.1545 0.3941 0.1553         0.0002        0.2401      0.0002         True
+ pre_covid      M2_no_turkey      250         32 0.0389               0.0269 0.0715 0.0051         0.2619       -0.0015      0.9846        False
+ pre_covid M3_within_country      276         26 0.0457               0.0317 0.0566 0.0032         0.3105           NaN         NaN        False
+     covid            M1_all      276         33 0.2119               0.1469 0.3528 0.1245         0.0002        0.2145      0.0008         True
+     covid      M2_no_turkey      250         32 0.0080               0.0055 0.0132 0.0002         0.8334       -0.0377      0.5519        False
+     covid M3_within_country      276         26 0.0144               0.0100 0.0172 0.0003         0.7642           NaN         NaN        False
+post_covid            M1_all      275         33 0.2080               0.1442 0.3438 0.1182         0.0002        0.2074      0.0004         True
+post_covid      M2_no_turkey      249         32 0.0073               0.0051 0.0122 0.0001         0.8480       -0.0392      0.5425        False
+post_covid M3_within_country      275         26 0.0712               0.0493 0.0869 0.0075         0.1406           NaN         NaN        False
+
+==========================================================================================
+NET BALANCE BY GDP TERCILE
+==========================================================================================
+share_net_receivers: share of regions with net balance > 0.
+    period gdp_tercile  regions  gdp_min  gdp_max  mean_net_balance  median_net_balance  share_net_receivers  turkish_regions
+ pre_covid       1 low       92   2900.0  16800.0            -0.253              -0.172                0.424               26
+ pre_covid    2 middle       92  17150.0  33300.0            -0.045              -0.078                0.370                0
+ pre_covid      3 high       92  33950.0  99650.0             0.014              -0.026                0.467                0
+     covid       1 low       92   2800.0  17050.0            -0.168              -0.109                0.478               26
+     covid    2 middle       92  17450.0  34400.0            -0.070              -0.109                0.380                0
+     covid      3 high       92  34500.0 108050.0             0.049               0.015                0.511                0
+post_covid       1 low       92   4150.0  20500.0            -0.197              -0.164                0.402               26
+post_covid    2 middle       91  20788.7  40650.0            -0.076              -0.075                0.396                0
+post_covid      3 high       92  40750.0 120050.0             0.016              -0.023                0.467                0
+
+==========================================================================================
+REGIONS FURTHEST FROM THE M1 LINE (8 per side)
+==========================================================================================
+Positive residual = attracts more than its GDP predicts; negative = attracts less.
+
+pre_covid - above the line:
+region                  name     gdp  net_balance  residual_m1
+  FRY4            La Réunion 22400.0        1.000        1.087
+  NL13               Drenthe 32800.0        1.000        1.002
+  NL23             Flevoland 34950.0        1.000        0.988
+  FRY2            Martinique 24750.0        0.882        0.947
+  PL92 Mazowiecki regionalny 12000.0        0.683        0.910
+  HU12                  Pest 11500.0        0.655        0.891
+  BG31         Severozapaden  5450.0        0.467        0.869
+  EL42          Notio Aigaio 18150.0        0.733        0.868
+pre_covid - below the line:
+region                                  name     gdp  net_balance  residual_m1
+  LU00                            Luxembourg 99650.0       -0.565       -0.810
+  ITF5                            Basilicata 22550.0       -0.753       -0.667
+  TR42 Kocaeli, Sakarya, Düzce, Bolu, Yalova 10300.0       -0.903       -0.642
+  TR21          Tekirdag, Edirne, Kirklareli  9700.0       -0.879       -0.605
+  FRC2                         Franche-Comté 27500.0       -0.645       -0.604
+  TR82             Kastamonu, Çankiri, Sinop  5750.0       -0.994       -0.603
+  TR72                Kayseri, Sivas, Yozgat  6000.0       -0.980       -0.599
+  TR33 Manisa, Afyonkarahisar, Kütahya, Usak  7100.0       -0.941       -0.598
+
+covid - above the line:
+region                  name     gdp  net_balance  residual_m1
+  EL64         Sterea Ellada 15300.0        1.000        1.141
+  HU12                  Pest 12350.0        0.880        1.067
+  NL13               Drenthe 34400.0        1.000        0.970
+  CZ06            Jihovýchod 20850.0        0.882        0.957
+  NL23             Flevoland 36650.0        1.000        0.956
+  FI20                 Åland 41850.0        1.000        0.928
+  BG31         Severozapaden  6600.0        0.600        0.919
+  PL92 Mazowiecki regionalny 13300.0        0.740        0.911
+covid - below the line:
+region                                  name     gdp  net_balance  residual_m1
+  TR33 Manisa, Afyonkarahisar, Kütahya, Usak  6850.0       -0.982       -0.671
+  FRI2                              Limousin 27950.0       -0.658       -0.645
+  TR42 Kocaeli, Sakarya, Düzce, Bolu, Yalova 10250.0       -0.852       -0.626
+  TR82             Kastamonu, Çankiri, Sinop  6050.0       -0.950       -0.612
+  FRC2                         Franche-Comté 27700.0       -0.622       -0.607
+  TR41             Bursa, Eskisehir, Bilecik  8450.0       -0.868       -0.601
+  EL51           Anatoliki Makedonia, Thraki 11100.0       -0.807       -0.598
+  TR21          Tekirdag, Edirne, Kirklareli 10000.0       -0.824       -0.593
+
+post_covid - above the line:
+region                  name     gdp  net_balance  residual_m1
+  EL64         Sterea Ellada 18350.0        1.000        1.164
+  HU12                  Pest 16350.0        0.821        1.009
+  NL23             Flevoland 44400.0        1.000        0.980
+  FI20                 Åland 51350.0        1.000        0.950
+  BG31         Severozapaden  9300.0        0.630        0.935
+  PL92 Mazowiecki regionalny 17300.0        0.677        0.854
+  EL42          Notio Aigaio 20300.0        0.684        0.827
+  HU21        Közép-Dunántúl 16750.0        0.573        0.756
+post_covid - below the line:
+region                                          name      gdp  net_balance  residual_m1
+  LU00                                    Luxembourg 120050.0       -0.554       -0.780
+  TR21                  Tekirdag, Edirne, Kirklareli  13250.0       -0.899       -0.667
+  TR52                                Konya, Karaman   8800.0       -0.972       -0.656
+  TR71 Kirikkale, Aksaray, Nigde, Nevsehir, Kirsehir   8450.0       -0.977       -0.652
+  TR82                     Kastamonu, Çankiri, Sinop   8200.0       -0.940       -0.609
+  TR63                Hatay, Kahramanmaras, Osmaniye   6450.0       -0.988       -0.606
+  TR33         Manisa, Afyonkarahisar, Kütahya, Usak   9250.0       -0.894       -0.588
+  TR42         Kocaeli, Sakarya, Düzce, Bolu, Yalova  14550.0       -0.798       -0.586

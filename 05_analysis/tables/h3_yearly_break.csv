@@ -1,0 +1,9 @@
+measure,kind,normal_min,normal_max,2019->2020,2020->2021,2021->2022,2022->2023,outside_normal_2019->2020
+density_feasible,% change from previous year,-0.6955,1.6373,-41.304,39.9148,6.0406,-0.0383,True
+reciprocity_b5,% change from previous year,-0.7865,1.9114,-13.789,10.8606,5.0013,1.1484,True
+gini_in_strength,% change from previous year,0.0669,0.9267,1.6041,1.8227,0.3917,2.8482,True
+top10pct_share_in,% change from previous year,0.3495,1.1214,2.2058,3.6383,1.3242,3.0088,True
+k_max,% change from previous year,0.0,0.0,-26.9231,23.6842,4.2553,2.0408,True
+r_weighted,similarity with previous year,0.8912,0.8943,0.8351,0.8243,0.8544,0.8555,True
+r_binary,similarity with previous year,0.7585,0.7645,0.649,0.6545,0.7029,0.717,True
+share_kept,similarity with previous year,0.7915,0.7959,0.5213,0.8088,0.7563,0.7479,True
