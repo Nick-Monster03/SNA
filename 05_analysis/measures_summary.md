@@ -54,7 +54,7 @@ Spain is the main attractor). The largest senders are the same big regions, plus
 (TR10). Net balance (Fig. 3) separates net receivers (Nordic regions, UK, capital-surrounding
 regions in Central-Eastern Europe such as HU12 Pest and PL92) from net senders (all Turkish
 regions, around −0.9, and Albania; most French and German regions are moderate net senders). Rankings are very stable (Spearman
-in-strength ≥ 0.98 between periods).
+in-strength ≥ 0.97 between periods).
 
 ## 2. PageRank and HITS (weighted)
 
@@ -119,6 +119,7 @@ across runs NMI 0.67–0.76), Fig. 2:
 2. a large southern–eastern block: Spain, Italy, Greece, Portugal with Poland, Romania,
    Hungary, Czechia, the Balkans and Turkey (EU-15 South 40%, EU-13 38%, candidates 23%);
 3. a second EU-15 block around Germany and Austria, with Finland, eastern Sweden and Ireland.
+4. Pre-Covid and Covid only: a **small fourth block** of 15–17 regions from 9–11 countries (e.g. Valencia, Emilia-Romagna, Hainaut and Liège, Bourgogne, three English regions, two Greek island regions), about 12,000 arrivals/year pre-Covid; post-Covid its regions join the other blocks (3 communities).
 This matches the "more vs less developed" blocks of Batagelj (2025), but Southern Europe sits
 with the East, not with the North-West. Regions of the same country fall into different
 communities (NMI with country only 0.21–0.23). Caveat: the modularity null model expects

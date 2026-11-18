@@ -22,7 +22,7 @@ Test: regression of the net balance (in − out)/(in + out) on log GDP per capit
 | Descriptive: GDP terciles | mean net balance −0.25 / −0.17 / −0.20 in the poorest tercile (all 26 Turkish regions are there), about 0 in the richest; but the share of net receivers is similar: 40–48% (poorest) vs 47–51% (richest) | – | – |
 | **H1 overall** | | | **Not supported** |
 
-* *For the Discussion:* Luxembourg is the richest region (GDP per capita about 100,000–120,000 euros) but a net sender (net balance −0.56 / −0.31 / −0.55, the largest negative residual): the University of Luxembourg requires a semester abroad from every bachelor student, so it sends about 480–510 students/year before and after Covid and receives about 120–150 – university rules matter more than wealth.
+* *For the Discussion:* Luxembourg is the richest region (GDP per capita about 100,000–120,000 euros) but a net sender (net balance −0.56 / −0.31 / −0.55, the largest negative residual pre- and post-Covid): the University of Luxembourg requires a semester abroad from every bachelor student, so it sends about 480–510 students/year before and after Covid and receives about 120–150 – university rules matter more than wealth.
 
 ## H2 – Distance, language and flows
 
